@@ -1,0 +1,65 @@
+{
+  "sharedConstraints": "Photorealistic premium financial-services editorial photography. Soft natural light. Navy, cream, wood, and stone neutrals. Natural expressions. No logos, no watermarks, no readable text on paper or screens, no fake charts, no piggy banks, no gold coins, no handshake-only cliché, no thumbs-up, no robots. Do not depict a recognizable specific real person. Not Esther Francis.",
+  "heroes": [
+    {
+      "slug": "how-much-life-insurance-do-i-need",
+      "filename": "hero.webp",
+      "purpose": "EMOTIONAL",
+      "prompt": "A parent in their late thirties sits at a sunlit kitchen table in a refined but ordinary home, reviewing a simple blank notebook and a closed laptop. Morning window light, cream walls, navy sweater, quiet concentration. Editorial photography, shallow depth of field, 16:9 landscape."
+    },
+    {
+      "slug": "retirement-income-transition",
+      "filename": "hero.webp",
+      "purpose": "HUMANIZING",
+      "prompt": "A thoughtful near-retirement couple in their early sixties sit together in a refined home office, looking at a simple paper plan with no readable text. Warm late-afternoon light, wood desk, cream and navy clothing, calm and composed. Premium editorial photography, 16:9 landscape."
+    },
+    {
+      "slug": "turning-65-medicare-timeline",
+      "filename": "hero.webp",
+      "purpose": "HUMANIZING",
+      "prompt": "A mature couple in their mid-sixties calmly organizes unlabeled folders and a calendar at a bright kitchen table. Soft daylight, pale stone counters, cream and navy wardrobe, unhurried mood. No readable text, no insurance cards, no government emblems. Editorial photography, 16:9 landscape."
+    },
+    {
+      "slug": "health-coverage-before-medicare",
+      "filename": "hero.webp",
+      "purpose": "EMOTIONAL",
+      "prompt": "A professional in their late fifties sits at a quiet home desk by a window, reviewing a closed folder. Optimistic morning light, navy blazer over a cream shirt, plants in soft focus. No readable documents. Photorealistic editorial portrait-in-environment, 16:9 landscape."
+    },
+    {
+      "slug": "mortgage-protection-vs-term-life",
+      "filename": "hero.webp",
+      "purpose": "EMOTIONAL",
+      "prompt": "A young family of three stands outside a modest well-kept house at warm evening light, a parent holding a slim unlabeled folder at their side. Natural, unposed, no smiling-at-camera stock look. Cream siding, navy coats, quiet residential street. Editorial photography, 16:9 landscape."
+    },
+    {
+      "slug": "what-final-expense-insurance-does",
+      "filename": "hero.webp",
+      "purpose": "HUMANIZING",
+      "prompt": "A warm multigenerational conversation at a family dining table: an older adult and two adult children talking over tea. Soft natural light, cream linens, wood table, navy and earth-tone clothing. Respectful, calm, no grief theatrics. No readable papers. Editorial photography, 16:9 landscape."
+    },
+    {
+      "slug": "key-person-vs-buy-sell",
+      "filename": "hero.webp",
+      "purpose": "EMOTIONAL",
+      "prompt": "A business owner and a professional colleague review unlabeled continuity documents in a modern executive conference room. Soft daylight through blinds, navy chairs, cream walls, wood table. Serious and composed, not a handshake. No readable text or logos. Premium editorial photography, 16:9 landscape."
+    },
+    {
+      "slug": "financial-questions-after-divorce",
+      "filename": "hero.webp",
+      "purpose": "EMOTIONAL",
+      "prompt": "A confident professional in their forties reviews a small stack of unlabeled documents in a quiet, optimistic apartment with morning light. Neutral cream interior, navy cardigan, sense of starting fresh. No wedding rings emphasized, no readable text. Editorial photography, 16:9 landscape."
+    },
+    {
+      "slug": "life-insurance-single-parents-solo-earners",
+      "filename": "hero.webp",
+      "purpose": "HUMANIZING",
+      "prompt": "A single parent and a child share a warm everyday moment in a lived-in kitchen, documentary style, not posed smiles at camera. Soft window light, cream cabinets, navy shirt. Quiet affection and ordinary life. No readable papers. Editorial photography, 16:9 landscape."
+    },
+    {
+      "slug": "first-financial-planning-meeting",
+      "filename": "hero.webp",
+      "purpose": "HUMANIZING",
+      "prompt": "Two people sit in a relaxed first meeting at a bright office table with coffee cups and a closed notebook. Soft professional lighting, navy and cream interior, natural conversation, no handshake. No logos, no readable documents. Premium editorial photography, 16:9 landscape."
+    }
+  ]
+}
