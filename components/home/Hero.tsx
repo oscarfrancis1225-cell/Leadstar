@@ -1,4 +1,3 @@
-import { ShieldCheck } from "lucide-react";
 import { QuoteButton } from "@/components/ui/QuoteButton";
 import { SmartImage } from "@/components/ui/SmartImage";
 import { siteImages } from "@/lib/images";
@@ -30,10 +29,6 @@ export function Hero() {
                 Schedule Consultation
               </QuoteButton>
             </div>
-            <p className="mt-6 flex items-start gap-2.5 text-sm leading-6 text-muted">
-              <ShieldCheck className="mt-0.5 h-4 w-4 text-navy" aria-hidden />
-              Trusted guidance for families at every stage of life.
-            </p>
           </div>
         </div>
         <div className="relative h-[22.5rem] sm:h-[28.75rem] lg:h-full lg:min-h-[640px]">

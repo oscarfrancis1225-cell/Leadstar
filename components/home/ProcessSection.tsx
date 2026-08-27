@@ -1,6 +1,5 @@
 import { FadeCarousel } from "@/components/ui/FadeCarousel";
 import { Container } from "@/components/ui/Container";
-import { IconByName } from "@/components/ui/IconMap";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { processSteps } from "@/lib/constants";
 import { processGallery } from "@/lib/images";
@@ -19,9 +18,6 @@ export function ProcessSection() {
               <li key={step.number} className="relative">
                 <div className="relative z-10 mb-4 grid h-10 w-10 place-items-center rounded-full bg-blue text-sm font-semibold text-white">
                   {Number(step.number)}
-                </div>
-                <div className="mb-3 text-gold">
-                  <IconByName name={step.icon} className="h-6 w-6" />
                 </div>
                 <h3 className="text-base font-semibold text-navy">{step.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-muted">{step.description}</p>
