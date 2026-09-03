@@ -12,9 +12,9 @@ import {
 } from "@/lib/calculators";
 
 export function MortgageProtectionCalculator() {
-  const [balance, setBalance] = useState(386000);
+  const [balance, setBalance] = useState(300000);
   const [rate, setRate] = useState(6);
-  const [years, setYears] = useState(22);
+  const [years, setYears] = useState(20);
   const [payment, setPayment] = useState(2000);
   const [otherHousing, setOtherHousing] = useState(0);
 
@@ -77,8 +77,8 @@ export function MortgageProtectionCalculator() {
             </p>
           ) : null}
           <p className="mt-5 text-sm leading-6 text-muted">
-            Could your household continue making this payment if income
-            unexpectedly changed?
+            This figure is the remaining cash obligation from the payment and
+            term you entered.
           </p>
           <CalculatorCta toolSlug="mortgage-protection" />
         </div>

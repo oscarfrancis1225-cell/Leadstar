@@ -8,9 +8,9 @@ export const retirementServicesProducts = [
     title: "Traditional IRA",
     metaTitle: "Traditional IRA",
     description:
-      "A plain-language look at a Traditional IRA: a tax-advantaged retirement account, not an investment itself, and not an account LeadStar manages.",
-    hook: "Someone hears “IRA” and thinks it is a product they buy, like a policy or a fund.",
-    question: "What is a Traditional IRA actually?",
+      "A Traditional IRA is an account structure, not a product you buy and not an account LeadStar manages. What you hold inside it is a separate choice.",
+    hook: "An IRA is not a product you buy. It is an account that can hold investments.",
+    question: "What is actually inside the IRA you already have?",
     disclaimerVariant: "tax-adjacent",
     relatedLinks: [
       { label: "Roth IRA", href: "/services/retirement-services/roth-ira" },
@@ -66,9 +66,9 @@ export const retirementServicesProducts = [
     title: "Roth IRA",
     metaTitle: "Roth IRA",
     description:
-      "A plain-language look at a Roth IRA: funded with after-tax dollars, with qualified distributions that may be tax-free if IRS rules are met.",
+      "A Roth IRA is funded with after-tax dollars. Qualified distributions may be tax-free if IRS rules are met, and those rules are the part people skip.",
     hook: "Someone hears “tax-free” and stops listening before the rules.",
-    question: "What is a Roth IRA actually?",
+    question: "When is a Roth distribution actually tax-free?",
     disclaimerVariant: "tax-adjacent",
     relatedLinks: [
       { label: "Traditional IRA", href: "/services/retirement-services/traditional-ira" },
@@ -124,9 +124,9 @@ export const retirementServicesProducts = [
     title: "SEP IRA",
     metaTitle: "SEP IRA",
     description:
-      "A plain-language look at a SEP IRA: a retirement account structure often used by self-employed people and small-business owners.",
-    hook: "A business owner hears they should “set up a SEP” and is not sure what that even is.",
-    question: "What is a SEP IRA actually for?",
+      "A SEP IRA is a retirement account structure often used by self-employed people and small-business owners. It is not a SIMPLE IRA, and LeadStar does not administer it.",
+    hook: "A business owner hears they should “set up a SEP” before they know who would be covered.",
+    question: "Who would this account actually cover, just you, or employees too?",
     disclaimerVariant: "tax-adjacent",
     relatedLinks: [
       { label: "SIMPLE IRA", href: "/services/retirement-services/simple-ira" },
@@ -156,7 +156,7 @@ export const retirementServicesProducts = [
       },
       {
         type: "paragraph",
-        text: "A SEP is not the same as a SIMPLE IRA or a 401(k). The jobs overlap — retirement saving for a small business — but the rules do not. If you have employees, a SEP can require contributions for them too. That is why the written plan and the tax picture matter.",
+        text: "A SEP is not the same as a SIMPLE IRA or a 401(k). The jobs overlap (retirement saving for a small business) but the rules do not. If you have employees, a SEP can require contributions for them too. That is why the written plan and the tax picture matter.",
       },
       {
         type: "heading",
@@ -182,9 +182,9 @@ export const retirementServicesProducts = [
     title: "SIMPLE IRA",
     metaTitle: "SIMPLE IRA",
     description:
-      "A plain-language look at a SIMPLE IRA: a retirement account structure designed for certain small employers and their eligible employees.",
-    hook: "A small employer wants a retirement plan that employees can put money into, without standing up a full 401(k).",
-    question: "What is a SIMPLE IRA actually?",
+      "A SIMPLE IRA is for certain small employers and eligible employees. It is not a SEP, and it is not a 401(k).",
+    hook: "SIMPLE and SEP sound similar. They are not the same plan, and they do not ask the same thing of a business.",
+    question: "Do you need employee deferrals, or only employer contributions?",
     disclaimerVariant: "tax-adjacent",
     relatedLinks: [
       { label: "SEP IRA", href: "/services/retirement-services/sep-ira" },
@@ -230,9 +230,9 @@ export const retirementServicesProducts = [
     title: "Employer Plans",
     metaTitle: "Employer Retirement Plans",
     description:
-      "A plain-language look at workplace retirement accounts such as 401(k), 403(b), and 457 plans. LeadStar does not administer these plans.",
+      "A 401(k), 403(b), or 457 is a workplace account, not a product LeadStar sells. Leaving a job does not automatically mean you should roll the money out.",
     hook: "Most of the retirement money a person has is sitting in a workplace plan they did not design.",
-    question: "What are these employer plans, in plain language?",
+    question: "When you leave a job, does that money have to move?",
     disclaimerVariant: "tax-adjacent",
     relatedLinks: [
       { label: "Traditional IRA", href: "/services/retirement-services/traditional-ira" },
@@ -286,9 +286,9 @@ export const retirementServicesProducts = [
     title: "Annuities",
     metaTitle: "Annuities",
     description:
-      "A plain-language look at annuities as insurance contracts that may be designed for long-term accumulation, income, or both. Not offered as a product on this site.",
+      "An annuity is an insurance contract, not a bank account and not the same as an IRA. This page does not offer or recommend one.",
     hook: "Someone hears “guaranteed income” and thinks the hard part is already solved.",
-    question: "What is an annuity actually?",
+    question: "What is the contract actually guaranteeing, and what is it not?",
     disclaimerVariant: "tax-adjacent",
     relatedLinks: [
       { label: "Retirement Services", href: "/services/retirement-services" },

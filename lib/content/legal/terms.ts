@@ -50,7 +50,7 @@ export const termsDocument = {
     },
     {
       type: "paragraph",
-      text: "The site is intended for adults in the United States who want educational information. Insurance can be discussed only where Esther Francis is licensed — Florida and California — unless another license is later added to the Disclosures page.",
+      text: "The site is intended for adults in the United States who want educational information. Insurance can be discussed only where Esther Francis is licensed (Florida and California) unless another license is later added to the Disclosures page.",
     },
     {
       type: "heading",

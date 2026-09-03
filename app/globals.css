@@ -19,7 +19,8 @@
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 14px;
-  --panel-overhang: 3.5rem;
+  /* Overlap into the navy band only. Hero pads by this plus 2.75rem so CTAs stay clear. */
+  --panel-overhang: 2rem;
 }
 
 @theme inline {
@@ -118,7 +119,7 @@ body::before {
 
 @media (min-width: 1024px) {
   :root {
-    --panel-overhang: 5.5rem;
+    --panel-overhang: 3.25rem;
   }
 }
 

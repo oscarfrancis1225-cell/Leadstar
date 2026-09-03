@@ -8,13 +8,11 @@ import { PageHero } from "@/components/layout/PageHero";
 import { Button } from "@/components/ui/Button";
 import { estherFrancis } from "@/lib/content/authors";
 import { siteConfig } from "@/lib/content/site";
-import { values } from "@/lib/constants";
-import { officeGallery } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "About LeadStar Financial",
   description:
-    "LeadStar Financial keeps insurance and financial-protection conversations simple. Esther Francis is licensed in Florida and California.",
+    "LeadStar Financial keeps insurance and financial-protection conversations personal and understandable. Esther Francis is an insurance agent licensed in Florida and California.",
   alternates: { canonical: "/about" },
 };
 
@@ -34,14 +32,12 @@ const philosophy = [
 ];
 
 export default function AboutPage() {
-  const teamPhotos = officeGallery.filter((image) => !image.src.includes("ChatGPT"));
-
   return (
     <>
       <PageHero
         eyebrow="About LeadStar"
-        title="Financial Guidance Built Around Real Life"
-        description="LeadStar Financial was formed to do things differently and keep the process simple. The aim is clearer conversations — not a harder sell."
+        title="Protection conversations that stay personal"
+        description="Esther Francis is an insurance agent licensed in Florida and California. LeadStar keeps those conversations understandable, not a harder sell."
       />
       <section className="bg-white py-10">
         <Container>
@@ -57,16 +53,14 @@ export default function AboutPage() {
         <Container className="max-w-3xl space-y-5">
           <h2 className="headline text-3xl">Our story</h2>
           <p className="lead">
-            {siteConfig.legalName} was formed to keep insurance and
-            financial-protection conversations personal and understandable. Many
-            relationships begin through introductions from friends, colleagues,
-            and other professionals.
-          </p>
-          <p className="lead">
-            Esther Francis is an insurance agent licensed in Florida and
-            California. {siteConfig.entityNote} A street address and a verified
-            phone number are not published on this page until they are confirmed
-            for public use. License numbers appear on the{" "}
+            Most people do not show up looking for a product name. They show up
+            with a date, a person who depends on them, or a question they have
+            been postponing. Esther Francis is an insurance agent licensed in
+            Florida and California. LeadStar Financial keeps those protection
+            conversations personal and understandable, not a harder sell.{" "}
+            {siteConfig.entityNote} A street address and a verified phone number
+            are not published on this page until they are confirmed for public
+            use. License numbers appear on the{" "}
             <Link href="/disclosures" className="text-blue hover:underline">
               Disclosures
             </Link>{" "}
@@ -83,19 +77,6 @@ export default function AboutPage() {
               <article key={item.title} className="card p-7">
                 <h3 className="font-serif text-2xl text-navy">{item.title}</h3>
                 <p className="mt-3 text-sm leading-7 text-muted">{item.text}</p>
-              </article>
-            ))}
-          </div>
-        </Container>
-      </section>
-      <section className="bg-white py-16">
-        <Container>
-          <h2 className="headline text-3xl">What makes our approach different</h2>
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
-            {values.map((value) => (
-              <article key={value.title} className="card p-7">
-                <h3 className="font-serif text-2xl text-navy">{value.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-muted">{value.description}</p>
               </article>
             ))}
           </div>
@@ -121,51 +102,13 @@ export default function AboutPage() {
                 Read Esther&apos;s profile
               </Button>
             </div>
-          </div>
-        </Container>
-      </section>
-      {teamPhotos.length > 0 ? (
-        <section className="bg-white py-16">
-          <Container>
-            <h2 className="headline text-3xl">Team imagery</h2>
-            <p className="lead mt-4 max-w-2xl">
-              Photographs appear here only when they are real, consented
-              pictures. AI-generated office images are not shown as team photos.
+            <p className="mt-4 text-sm leading-6 text-muted">
+              Office photographs are on a dedicated page.{" "}
+              <Link href="/office#gallery" className="text-blue hover:underline">
+                See office photographs
+              </Link>
             </p>
-            <div className="mt-8 grid gap-6 md:grid-cols-2">
-              {teamPhotos.map((image) => (
-                <EditorialImage
-                  key={image.src}
-                  src={image.src}
-                  alt={image.alt}
-                  width={image.width}
-                  height={image.height}
-                  caption="A LeadStar team photograph. Confirm people and setting before treating this caption as a named event."
-                />
-              ))}
-            </div>
-          </Container>
-        </section>
-      ) : null}
-      <section className="bg-cream py-16">
-        <Container className="max-w-2xl">
-          <h2 className="headline text-3xl">Start a conversation</h2>
-          <p className="lead mt-4">
-            If you want a calmer first discussion about protection or planning,
-            we can begin there.
-          </p>
-          <div className="mt-6">
-            <Button href="/contact" variant="gold" showArrow>
-              Start a conversation
-            </Button>
           </div>
-          <p className="mt-6 text-sm text-muted">
-            Looking for the office gallery?{" "}
-            <Link href="/office" className="text-blue hover:underline">
-              Visit the office page
-            </Link>
-            .
-          </p>
         </Container>
       </section>
       <FinalCTA />

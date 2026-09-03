@@ -1,4 +1,4 @@
-# Fact ledger — how-much-life-insurance-do-i-need
+# Fact ledger: how-much-life-insurance-do-i-need
 
 CLAIM: Social Security may pay survivor benefits to eligible family members.
 SOURCE: https://www.ssa.gov/benefits/survivors/

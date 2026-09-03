@@ -1,4 +1,4 @@
-import { QuoteButton } from "@/components/ui/QuoteButton";
+import { Button } from "@/components/ui/Button";
 import { SmartImage } from "@/components/ui/SmartImage";
 import { siteImages } from "@/lib/images";
 
@@ -6,28 +6,26 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden bg-white">
       <div className="lg:grid lg:min-h-[640px] lg:grid-cols-[minmax(28rem,0.86fr)_minmax(0,1.14fr)]">
-        <div className="align-container-start flex items-center py-12 pr-6 sm:py-16">
+        <div className="align-container-start flex items-center pt-12 pr-6 pb-[calc(var(--panel-overhang)+2.75rem)] sm:pt-16">
           <div className="reveal max-w-[34rem]">
-            <p className="eyebrow">Financial security for what matters most</p>
+            <p className="eyebrow">A question most people never ask</p>
             <h1 className="headline mt-5 text-[2.4rem] sm:text-[3.15rem] xl:text-[3.55rem]">
-              Protect your health.
+              Can good health be an asset?
               <br />
-              Safeguard your life.
-              <br />
-              <span className="text-blue">Secure your income.</span>
+              <span className="text-blue">Your paycheck already is.</span>
             </h1>
             <p className="lead mt-6 max-w-[30rem]">
-              Personalized insurance and financial solutions designed to protect
-              your family, strengthen your future, and help you move forward
-              with confidence.
+              Your family lives on the money you bring home. Staying healthy
+              helps you keep bringing it. We help you protect that paycheck now,
+              and plan for the years after you stop working.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <QuoteButton variant="primary" showArrow>
-                Get a Quote
-              </QuoteButton>
-              <QuoteButton variant="secondary" showCalendar event="consultation">
-                Schedule Consultation
-              </QuoteButton>
+              <Button href="/contact" variant="primary" showArrow>
+                Start a conversation
+              </Button>
+              <Button href="/services" variant="secondary">
+                Explore services
+              </Button>
             </div>
           </div>
         </div>

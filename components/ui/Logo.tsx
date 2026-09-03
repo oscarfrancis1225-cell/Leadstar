@@ -8,13 +8,22 @@ type LogoProps = {
   className?: string;
   inverted?: boolean;
   priority?: boolean;
+  compact?: boolean;
+  onClick?: React.MouseEventHandler<HTMLAnchorElement>;
 };
 
-export function Logo({ className, inverted = false, priority = false }: LogoProps) {
+export function Logo({
+  className,
+  inverted = false,
+  priority = false,
+  compact = false,
+  onClick,
+}: LogoProps) {
   if (inverted) {
     return (
       <Link
         href="/"
+        onClick={onClick}
         className={cn(
           "group flex shrink-0 items-center gap-3 rounded-lg text-white",
           className,
@@ -42,7 +51,8 @@ export function Logo({ className, inverted = false, priority = false }: LogoProp
   return (
     <Link
       href="/"
-      className={cn("group flex shrink-0 items-center rounded-lg", className)}
+      onClick={onClick}
+      className={cn("group flex min-w-0 shrink items-center rounded-lg", className)}
     >
       <Image
         src={siteImages.logo.src}
@@ -50,7 +60,12 @@ export function Logo({ className, inverted = false, priority = false }: LogoProp
         width={siteImages.logo.width}
         height={siteImages.logo.height}
         priority={priority}
-        className="h-11 w-auto max-w-[min(100%,15rem)] object-contain object-left sm:h-12 sm:max-w-[18rem] lg:h-14 lg:max-w-[22rem]"
+        className={cn(
+          "w-auto object-contain object-left",
+          compact
+            ? "h-8 max-w-[11.5rem]"
+            : "h-11 max-w-[min(100%,15rem)] sm:h-12 sm:max-w-[18rem] lg:h-14 lg:max-w-[22rem]",
+        )}
       />
       <span className="sr-only">{siteConfig.name}</span>
     </Link>

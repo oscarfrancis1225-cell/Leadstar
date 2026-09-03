@@ -3,7 +3,6 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { FinalCTA } from "@/components/home/FinalCTA";
 import { PageHero } from "@/components/layout/PageHero";
-import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { IconByName } from "@/components/ui/IconMap";
 import { services } from "@/lib/constants";
@@ -11,7 +10,7 @@ import { services } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Explore life insurance, retirement, Medicare, health insurance, final expense, mortgage protection, and business planning conversations.",
+    "Compare life insurance, retirement, Medicare, health insurance, final expense, mortgage protection, and business planning options before you pick a product name.",
   alternates: { canonical: "/services" },
 };
 
@@ -20,8 +19,8 @@ export default function ServicesPage() {
     <>
       <PageHero
         eyebrow="Services"
-        title="Protection and planning for the chapters that matter"
-        description="Explore coverage and planning conversations designed to help you compare options with more clarity and less pressure."
+        title="Compare the options before you pick a product name"
+        description="Life, retirement, Medicare, health, a house payment, a business. The first job is naming the decision, then comparing what actually fits."
       />
       <section className="bg-white py-16 lg:py-20">
         <Container className="grid gap-6">
@@ -41,18 +40,13 @@ export default function ServicesPage() {
               </div>
               <Link
                 href={service.href}
-                className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue"
+                className="inline-flex min-h-11 items-center gap-1.5 text-sm font-semibold text-blue"
               >
                 Learn more
                 <ArrowRight className="h-4 w-4" aria-hidden />
               </Link>
             </article>
           ))}
-          <div className="pt-4">
-            <Button href="/contact" variant="blue" showArrow>
-              Start a conversation
-            </Button>
-          </div>
         </Container>
       </section>
       <FinalCTA />

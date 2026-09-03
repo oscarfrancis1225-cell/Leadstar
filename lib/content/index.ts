@@ -19,7 +19,6 @@ export { tools, getRelatedTools, getTool, type Tool, type ToolSlug } from "@/lib
 export { advisor, advisorTrustPoints } from "@/lib/content/advisor";
 export { processSteps } from "@/lib/content/process";
 export { values } from "@/lib/content/values";
-export { testimonials } from "@/lib/content/testimonials";
 export {
   articles,
   getArticle,

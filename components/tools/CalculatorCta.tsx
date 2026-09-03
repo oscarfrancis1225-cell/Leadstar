@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/Button";
-import { QuoteButton } from "@/components/ui/QuoteButton";
 import { getTool } from "@/lib/content/tools";
 
 type CalculatorCtaProps = {
@@ -16,18 +15,13 @@ export function CalculatorCta({ toolSlug }: CalculatorCtaProps) {
   return (
     <div className="mt-6">
       <p className="text-sm leading-6 text-muted">
-        Want to explore what this could mean for you?
+        This result is an illustration, not a quote. A conversation can help
+        you talk through what the numbers might mean for your situation.
       </p>
       <div className="mt-4 flex w-full flex-col gap-3">
-        <QuoteButton
-          className="w-full"
-          variant="blue"
-          showArrow
-          event="consultation"
-          toolSlug={toolSlug}
-        >
+        <Button className="w-full" href="/contact" variant="blue" showArrow>
           {tool.ctaLabel}
-        </QuoteButton>
+        </Button>
         <Button className="w-full" href={tool.relatedServiceHref} variant="secondary">
           {tool.secondaryCtaLabel}
         </Button>

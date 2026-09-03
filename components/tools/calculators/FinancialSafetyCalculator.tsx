@@ -15,8 +15,8 @@ const bandCopy = {
 } as const;
 
 export function FinancialSafetyCalculator() {
-  const [expenses, setExpenses] = useState(3200);
-  const [savings, setSavings] = useState(18800);
+  const [expenses, setExpenses] = useState(3000);
+  const [savings, setSavings] = useState(18000);
   const [debt, setDebt] = useState(800);
 
   const result = calculateSafetyCushion({
@@ -31,7 +31,7 @@ export function FinancialSafetyCalculator() {
         label: "Illustrated cushion",
         value:
           result.displayMonths === null
-            ? "—"
+            ? "-"
             : `${formatMonths(result.displayMonths)} mo`,
       }}
       results={
@@ -41,7 +41,7 @@ export function FinancialSafetyCalculator() {
           </p>
           <p className="headline mt-2 break-words text-3xl tabular-nums text-navy sm:text-4xl">
             {result.displayMonths === null
-              ? "—"
+              ? "-"
               : `${formatMonths(result.displayMonths)} months`}
           </p>
           <p className="mt-2 text-sm text-muted">Illustrated estimate</p>

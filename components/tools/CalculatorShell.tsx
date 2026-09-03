@@ -23,7 +23,8 @@ export function CalculatorShell({
           {assumptions ? <div className="mt-5">{assumptions}</div> : null}
           {summary ? (
             <div
-              aria-hidden="true"
+              role="status"
+              aria-live="polite"
               className="sticky bottom-[max(0.5rem,env(safe-area-inset-bottom))] z-20 mt-5 flex items-center justify-between gap-3 rounded-[12px] bg-navy px-4 py-3 shadow-header lg:hidden"
             >
               <p className="text-xs text-white/70">{summary.label}</p>

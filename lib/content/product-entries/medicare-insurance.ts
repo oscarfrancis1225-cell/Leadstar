@@ -8,9 +8,9 @@ export const medicareInsuranceProducts = [
     title: "Medicare Part A",
     metaTitle: "Medicare Part A",
     description:
-      "A plain-language look at Medicare Part A, hospital insurance. This page explains program mechanics only.",
-    hook: "Someone turning 65 hears “Part A” and is not sure whether that is the hospital piece or the whole program.",
-    question: "What does Part A actually help cover?",
+      "Part A is hospital insurance, not the whole Medicare program. This page explains program mechanics only.",
+    hook: "Part A is hospital insurance. It is not the whole Medicare program.",
+    question: "Do you already have Part A, or are you assuming the card will arrive?",
     disclaimerVariant: "medicare",
     relatedLinks: [
       { label: "Part B", href: "/services/medicare-insurance/part-b" },
@@ -56,9 +56,9 @@ export const medicareInsuranceProducts = [
     title: "Medicare Part B",
     metaTitle: "Medicare Part B",
     description:
-      "A plain-language look at Medicare Part B, medical insurance. This page explains program mechanics only.",
-    hook: "Hospital coverage is only half the picture. Most people also need medical insurance.",
-    question: "What does Part B actually help cover?",
+      "Part B is medical insurance. Delay it without creditable coverage and a late-enrollment penalty can follow. This page explains program mechanics only.",
+    hook: "Hospital coverage is only half the picture. Delay Part B without creditable coverage and a penalty can follow.",
+    question: "When does your Part B window actually open?",
     disclaimerVariant: "medicare",
     relatedLinks: [
       { label: "Part A", href: "/services/medicare-insurance/part-a" },
@@ -104,9 +104,9 @@ export const medicareInsuranceProducts = [
     title: "Medicare Advantage",
     metaTitle: "Medicare Advantage (Part C)",
     description:
-      "A plain-language look at Medicare Advantage, also called Part C. This page explains the structure only. It does not compare or recommend plans.",
-    hook: "Someone is told they can “get Medicare through a private plan,” and it sounds like a replacement for the whole program.",
-    question: "What is Medicare Advantage actually?",
+      "Medicare Advantage is a Medicare-approved private plan, another way to receive Medicare benefits, not a replacement for the program. This page does not compare or recommend plans.",
+    hook: "A private plan is not a replacement for the Medicare program. It is one way to receive the benefits.",
+    question: "Are you comparing Advantage to Original Medicare, or to Medigap?",
     disclaimerVariant: "medicare",
     relatedLinks: [
       { label: "Part A", href: "/services/medicare-insurance/part-a" },
@@ -145,7 +145,7 @@ export const medicareInsuranceProducts = [
       {
         type: "callout",
         title: "Esther can help with these questions",
-        text: "Esther can help you list the structure questions — Original Medicare versus Advantage, doctors, drugs, travel — to take to Medicare.gov or a counselor. This site does not enroll you or recommend a plan.",
+        text: "Esther can help you list the structure questions (Original Medicare versus Advantage, doctors, drugs, travel) to take to Medicare.gov or a counselor. This site does not enroll you or recommend a plan.",
       },
     ],
   },
@@ -156,9 +156,9 @@ export const medicareInsuranceProducts = [
     title: "Medicare Part D",
     metaTitle: "Medicare Part D",
     description:
-      "A plain-language look at Medicare Part D, prescription drug coverage. This page explains program mechanics only.",
-    hook: "Hospital and doctor coverage still leave a common question: how do prescriptions get covered?",
-    question: "What is Part D actually for?",
+      "Part D helps cover prescriptions. Hospital and doctor coverage do not automatically include them. This page explains program mechanics only.",
+    hook: "Hospital and doctor coverage still leave prescriptions uncovered unless you add a drug path.",
+    question: "Do you already have creditable drug coverage, or a gap you have not named?",
     disclaimerVariant: "medicare",
     relatedLinks: [
       { label: "Part B", href: "/services/medicare-insurance/part-b" },
@@ -204,9 +204,9 @@ export const medicareInsuranceProducts = [
     title: "Medigap",
     metaTitle: "Medigap (Medicare Supplement)",
     description:
-      "A plain-language look at Medigap, extra insurance that works with Original Medicare. Not the same as Medicare Advantage.",
-    hook: "Original Medicare leaves some costs for you. People then hear two different words for “extra help”: Medigap and Advantage.",
-    question: "What is Medigap actually?",
+      "Medigap is extra insurance that works with Original Medicare. It is not Medicare Advantage. This page does not rank letter plans.",
+    hook: "Medigap is extra insurance on Original Medicare. It is not Medicare Advantage.",
+    question: "Which extra are you actually shopping, a supplement, or a private plan path?",
     disclaimerVariant: "medicare",
     relatedLinks: [
       { label: "Medicare Advantage", href: "/services/medicare-insurance/medicare-advantage" },
@@ -222,7 +222,7 @@ export const medicareInsuranceProducts = [
       },
       {
         type: "paragraph",
-        text: "Medigap is Medicare Supplement Insurance. You buy it from a private company. It works with Original Medicare — Part A and Part B — to help with certain out-of-pocket costs, such as coinsurance. You generally must have Part A and Part B to buy it.",
+        text: "Medigap is Medicare Supplement Insurance. You buy it from a private company. It works with Original Medicare (Part A and Part B) to help with certain out-of-pocket costs, such as coinsurance. You generally must have Part A and Part B to buy it.",
       },
       {
         type: "paragraph",

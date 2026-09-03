@@ -8,9 +8,9 @@ export const lifeInsuranceProducts = [
     title: "Term Life",
     metaTitle: "Term Life Insurance",
     description:
-      "A plain-language look at term life insurance: coverage for a stated period, often used when the need has an end date.",
-    hook: "A household is trying to protect income or a loan for a stretch of years, not forever.",
-    question: "What is term life actually for?",
+      "Term life is for a job with an end date (years of income, years left on a loan), not a product you pick because the name is familiar.",
+    hook: "Most people shop a product name first. Term life is for a job with an end date.",
+    question: "How long does the need actually last?",
     disclaimerVariant: "standard",
     relatedLinks: [
       { label: "Whole Life", href: "/services/life-insurance/whole-life" },
@@ -81,9 +81,9 @@ export const lifeInsuranceProducts = [
     title: "Whole Life",
     metaTitle: "Whole Life Insurance",
     description:
-      "A plain-language look at whole life insurance: permanent coverage that can last for life if the contract stays funded, with a cash-value component.",
-    hook: "A household is deciding whether the need itself has an end date, or whether it may last.",
-    question: "What is whole life actually designed to do?",
+      "Whole life can last for life if the contract stays funded. The useful question is whether the need itself expires, not whether cash value sounds appealing.",
+    hook: "People wait for the need to expire. Some needs do not.",
+    question: "Does this need have an end date, or does it last?",
     disclaimerVariant: "standard",
     relatedLinks: [
       { label: "Term Life", href: "/services/life-insurance/term-life" },
@@ -157,9 +157,9 @@ export const lifeInsuranceProducts = [
     title: "Universal Life",
     metaTitle: "Universal Life Insurance",
     description:
-      "A plain-language look at universal life insurance: permanent coverage with more flexible premium and cash-value mechanics, depending on the contract.",
-    hook: "Someone hears “permanent coverage” and also hears “flexible premiums,” and those two ideas can pull in different directions.",
-    question: "What is universal life actually designed to do?",
+      "Universal life is permanent coverage with more flexible funding, and a contract that still has to stay funded. Flexible is not the same as optional.",
+    hook: "Flexible premiums sound like permission to pay less. The contract still has to stay funded.",
+    question: "What happens if the funding gets too light?",
     disclaimerVariant: "standard",
     relatedLinks: [
       { label: "Term Life", href: "/services/life-insurance/term-life" },

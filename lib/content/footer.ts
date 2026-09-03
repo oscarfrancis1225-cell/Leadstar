@@ -10,13 +10,11 @@ export const footerColumns = {
     { label: "Contact", href: "/contact" },
     { label: "Careers", href: "/careers" },
     { label: "Esther Francis", href: "/about/esther-francis" },
-    { label: "Reviews", href: "/reviews" },
   ],
   resources: [
     { label: "Blog", href: "/blog" },
     { label: "Financial Tools", href: "/tools" },
     { label: "FAQ", href: "/faq" },
-    { label: "Privacy", href: "/privacy" },
     { label: "Disclosures", href: "/disclosures" },
   ],
 } as const;
@@ -32,5 +30,5 @@ export const contactHighlights = [
   "No-obligation conversation",
   "Clear answers",
   "Personal guidance",
-  "Secure form submission",
+  "We'll only use this to reply",
 ] as const;

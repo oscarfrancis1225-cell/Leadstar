@@ -46,11 +46,11 @@ export const healthInsuranceService = {
       type: "heading",
       level: 2,
       id: "when-the-question-appears",
-      text: "When the question usually appears",
+      text: "Coverage before 65 is a different problem",
     },
     {
       type: "paragraph",
-      text: "Health coverage questions often show up during a job change, a move to self-employment, early retirement, divorce, or a gap before Medicare. The first task is to name the situation and the date coverage would end. Options and costs depend on that situation and on current law. This page does not shop named plans or list premiums.",
+      text: "People mix this up with Medicare. Medicare generally starts at 65 for people who qualify on age. Before that, a job change, self-employment, early retirement, or divorce can leave a gap. The first task is to name the situation and the date coverage would end. Options and costs depend on that situation and on current law. This page does not shop named plans or list premiums.",
     },
     {
       type: "heading",
@@ -65,7 +65,7 @@ export const healthInsuranceService = {
         "A new employer’s plan, if there is a waiting period.",
         "A Marketplace or other individual policy, when a special enrollment period is available.",
         "Coverage through a spouse’s employer.",
-        "A short-term or other limited plan — these can exclude conditions and are not a substitute for comprehensive coverage. Ask what is actually covered.",
+        "A short-term or other limited plan, these can exclude conditions and are not a substitute for comprehensive coverage. Ask what is actually covered.",
       ],
     },
     {
@@ -80,7 +80,7 @@ export const healthInsuranceService = {
     },
     {
       type: "paragraph",
-      text: "When Medicare is on the horizon, it can matter whether current drug coverage is creditable — meaning it is expected to pay, on average, at least as much as Medicare’s standard drug coverage. A late Part D enrollment can carry a penalty if there is a long gap without creditable coverage. Your plan administrator, not this website, can say whether a creditable-coverage notice applies.",
+      text: "When Medicare is on the horizon, it can matter whether current drug coverage is creditable, meaning it is expected to pay, on average, at least as much as Medicare’s standard drug coverage. A late Part D enrollment can carry a penalty if there is a long gap without creditable coverage. Your plan administrator, not this website, can say whether a creditable-coverage notice applies.",
     },
     {
       type: "heading",
@@ -114,14 +114,14 @@ export const healthInsuranceService = {
         "No. This is an educational page. Official Marketplace enrollment happens through Healthcare.gov or a state exchange, or through an agent who is actually completing that enrollment.",
     },
     {
-      question: "I am leaving my job. What should I do first?",
+      question: "If coverage ends before 65, what should I do first?",
       answer:
         "Write down the last day of coverage, who else is covered, and whether a continuation notice is coming. Then look at the calendar for any special enrollment window. A conversation can help you order those steps.",
     },
     {
       question: "Does this page compare health plans?",
       answer:
-        "No. Plan networks, deductibles, and prices change. Comparing them belongs in a current, individualized process — not on a static website.",
+        "No. Plan networks, deductibles, and prices change. Comparing them belongs in a current, individualized process, not on a static website.",
     },
     {
       question: "I retire at 63. Is that a Medicare question?",
@@ -136,11 +136,11 @@ export const healthInsuranceService = {
   ],
   sources: [
     {
-      label: "HealthCare.gov — Special enrollment periods",
+      label: "HealthCare.gov: Special enrollment periods",
       url: "https://www.healthcare.gov/coverage-outside-open-enrollment/special-enrollment-period/",
     },
     {
-      label: "Medicare.gov — Get started with Medicare",
+      label: "Medicare.gov: Get started with Medicare",
       url: "https://www.medicare.gov/basics/get-started-with-medicare",
     },
   ],

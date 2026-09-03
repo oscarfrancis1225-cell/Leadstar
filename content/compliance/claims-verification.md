@@ -25,7 +25,7 @@ Public site copy must stay inside verified or rewritten-safer language until thi
 | Licensed states (Florida and California) | `VERIFIED` | Public copy may say Esther Francis is licensed in Florida and California. |
 | Florida and California license numbers | `NEEDS VERIFICATION` | Slots exist in `lib/content/site.ts` (`licenses.floridaNumber`, `licenses.californiaNumber`). Display falls back to “not yet listed” until pasted. |
 | MA/PDP carrier appointments (TPMO status) | `NEEDS VERIFICATION` | Medicare pages stay educational-only until determined. |
-| Complimentary initial consultation | `NEEDS VERIFICATION` | "Start a conversation" — no complimentary/free claim. |
+| Complimentary initial consultation | `NEEDS VERIFICATION` | "Start a conversation", no complimentary/free claim. |
 | Referral-only practice | `NEEDS VERIFICATION` | Do not claim referral-only intake. |
 | LinkedIn sameAs URLs | `NEEDS VERIFICATION` | Do not output `sameAs` until confirmed. |
 | Community roles (Red Cross, Women of Tomorrow) | `NEEDS VERIFICATION` | Confirm with Esther before publishing. |

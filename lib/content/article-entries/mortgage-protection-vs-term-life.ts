@@ -4,12 +4,12 @@ import type { Article } from "@/lib/content/types";
 export const mortgageProtectionVsTermLife = {
   slug: "mortgage-protection-vs-term-life",
   href: "/blog/mortgage-protection-vs-term-life",
-  title: "Mortgage Protection Insurance vs. Term Life Insurance: What's the Difference?",
-  metaTitle: "Mortgage Protection Insurance vs. Term Life Insurance",
+  title: "Mortgage Protection and Term Life Are Not the Same Job",
+  metaTitle: "Mortgage Protection vs Term Life: Not the Same Job",
   excerpt:
-    "Both can protect a home. They differ in who receives the money, how the benefit changes, and how you qualify. A balanced comparison.",
-  dek: "The right choice depends on who you want the benefit to serve and how you qualify.",
-  h1: "Mortgage Protection Insurance vs. Term Life Insurance: What's the Difference?",
+    "Both can help keep a home if a breadwinner dies. They differ in who receives the money, how the benefit changes, and how you qualify. Paying off a house does not replace income, childcare, or education costs. A balanced comparison of the mechanics.",
+  dek: "The right question is who you want the benefit to serve, the loan, or the people.",
+  h1: "Mortgage Protection and Term Life Are Not the Same Job",
   category: "Mortgage Protection",
   pillar: "Home & Mortgage Protection",
   image: articleHero(
@@ -24,19 +24,27 @@ export const mortgageProtectionVsTermLife = {
   reviewAttestation: "pending",
   freshnessType: "evergreen",
   nextReviewAt: "2027-08-27",
-  readingTimeMinutes: 10,
+  readingTimeMinutes: 4,
   summary:
-    "Mortgage protection insurance is usually designed to pay a remaining mortgage balance, often to the lender, and the benefit may decline as the loan shrinks. Term life insurance pays a chosen beneficiary a fixed amount they can use for the mortgage or other needs. Neither is automatically better.",
+    "Mortgage protection insurance is usually designed to pay a remaining mortgage balance, often to the lender, and the benefit may decline as the loan shrinks. Term life insurance pays a chosen beneficiary a fixed amount they can use for the mortgage or other needs. Neither is automatically better. Paying off a house does not replace income, childcare, or education costs.",
   sections: [
     {
-      type: "heading",
-      level: 2,
-      id: "the-short-answer",
-      text: "The short answer",
+      type: "paragraph",
+      text: "The lender mentioned protection on the loan. A life insurance conversation mentioned protecting the family. Both can help a household keep a home if a breadwinner dies.",
     },
     {
       type: "paragraph",
-      text: "Both products can help a household keep a home if a breadwinner dies. The important difference is control. Mortgage protection insurance is built around the loan. Term life insurance is built around the people you name.",
+      text: "If they both \"cover the house,\" why does it matter which one you buy, and who actually receives the check?",
+    },
+    {
+      type: "heading",
+      level: 2,
+      id: "the-check-does-not-always-go-to-the-family",
+      text: "The check does not always go to the family",
+    },
+    {
+      type: "paragraph",
+      text: "What most people miss is control. Mortgage protection insurance is built around the loan. Term life insurance is built around the people you name. The important difference is not the word \"protection.\" It is who is paid, and whether the amount stays still while the years pass.",
     },
     {
       type: "callout",
@@ -46,28 +54,16 @@ export const mortgageProtectionVsTermLife = {
     {
       type: "heading",
       level: 2,
-      id: "how-mpi-works",
-      text: "How mortgage protection insurance works",
+      id: "how-each-one-actually-pays",
+      text: "How each one actually pays",
     },
     {
       type: "paragraph",
       text: "A mortgage protection policy is typically intended to pay the remaining mortgage if you die during the policy term. The benefit often decreases as the loan balance decreases. The recipient of the payment may be the lender rather than a family member. Underwriting is often simpler than fully underwritten term life, which is one reason some people consider it when health history makes other coverage harder to obtain.",
     },
     {
-      type: "heading",
-      level: 2,
-      id: "how-term-works",
-      text: "How term life insurance works",
-    },
-    {
       type: "paragraph",
       text: "A term life policy pays a death benefit you choose to the beneficiaries you name, if you die during the term and the policy is in force. The amount usually stays level. Those beneficiaries can pay the mortgage, replace income, or do both. Qualification is typically based on age, health, and other underwriting factors.",
-    },
-    {
-      type: "heading",
-      level: 2,
-      id: "side-by-side",
-      text: "Side by side",
     },
     {
       type: "table",
@@ -83,47 +79,65 @@ export const mortgageProtectionVsTermLife = {
     {
       type: "heading",
       level: 2,
-      id: "when-each-tends-to-fit",
-      text: "When each tends to fit",
-    },
-    {
-      type: "paragraph",
-      text: "Term life is often discussed first when a person can qualify and wants flexibility for more than the house. Mortgage protection can be part of the conversation when the main goal is the loan itself, or when health or underwriting limits other options. Cost comparisons belong to a specific illustration, not a general article. For the same face amount, simplified products are not automatically less expensive.",
-    },
-    {
-      type: "heading",
-      level: 2,
-      id: "bigger-picture",
-      text: "The mortgage is one obligation among several",
+      id: "the-mistake-is-protecting-only-the-loan",
+      text: "The mistake is protecting only the loan",
     },
     {
       type: "paragraph",
       text: "Paying off a house does not replace income, childcare, or education costs. If those obligations exist, a mortgage-only solution may leave a gap. That is why this comparison belongs next to a broader protection-needs estimate.",
     },
     {
+      type: "paragraph",
+      text: "Another error is assuming a simplified product is automatically less expensive. Cost comparisons belong to a specific illustration, not a general article. For the same face amount, simplified products are not automatically less expensive.",
+    },
+    {
+      type: "paragraph",
+      text: "But a paid-off house still needs groceries on Tuesday. Therefore \"the home is protected\" is not the same sentence as \"the household can keep going.\"",
+    },
+    {
       type: "heading",
       level: 2,
-      id: "questions-to-ask",
-      text: "Questions to ask",
+      id: "decide-who-the-benefit-is-for",
+      text: "Decide who the benefit is for",
+    },
+    {
+      type: "paragraph",
+      text: "A better way to think about the decision is to start with the people, then the loan, not the other way around. Term life is often discussed first when a person can qualify and wants flexibility for more than the house. Mortgage protection can be part of the conversation when the main goal is the loan itself, or when health or underwriting limits other options.",
+    },
+    {
+      type: "paragraph",
+      text: "Imagine a household whose only stated goal is \"make sure the house is paid.\" That goal is real. It is also incomplete if a surviving parent would still need income, childcare, or time to decide whether to keep the home at all. The beneficiaries you name can make that decision. A lender-directed benefit cannot.",
+    },
+    {
+      type: "heading",
+      level: 2,
+      id: "questions-before-you-apply",
+      text: "Questions before you apply",
     },
     {
       type: "list",
+      ordered: true,
       items: [
-        "Who receives the benefit, and can I name someone other than the lender?",
+        "Who receives the benefit, and can you name someone other than the lender?",
         "Does the benefit decline, and on what schedule?",
-        "What happens if I sell the home or refinance?",
+        "What happens if you sell the home or refinance?",
         "What health questions or exams are required?",
-        "If I already have term life, what job would a second policy do?",
+        "If you already have term life, what job would a second policy do?",
+        "Besides the mortgage, which obligations (income, childcare, education) would still need funding?",
       ],
+    },
+    {
+      type: "paragraph",
+      text: "Decide who you want the benefit to serve before you apply for anything.",
     },
   ],
   sources: [
     {
-      label: "NAIC — Consumer information",
+      label: "NAIC: Consumer information",
       url: "https://content.naic.org/consumer",
     },
     {
-      label: "Insurance Information Institute — Life insurance",
+      label: "Insurance Information Institute: Life insurance",
       url: "https://www.iii.org/insurance-basics/life",
     },
   ],
@@ -135,14 +149,14 @@ export const mortgageProtectionVsTermLife = {
   serviceHref: "/services/mortgage-protection",
   toolHrefs: ["/tools/mortgage-protection"],
   midCta: {
-    text: "Want to compare how these options would treat your mortgage?",
-    href: "/contact",
-    label: "Review your options",
+    text: "If you want to size the housing obligation before you choose who should receive a benefit, the mortgage worksheet puts the remaining payments on one page.",
+    href: "/tools/mortgage-protection",
+    label: "Open the mortgage worksheet",
   },
   finalCta: {
     text: "If you are deciding how to protect a home loan, LeadStar can help you compare the mechanics before you apply for anything.",
     href: "/contact",
-    label: "Start a conversation",
+    label: "Talk with Esther",
   },
   disclaimerVariant: "standard",
   publicationStatus: "published",

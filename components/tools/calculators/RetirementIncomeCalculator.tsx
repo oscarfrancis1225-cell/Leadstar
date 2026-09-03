@@ -147,7 +147,7 @@ export function RetirementIncomeCalculator() {
       <CalculatorField
         id="ri-income"
         label="Current monthly income"
-        hint="Shown for context. The comparison uses your retirement expense figure."
+        hint="Used only to suggest a starting expense figure."
         value={currentMonthlyIncome}
         prefix="$"
         onChange={(value) => {

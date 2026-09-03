@@ -3,26 +3,29 @@ import { Check } from "lucide-react";
 import { LeadForm } from "@/components/forms/LeadForm";
 import { Container } from "@/components/ui/Container";
 import { contactHighlights, siteConfig } from "@/lib/constants";
+import { isPlaceholderPhone } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Tell us what you'd like help with and a member of the LeadStar team can follow up with you.",
+    "Start the conversation in the right order. Tell us what is in front of you and a member of the LeadStar team can follow up.",
   alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {
+  const showPhone = !isPlaceholderPhone(siteConfig.phone);
+
   return (
     <section className="bg-cream py-16 lg:py-20">
       <Container className="grid items-start gap-12 lg:grid-cols-[0.9fr_1.1fr]">
         <div>
           <p className="eyebrow">Contact</p>
           <h1 className="headline mt-3 text-4xl sm:text-5xl">
-            Let&apos;s Build a Plan Around What Matters Most
+            Start the conversation in the right order
           </h1>
           <p className="lead mt-5">
-            Tell us what you&apos;d like help with and a member of our team can
-            follow up with you.
+            Tell us what is actually in front of you. A member of our team can
+            follow up. There is no application on this website.
           </p>
           <ul className="mt-8 space-y-3">
             {contactHighlights.map((item) => (
@@ -35,8 +38,12 @@ export default function ContactPage() {
             ))}
           </ul>
           <p className="mt-8 text-sm leading-6 text-muted">
-            {siteConfig.phone}
-            <br />
+            {showPhone ? (
+              <>
+                {siteConfig.phone}
+                <br />
+              </>
+            ) : null}
             {siteConfig.email}
             <br />
             {siteConfig.serviceArea}

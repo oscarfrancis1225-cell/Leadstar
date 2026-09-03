@@ -51,7 +51,11 @@ export function CalculatorField({
       <label htmlFor={id} className="text-sm font-medium text-navy">
         {label}
       </label>
-      {hint ? <p className="mt-1 text-xs leading-5 text-muted">{hint}</p> : null}
+      {hint ? (
+        <p id={`${id}-hint`} className="mt-1 text-xs leading-5 text-muted">
+          {hint}
+        </p>
+      ) : null}
       <div className="relative mt-2">
         {prefix ? (
           <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-sm text-muted">
@@ -69,14 +73,29 @@ export function CalculatorField({
           inputMode="decimal"
           enterKeyHint="done"
           autoComplete="off"
+          aria-describedby={hint ? `${id}-hint` : undefined}
           value={draft ?? formatFieldValue(value, prefix)}
           onFocus={() => setDraft(String(Number.isFinite(value) ? value : 0))}
-          onBlur={() => setDraft(null)}
+          onBlur={() => {
+            if (draft !== null) {
+              const stripped = draft.replace(/[^\d.-]/g, "").trim();
+              if (stripped === "" || stripped === "-") {
+                onChange(0);
+              }
+            }
+            setDraft(null);
+          }}
           onChange={(event) => {
             const nextDraft = event.target.value;
             setDraft(nextDraft);
-            const next = Number(nextDraft.replace(/[^\d.-]/g, ""));
-            onChange(Number.isFinite(next) ? next : 0);
+            const stripped = nextDraft.replace(/[^\d.-]/g, "");
+            if (stripped === "" || stripped === "-") {
+              return;
+            }
+            const next = Number(stripped);
+            if (Number.isFinite(next)) {
+              onChange(next);
+            }
           }}
         />
         {suffix ? (
@@ -99,7 +118,7 @@ export function CalculatorField({
           max={max}
           step={step}
           value={bounded}
-          aria-label={label}
+          aria-labelledby={id}
           onChange={(event) => {
             setDraft(null);
             onChange(Number(event.target.value));

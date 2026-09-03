@@ -12,7 +12,6 @@ export {
   advisorTrustPoints,
   processSteps,
   values,
-  testimonials,
   articles,
   getPublishedArticles,
   getFeaturedArticles,

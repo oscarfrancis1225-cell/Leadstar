@@ -3,13 +3,12 @@ import { FinalCTA } from "@/components/home/FinalCTA";
 import { Container } from "@/components/ui/Container";
 import { PageHero } from "@/components/layout/PageHero";
 import { SmartImage } from "@/components/ui/SmartImage";
-import { advisor } from "@/lib/constants";
 import { officeGallery, siteImages } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "Office",
   description:
-    "See the LeadStar Financial office gallery and learn how to reach Esther Francis.",
+    "Photographs of the LeadStar Financial office setting. Visit details can be confirmed during a conversation.",
   alternates: { canonical: "/office" },
 };
 
@@ -17,9 +16,9 @@ export default function OfficePage() {
   return (
     <>
       <PageHero
-        eyebrow={advisor.eyebrow}
-        title={advisor.title}
-        description={advisor.bio}
+        eyebrow="The office"
+        title="A place for thoughtful conversations"
+        description="These photographs show the setting where planning conversations take place. A street address is shared when it is confirmed for public use."
       />
       <section className="bg-white py-16 lg:py-20">
         <Container className="grid items-center gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:gap-14">
@@ -51,12 +50,8 @@ export default function OfficePage() {
       </section>
       <section id="gallery" className="scroll-mt-24 bg-cream py-16 lg:py-20">
         <Container>
-          <p className="eyebrow">The office</p>
-          <h2 className="headline mt-3 text-3xl">A place for thoughtful conversations</h2>
-          <p className="lead mt-4 max-w-2xl">
-            These photographs show the setting where planning conversations take
-            place. Visit details can be confirmed during a consultation.
-          </p>
+          <p className="eyebrow">Gallery</p>
+          <h2 className="headline mt-3 text-3xl">Office photographs</h2>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {officeGallery.map((image) => (
               <div

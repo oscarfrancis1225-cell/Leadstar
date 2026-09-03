@@ -92,9 +92,6 @@ export default async function ServiceProductPage({ params }: ProductPageProps) {
             </div>
           ) : null}
           <div className="mt-10 flex flex-wrap gap-3">
-            <Button href="/contact" variant="blue" showArrow>
-              Talk with Esther
-            </Button>
             <Button href={service.href} variant="secondary">
               Back to {service.title}
             </Button>

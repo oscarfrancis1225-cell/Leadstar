@@ -1,16 +1,16 @@
-export const tools = [
+﻿export const tools = [
   {
     slug: "retirement-income",
     title: "Retirement Income Planner",
     shortDescription:
-      "Could your future income support the retirement you envision?",
+      "If the paycheck stopped, would the income you typed cover the month?",
     description:
       "This tool illustrates whether savings grown to retirement, plus Social Security or pension income you enter, may cover the monthly retirement expenses you enter.",
     href: "/tools/retirement-income",
     icon: "Landmark",
     relatedServiceHref: "/services/retirement-services",
     relatedServiceLabel: "Retirement Services",
-    ctaLabel: "Schedule a Retirement Conversation",
+    ctaLabel: "Start a conversation",
     secondaryCtaLabel: "Explore Retirement Services",
     relatedSlugs: ["retirement-goal", "compound-growth", "financial-safety"],
     howToUse: [
@@ -30,7 +30,7 @@ export const tools = [
     ],
     disclosures: [
       "Illustrated estimate only. Actual investment performance is not guaranteed.",
-      "This view uses today’s dollars and does not adjust expenses or income for inflation.",
+      "This view uses today's dollars and does not adjust expenses or income for inflation.",
       "A planning withdrawal rate is an educational shorthand. It is not a promise that assets will last to any specific age.",
     ],
     summary:
@@ -52,14 +52,14 @@ export const tools = [
     slug: "compound-growth",
     title: "Compound Growth Calculator",
     shortDescription:
-      "See what consistent saving and time could potentially accomplish.",
+      "If the rate you enter held still, what would the balance look like?",
     description:
       "This tool illustrates how a starting balance and a consistent monthly contribution could grow if the annual return you enter stayed constant.",
     href: "/tools/compound-growth",
     icon: "TrendingUp",
     relatedServiceHref: "/services/retirement-services",
     relatedServiceLabel: "Retirement Services",
-    ctaLabel: "Schedule Consultation",
+    ctaLabel: "Start a conversation",
     secondaryCtaLabel: "Explore Retirement Services",
     relatedSlugs: ["retirement-goal", "retirement-income", "financial-safety"],
     howToUse: [
@@ -97,14 +97,15 @@ export const tools = [
   {
     slug: "retirement-goal",
     title: "Retirement Goal Calculator",
-    shortDescription: "Estimate a potential long-term savings target.",
+    shortDescription:
+      "What savings figure would support the monthly income you have in mind?",
     description:
       "This tool illustrates a long-term savings figure that could support the monthly retirement income you enter, after subtracting Social Security or pension income you enter, using a planning withdrawal rate.",
     href: "/tools/retirement-goal",
     icon: "PiggyBank",
     relatedServiceHref: "/services/retirement-services",
     relatedServiceLabel: "Retirement Services",
-    ctaLabel: "See How LeadStar Can Help",
+    ctaLabel: "Start a conversation",
     secondaryCtaLabel: "Explore Retirement Services",
     relatedSlugs: ["retirement-income", "compound-growth", "protection-needs"],
     howToUse: [
@@ -122,7 +123,7 @@ export const tools = [
       "Actual Social Security calculations and a personalized savings recommendation",
     ],
     disclosures: [
-      "Educational estimate in today’s dollars. This is not a savings-target recommendation.",
+      "Educational estimate in today's dollars. This is not a savings-target recommendation.",
       "A 4% planning withdrawal rate is a common educational shorthand. It does not mean assets last to the planning age you entered.",
     ],
     summary:
@@ -144,7 +145,7 @@ export const tools = [
     slug: "protection-needs",
     title: "Protection Needs Estimator",
     shortDescription:
-      "Explore the financial responsibilities you may want to protect.",
+      "If someone depends on you, what is the gap after coverage you already have?",
     description:
       "This tool adds a few common financial responsibilities and subtracts coverage and savings you already have, so you can see a rough protection range.",
     href: "/tools/protection-needs",
@@ -191,14 +192,14 @@ export const tools = [
     slug: "mortgage-protection",
     title: "Mortgage Protection Calculator",
     shortDescription:
-      "Understand the financial obligation remaining on your home.",
+      "What cash obligation is still attached to the house?",
     description:
       "This tool multiplies the monthly housing payment you enter by the remaining term so you can see the approximate cash obligation still attached to the home.",
     href: "/tools/mortgage-protection",
     icon: "Home",
     relatedServiceHref: "/services/mortgage-protection",
     relatedServiceLabel: "Mortgage Protection",
-    ctaLabel: "Schedule Consultation",
+    ctaLabel: "Start a conversation",
     secondaryCtaLabel: "Learn About Mortgage Protection",
     relatedSlugs: ["protection-needs", "financial-safety", "retirement-income"],
     howToUse: [
@@ -237,15 +238,15 @@ export const tools = [
     slug: "financial-safety",
     title: "Financial Safety Cushion",
     shortDescription:
-      "See how long your current reserves could potentially cover essential expenses.",
+      "How many months would current cash last if the paycheck paused?",
     description:
       "This tool divides current cash savings by essential monthly expenses and debt payments to illustrate how many months those reserves could cover.",
     href: "/tools/financial-safety",
     icon: "Wallet",
-    relatedServiceHref: "/services/life-insurance",
-    relatedServiceLabel: "Life Insurance",
-    ctaLabel: "Schedule Consultation",
-    secondaryCtaLabel: "Learn About Life Insurance",
+    relatedServiceHref: "/tools",
+    relatedServiceLabel: "All educational tools",
+    ctaLabel: "Start a conversation",
+    secondaryCtaLabel: "See all tools",
     relatedSlugs: ["protection-needs", "mortgage-protection", "retirement-income"],
     howToUse: [
       "Enter the monthly expenses you would need to keep going.",

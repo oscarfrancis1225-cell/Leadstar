@@ -57,12 +57,12 @@ export const retirementServicesService = {
     {
       type: "heading",
       level: 2,
-      id: "what-the-conversation-is",
-      text: "What a retirement conversation is here",
+      id: "balance-is-not-a-paycheck",
+      text: "A balance is not a paycheck",
     },
     {
       type: "paragraph",
-      text: "Retirement services at LeadStar means organizing how savings, Social Security, pensions, and other sources might become monthly income. The work is a conversation about timing, spending, and gaps — not a promise of a return or a particular lifestyle.",
+      text: "The belief is that a large number in an account means you are ready. It is not. Retirement is the shift from saving to spending, how savings, Social Security, and other sources become monthly income. The work is a conversation about timing, spending, and gaps. Not a promise of a return or a particular lifestyle.",
     },
     {
       type: "paragraph",
@@ -79,7 +79,7 @@ export const retirementServicesService = {
       items: [
         "When do you hope to stop relying on a paycheck?",
         "What does a month of retirement spending look like in today’s dollars?",
-        "Which income already has a name — Social Security, a pension, rental income?",
+        "Which income already has a name: Social Security, a pension, rental income?",
         "Which accounts would you draw from first, and which would you rather leave alone?",
         "What happens to a spouse if one person dies earlier than expected?",
       ],
@@ -96,7 +96,7 @@ export const retirementServicesService = {
     },
     {
       type: "paragraph",
-      text: "The Compound Growth Calculator shows what a starting balance and a monthly contribution could become if a constant return held for the whole period. That return is an assumption you enter. It is not a forecast of any account LeadStar manages — LeadStar does not manage investment accounts on this site.",
+      text: "The Compound Growth Calculator shows what a starting balance and a monthly contribution could become if a constant return held for the whole period. That return is an assumption you enter. It is not a forecast of any account LeadStar manages: LeadStar does not manage investment accounts on this site.",
     },
     {
       type: "heading",
@@ -121,7 +121,7 @@ export const retirementServicesService = {
   ],
   faqs: [
     {
-      question: "Do you manage retirement accounts?",
+      question: "If a balance is not a paycheck, do you manage the account?",
       answer:
         "This website does not describe LeadStar as an investment adviser. A retirement conversation here is about organizing questions and protection needs. If you need portfolio management, ask for a referral to someone licensed for that work.",
     },
@@ -148,11 +148,11 @@ export const retirementServicesService = {
   ],
   sources: [
     {
-      label: "Social Security Administration — Plan for retirement",
+      label: "Social Security Administration: Plan for retirement",
       url: "https://www.ssa.gov/prepare/plan-retirement",
     },
     {
-      label: "NAIC — Consumer information",
+      label: "NAIC: Consumer information",
       url: "https://content.naic.org/consumer",
     },
   ],

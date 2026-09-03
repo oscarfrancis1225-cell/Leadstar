@@ -20,7 +20,7 @@ const faqs = [
       "A member of the LeadStar team can follow up to learn more about what you would like help with and discuss possible next steps.",
   },
   {
-    question: "Do I need to know exactly what coverage I want?",
+    question: "Do I have to pick a product before we talk?",
     answer:
       "No. You can select “Not Sure Yet” and start with a conversation about your goals, timing, and concerns.",
   },

@@ -10,7 +10,6 @@ import { FinalCTA } from "@/components/home/FinalCTA";
 import { LicensingNotice } from "@/components/legal/LicensingNotice";
 import { PageHero } from "@/components/layout/PageHero";
 import { BreadcrumbJsonLd, FAQPageJsonLd } from "@/components/seo/JsonLd";
-import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { ProductTypeCards } from "@/components/services/ProductTypeCards";
 import { getDisclaimer } from "@/lib/content/disclaimers";
@@ -136,11 +135,6 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
           ) : null}
           <div className="mt-10">
             <ArticleSources sources={page.sources} />
-          </div>
-          <div className="mt-10">
-            <Button href="/contact" variant="blue" showArrow>
-              Start a conversation
-            </Button>
           </div>
           <ServiceToolLinks slug={service.slug} />
           <p className="mt-10 text-sm leading-6 text-muted">

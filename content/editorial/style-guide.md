@@ -24,6 +24,18 @@ Give context first. A hook should make a reader think "this is relevant to me," 
 
 Use real stories only with permission. Otherwise use clearly labeled hypotheticals ("Imagine a household where..." / "Consider a hypothetical example..."). Never invent clients.
 
+## Story spine
+
+Use these seven beats as the article spine for web articles. This is not a video structure. Do not add video, iframes, or short-form video features. Do not label the beats "Scene 1." Headings should be specific to the topic.
+
+1. **Emotional hook**: first 1–2 paragraphs plus the H1. Context in the first line. Challenge a common belief. Plant a question. Open a loop; do not close it in paragraph 1.
+2. **Curiosity**: the thing most people miss.
+3. **Discovery**: the real mechanism. Keep sourced facts. Do not invent numbers.
+4. **Mistake**: the common error. Use "but" / "therefore" logic, not "and then" plotting.
+5. **Reframe**: a better way to think about the decision.
+6. **Framework**: a practical checklist or order of operations.
+7. **Payoff**: a memorable last line that leads into the conversation CTA. Make the reader want to do the decision correctly, not merely "learn more."
+
 ## Claims
 
 Source before publishing. If a number cannot be verified against a primary authority, omit it.
@@ -64,7 +76,7 @@ Do not call coverage a state-regulated benefit, government program, or burial pr
 
 ## Bylines
 
-Display: "Prepared by the LeadStar editorial team — Reviewed by Esther Francis, Financial Services Professional — [date]."
+Display: "Prepared by the LeadStar editorial team (Reviewed by Esther Francis, Financial Services Professional) [date]."
 
 Never attach that byline unless a signed review attestation exists in `content/reviews/`.
 

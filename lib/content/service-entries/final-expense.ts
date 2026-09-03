@@ -34,11 +34,11 @@ export const finalExpenseService = {
       type: "heading",
       level: 2,
       id: "what-it-is",
-      text: "What final expense insurance is",
+      text: "It is not a government program",
     },
     {
       type: "paragraph",
-      text: "Final expense coverage is usually a small whole life policy. The job is modest and specific: put cash in a beneficiary’s hands for funeral or memorial costs, remaining medical bills, or other last expenses. The beneficiary generally decides how to use the money. The check does not have to go to a funeral home.",
+      text: "Advertisements can make final expense sound like a public burial benefit. It is not. Final expense coverage is usually a small whole life policy. The job is modest and specific: put cash in a beneficiary’s hands for funeral or memorial costs, remaining medical bills, or other last expenses. The beneficiary generally decides how to use the money. The check does not have to go to a funeral home.",
     },
     {
       type: "paragraph",
@@ -52,7 +52,7 @@ export const finalExpenseService = {
     },
     {
       type: "paragraph",
-      text: "A pre-need funeral contract is an agreement with a funeral provider about specified services. Final expense insurance is not that contract. It pays a beneficiary. The family can still choose the funeral home, the city, and the type of service. If someone already prepaid a funeral, a separate small life policy may be unnecessary — or it may cover other bills the prepaid contract does not.",
+      text: "A pre-need funeral contract is an agreement with a funeral provider about specified services. Final expense insurance is not that contract. It pays a beneficiary. The family can still choose the funeral home, the city, and the type of service. If someone already prepaid a funeral, a separate small life policy may be unnecessary, or it may cover other bills the prepaid contract does not.",
     },
     {
       type: "heading",
@@ -93,7 +93,7 @@ export const finalExpenseService = {
       type: "heading",
       level: 2,
       id: "who-it-may-fit",
-      text: "Who it may fit — and who it may not",
+      text: "Who it may fit, and who it may not",
     },
     {
       type: "paragraph",
@@ -144,7 +144,7 @@ export const finalExpenseService = {
   ],
   faqs: [
     {
-      question: "Is final expense insurance the same as burial insurance?",
+      question: "Is this a government burial program, or just another name for a small life policy?",
       answer:
         "In advertising, the names are often used for the same kind of small whole life policy. The contract still pays a beneficiary. It is not a government burial program.",
     },
@@ -181,19 +181,19 @@ export const finalExpenseService = {
   ],
   sources: [
     {
-      label: "NAIC — Consumer information",
+      label: "NAIC: Consumer information",
       url: "https://content.naic.org/consumer",
     },
     {
-      label: "Insurance Information Institute — Life insurance basics",
+      label: "Insurance Information Institute: Life insurance basics",
       url: "https://www.iii.org/insurance-basics/life",
     },
     {
-      label: "Social Security Administration — Survivor benefits",
+      label: "Social Security Administration: Survivor benefits",
       url: "https://www.ssa.gov/benefits/survivors/",
     },
     {
-      label: "Medicare.gov — Get started with Medicare",
+      label: "Medicare.gov: Get started with Medicare",
       url: "https://www.medicare.gov/basics/get-started-with-medicare",
     },
   ],

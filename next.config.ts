@@ -36,6 +36,11 @@ const nextConfig: NextConfig = {
         destination: "/blog/retirement-income-transition",
         permanent: true,
       },
+      {
+        source: "/reviews",
+        destination: "/about",
+        permanent: true,
+      },
     ];
   },
 };

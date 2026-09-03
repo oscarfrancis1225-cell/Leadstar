@@ -7,12 +7,13 @@ import {
   siteConfig,
 } from "@/lib/constants";
 import { analyticsEvents } from "@/lib/analytics";
-import { formatPhoneHref } from "@/lib/utils";
+import { formatPhoneHref, isPlaceholderPhone } from "@/lib/utils";
 import { ContactLink } from "@/components/layout/ContactLink";
 import { ProducerIdentification } from "@/components/legal/ProducerIdentification";
 
 export function Footer() {
   const year = new Date().getFullYear();
+  const showPhone = !isPlaceholderPhone(siteConfig.phone);
 
   return (
     <footer className="bg-navy-deep text-white">
@@ -30,15 +31,17 @@ export function Footer() {
         <div>
           <p className="text-sm font-semibold tracking-wide text-white">Contact</p>
           <ul className="mt-5 space-y-4 text-sm text-white/72">
-            <li className="flex items-start gap-3">
-              <Phone className="mt-0.5 h-4 w-4 text-gold" aria-hidden />
-              <ContactLink
-                href={formatPhoneHref(siteConfig.phone)}
-                event={analyticsEvents.phoneClicked}
-              >
-                {siteConfig.phone}
-              </ContactLink>
-            </li>
+            {showPhone ? (
+              <li className="flex items-start gap-3">
+                <Phone className="mt-0.5 h-4 w-4 text-gold" aria-hidden />
+                <ContactLink
+                  href={formatPhoneHref(siteConfig.phone)}
+                  event={analyticsEvents.phoneClicked}
+                >
+                  {siteConfig.phone}
+                </ContactLink>
+              </li>
+            ) : null}
             <li className="flex items-start gap-3">
               <Mail className="mt-0.5 h-4 w-4 text-gold" aria-hidden />
               <ContactLink

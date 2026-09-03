@@ -10,7 +10,7 @@ import { siteConfig } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Financial Tools",
   description:
-    "Explore simple educational tools designed to help you better understand your financial picture.",
+    "Run the numbers before you guess. Educational calculators for protection needs, retirement income, compound growth, mortgage obligation, and cash reserves. These are illustrations, not quotes.",
   alternates: { canonical: "/tools" },
 };
 
@@ -19,8 +19,8 @@ export default function ToolsPage() {
     <>
       <PageHero
         eyebrow="Financial Tools & Calculators"
-        title="Educational tools for a clearer financial picture"
-        description="Explore simple educational tools designed to help you better understand your financial picture."
+        title="Run the numbers before you guess"
+        description="Each calculator uses the numbers you enter and a small set of planning assumptions. Results are illustrations, not quotes or recommendations."
       />
       <section className="bg-white py-10 lg:py-16">
         <Container>

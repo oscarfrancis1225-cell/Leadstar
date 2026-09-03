@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { SmartImage } from "@/components/ui/SmartImage";
-import { estherFrancis } from "@/lib/content/authors";
 import type { Article } from "@/lib/content/types";
 
 type ArticleCardProps = {
@@ -26,16 +25,13 @@ export function ArticleCard({ article }: ArticleCardProps) {
         </h2>
         <p className="mt-3 text-sm leading-6 text-muted">{article.excerpt}</p>
         <p className="mt-4 text-xs leading-5 text-muted">
-          {estherFrancis.name} ·{" "}
-          <time dateTime={article.publishedAt}>{formatDate(article.publishedAt)}</time>
-          {" · "}
-          {article.readingTimeMinutes} min read
+          LeadStar editorial · <time dateTime={article.publishedAt}>{formatDate(article.publishedAt)}</time>
         </p>
         <Link
           href={article.href}
-          className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-blue"
+          className="mt-5 inline-flex min-h-11 items-center gap-1.5 text-sm font-semibold text-blue"
         >
-          Read {article.title}
+          Read article
           <ArrowRight className="h-3.5 w-3.5" aria-hidden />
         </Link>
       </div>

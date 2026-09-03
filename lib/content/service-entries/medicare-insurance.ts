@@ -51,6 +51,16 @@ export const medicareInsuranceService = {
     {
       type: "heading",
       level: 2,
+      id: "turning-65-is-not-enrollment",
+      text: "Turning 65 is not the same as being enrolled",
+    },
+    {
+      type: "paragraph",
+      text: "A lot of people treat the birthday as the enrollment. It is not. Medicare has windows. Miss one, and the next step can cost more or wait longer. The useful first move is the calendar, not a plan name.",
+    },
+    {
+      type: "heading",
+      level: 2,
       id: "what-this-page-covers",
       text: "What this page covers",
     },
@@ -93,7 +103,7 @@ export const medicareInsuranceService = {
     },
     {
       type: "paragraph",
-      text: "The annual Open Enrollment Period runs from October 15 through December 7. Changes made then generally take effect January 1. People already in a Medicare Advantage plan also have a Medicare Advantage Open Enrollment Period from January 1 through March 31, with limits on what can change. A General Enrollment Period for Part A and Part B runs January 1 through March 31 if you missed earlier windows. Late-enrollment penalties can apply if you delay Part B or Part D without creditable coverage. Treat that as a concept to confirm on Medicare.gov — this page does not calculate a penalty.",
+      text: "The annual Open Enrollment Period runs from October 15 through December 7. Changes made then generally take effect January 1. People already in a Medicare Advantage plan also have a Medicare Advantage Open Enrollment Period from January 1 through March 31, with limits on what can change. A General Enrollment Period for Part A and Part B runs January 1 through March 31 if you missed earlier windows. Late-enrollment penalties can apply if you delay Part B or Part D without creditable coverage. Treat that as a concept to confirm on Medicare.gov, this page does not calculate a penalty.",
     },
     {
       type: "paragraph",
@@ -127,12 +137,12 @@ export const medicareInsuranceService = {
   ],
   faqs: [
     {
-      question: "When is Medicare Open Enrollment?",
+      question: "When is the annual window, and is that the same as turning 65?",
       answer:
         "The annual Open Enrollment Period is October 15 through December 7. Coverage changes generally start January 1. Confirm details on Medicare.gov.",
     },
     {
-      question: "What is the Initial Enrollment Period?",
+      question: "If turning 65 is not enrollment, what is the Initial Enrollment Period?",
       answer:
         "It is a seven-month period around the month you turn 65: three months before, the birthday month, and three months after. People who qualify before 65 on disability have a different trigger. See Medicare.gov.",
     },
@@ -159,15 +169,15 @@ export const medicareInsuranceService = {
   ],
   sources: [
     {
-      label: "Medicare.gov — Get started with Medicare",
+      label: "Medicare.gov: Get started with Medicare",
       url: "https://www.medicare.gov/basics/get-started-with-medicare",
     },
     {
-      label: "Medicare.gov — Joining a plan",
+      label: "Medicare.gov: Joining a plan",
       url: "https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan",
     },
     {
-      label: "CMS — Original Medicare eligibility and enrollment",
+      label: "CMS: Original Medicare eligibility and enrollment",
       url: "https://www.cms.gov/medicare/enrollment-renewal/original-part-a-b",
     },
   ],

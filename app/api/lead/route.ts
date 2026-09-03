@@ -67,7 +67,25 @@ export async function POST(request: Request) {
 
   const webhookUrl = process.env.LEAD_WEBHOOK_URL?.trim();
 
-  if (webhookUrl) {
+  if (!webhookUrl) {
+    if (process.env.NODE_ENV === "production") {
+      return NextResponse.json(
+        {
+          ok: false,
+          message: "Unable to deliver the request right now. Please email us instead.",
+        },
+        { status: 503 },
+      );
+    }
+
+    console.info("[lead:dev]", {
+      requestId: payload.requestId,
+      createdAt: payload.createdAt,
+      service: payload.service,
+      preferredContact: payload.preferredContact,
+      hasMessage: Boolean(payload.message),
+    });
+  } else {
     try {
       const response = await fetch(webhookUrl, {
         method: "POST",
@@ -87,19 +105,10 @@ export async function POST(request: Request) {
         { status: 502 },
       );
     }
-  } else if (process.env.NODE_ENV !== "production") {
-    console.info("[lead:dev]", {
-      requestId: payload.requestId,
-      createdAt: payload.createdAt,
-      service: payload.service,
-      preferredContact: payload.preferredContact,
-      hasMessage: Boolean(payload.message),
-    });
   }
 
   return NextResponse.json({
     ok: true,
     requestId: payload.requestId,
-    development: !webhookUrl,
   });
 }

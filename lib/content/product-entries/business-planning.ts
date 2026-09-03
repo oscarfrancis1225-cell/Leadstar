@@ -8,9 +8,9 @@ export const businessPlanningProducts = [
     title: "Key Person Insurance",
     metaTitle: "Key Person Insurance",
     description:
-      "A plain-language look at key person insurance: life coverage the business typically owns to help with the financial impact of losing a key person.",
+      "Key person insurance is typically owned by the business, with the business as beneficiary. It is a use of life insurance, not a new product line.",
     hook: "A company can look fine on paper and still stall if one person is gone for 90 days.",
-    question: "What is key person insurance actually for?",
+    question: "Who cannot be absent, and is the business the beneficiary?",
     disclaimerVariant: "standard",
     relatedLinks: [
       { label: "Buy-Sell Funding", href: "/services/business-planning/buy-sell-funding" },
@@ -56,9 +56,9 @@ export const businessPlanningProducts = [
     title: "Buy-Sell Funding",
     metaTitle: "Buy-Sell Funding",
     description:
-      "A plain-language look at using life insurance as the funding layer for a written buy-sell agreement drafted by an attorney.",
+      "Insurance, if used, is only the funding layer for a written buy-sell agreement. The agreement comes first. LeadStar does not draft it.",
     hook: "Two partners bought policies years ago and never updated the paperwork after a third person joined.",
-    question: "What is buy-sell funding actually?",
+    question: "Does the written agreement still match who owns the policies?",
     disclaimerVariant: "tax-adjacent",
     relatedLinks: [
       { label: "Key Person Insurance", href: "/services/business-planning/key-person-insurance" },

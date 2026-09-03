@@ -46,11 +46,11 @@ export const lifeInsuranceService = {
       type: "heading",
       level: 2,
       id: "start-with-the-job",
-      text: "Start with the job, not the product name",
+      text: "Someone depends on you. Start there.",
     },
     {
       type: "paragraph",
-      text: "Life insurance pays a death benefit to the people or entities you name if you die while the policy is in force. The useful first step is naming the job: replace income for a period of years, pay off a loan, fund a child’s education, or leave a smaller amount for last expenses. The product name comes after that list.",
+      text: "The belief is that you pick a product name first (term, whole, universal) and the job will follow. It works the other way. Life insurance pays a death benefit to the people or entities you name if you die while the policy is in force. Name the job first: replace income for a period of years, pay off a loan, fund a child’s education, or leave a smaller amount for last expenses.",
     },
     {
       type: "paragraph",
@@ -64,11 +64,11 @@ export const lifeInsuranceService = {
     },
     {
       type: "paragraph",
-      text: "Term life covers a set period — often 10, 20, or 30 years. If death occurs during that period and the policy is in force, the insurer pays the death benefit. When the term ends, coverage ends unless the contract allows renewal or conversion. Term is often used when the job itself has an end date: years until children are independent, or years left on a mortgage.",
+      text: "Term life covers a set period, often 10, 20, or 30 years. If death occurs during that period and the policy is in force, the insurer pays the death benefit. When the term ends, coverage ends unless the contract allows renewal or conversion. Term is often used when the job itself has an end date: years until children are independent, or years left on a mortgage.",
     },
     {
       type: "paragraph",
-      text: "Permanent life insurance — commonly whole life or universal life — is designed to last for life if premiums and policy charges are kept as the contract requires. Many permanent policies can build cash value. Cash value is not a savings account at a bank, and it is not a reason to buy coverage you do not need. Loans or withdrawals, if allowed, can reduce the death benefit.",
+      text: "Permanent life insurance (commonly whole life or universal life) is designed to last for life if premiums and policy charges are kept as the contract requires. Many permanent policies can build cash value. Cash value is not a savings account at a bank, and it is not a reason to buy coverage you do not need. Loans or withdrawals, if allowed, can reduce the death benefit.",
     },
     {
       type: "table",
@@ -119,7 +119,7 @@ export const lifeInsuranceService = {
   ],
   faqs: [
     {
-      question: "How much life insurance do I need?",
+      question: "How much coverage does the job actually take?",
       answer:
         "There is no single formula that fits every household. A common educational approach is to add years of income, debts, and education goals, then subtract existing coverage and liquid savings. Use the Protection Needs tool as a first range, then talk through what you would actually want funded.",
     },
@@ -146,11 +146,11 @@ export const lifeInsuranceService = {
   ],
   sources: [
     {
-      label: "Insurance Information Institute — Life insurance basics",
+      label: "Insurance Information Institute: Life insurance basics",
       url: "https://www.iii.org/insurance-basics/life",
     },
     {
-      label: "NAIC — Consumer information",
+      label: "NAIC: Consumer information",
       url: "https://content.naic.org/consumer",
     },
   ],

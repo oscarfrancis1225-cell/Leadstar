@@ -8,9 +8,9 @@ export const mortgageProtectionProducts = [
     title: "Mortgage-Centered Coverage",
     metaTitle: "Mortgage-Centered Life Coverage",
     description:
-      "A plain-language look at life coverage designed around a home loan, which may pay a lender or shrink as the balance shrinks.",
-    hook: "The house payment is the number everyone can see. The harder question is who would keep making it.",
-    question: "What is mortgage-centered coverage actually?",
+      "Some designs pay a lender, or shrink as the loan shrinks. Term life pays a person you name. The useful question is who receives the money.",
+    hook: "The house payment is the number everyone can see. Who would receive the check?",
+    question: "If you die, who decides whether to keep the house?",
     disclaimerVariant: "standard",
     relatedLinks: [
       { label: "Term Life", href: "/services/life-insurance/term-life" },

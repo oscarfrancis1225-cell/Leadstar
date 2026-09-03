@@ -2,9 +2,9 @@ export const services = [
   {
     slug: "life-insurance",
     title: "Life Insurance",
-    shortDescription: "Protect the people who matter most.",
+    shortDescription: "Someone depends on your income. Start with that job, not a product name.",
     description:
-      "Explore life insurance options that can help provide financial support for the people who depend on you.",
+      "If people depend on you, the first question is the gap (income, a loan, an education), not whether the policy is called term or whole life.",
     href: "/services/life-insurance",
     icon: "HeartHandshake",
     summary:
@@ -13,9 +13,9 @@ export const services = [
   {
     slug: "retirement-services",
     title: "Retirement Services",
-    shortDescription: "Plan confidently for the future you deserve.",
+    shortDescription: "A balance is not a paycheck. How does it become one?",
     description:
-      "Review retirement planning approaches that can help you organize priorities and prepare for later chapters of life.",
+      "Retirement conversations here start with how savings, Social Security, and other sources might become monthly income. Nothing here promises a return or a particular lifestyle.",
     href: "/services/retirement-services",
     icon: "Landmark",
     summary:
@@ -24,9 +24,9 @@ export const services = [
   {
     slug: "medicare-insurance",
     title: "Medicare Insurance",
-    shortDescription: "Navigate Medicare choices with clarity.",
+    shortDescription: "Turning 65 is not the same as being enrolled.",
     description:
-      "Get a clearer view of Medicare-related options so you can compare coverage with more confidence.",
+      "Medicare conversations start with enrollment timing, current coverage, and official program rules. This page does not compare or recommend specific Medicare plans.",
     href: "/services/medicare-insurance",
     icon: "HeartPulse",
     summary:
@@ -35,9 +35,9 @@ export const services = [
   {
     slug: "health-insurance",
     title: "Health Insurance",
-    shortDescription: "Coverage designed around your health and family.",
+    shortDescription: "Coverage before 65 is its own problem. Medicare is later.",
     description:
-      "Look at health coverage options that can be evaluated around your household, budget, and care preferences.",
+      "Health coverage questions often appear during a job change, early retirement, or a family transition. Name the end date first. Options and costs depend on your situation and current law.",
     href: "/services/health-insurance",
     icon: "Stethoscope",
     summary:
@@ -46,9 +46,9 @@ export const services = [
   {
     slug: "final-expense",
     title: "Final Expense",
-    shortDescription: "Help protect loved ones from unexpected costs.",
+    shortDescription: "It is not a government program. It is a small permanent policy.",
     description:
-      "Consider final expense coverage that may help loved ones manage end-of-life costs with less financial strain.",
+      "Final expense coverage is typically a small permanent life policy meant to help with end-of-life costs. It is not a government program and not income replacement.",
     href: "/services/final-expense",
     icon: "Flower2",
     summary:
@@ -57,9 +57,9 @@ export const services = [
   {
     slug: "mortgage-protection",
     title: "Mortgage Protection",
-    shortDescription: "Help protect your home and your family's future.",
+    shortDescription: "The useful question is who receives the money.",
     description:
-      "Learn how mortgage protection can be used to help support housing stability if life takes an unexpected turn.",
+      "Mortgage protection is designed around a home loan. Term life is designed around the people you name. The comparison is who receives the money and how the benefit works.",
     href: "/services/mortgage-protection",
     icon: "Home",
     summary:
@@ -68,9 +68,9 @@ export const services = [
   {
     slug: "business-planning",
     title: "Business Planning",
-    shortDescription: "Protection strategies for owners and key people.",
+    shortDescription: "Key person keeps operations funded. Buy-sell transfers ownership.",
     description:
-      "Explore planning conversations designed for owners, partners, and key people who want more continuity in their work.",
+      "Business-owner planning often separates two jobs: keeping operations funded if a key person dies, and transferring ownership under a written agreement.",
     href: "/services/business-planning",
     icon: "Briefcase",
     summary:

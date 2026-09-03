@@ -55,14 +55,14 @@ export const disclosuresDocument = {
       type: "list",
       items: [
         `Florida licensee search: ${siteConfig.licenses.floridaLookupUrl}`,
-        `California Department of Insurance — find an agent or broker: ${siteConfig.licenses.californiaLookupUrl}`,
+        `California Department of Insurance, find an agent or broker: ${siteConfig.licenses.californiaLookupUrl}`,
       ],
     },
     {
       type: "heading",
       level: 2,
       id: "what-this-website-is",
-      text: "What this website is — and is not",
+      text: "What this website is, and is not",
     },
     {
       type: "paragraph",
@@ -80,7 +80,7 @@ export const disclosuresDocument = {
     },
     {
       type: "paragraph",
-      text: "If a policy is later applied for and issued, the insurance company — not LeadStar Financial — issues the contract and pays valid claims according to that contract. Carrier appointments vary and are not listed on this page until they are verified for public use.",
+      text: "If a policy is later applied for and issued, the insurance company (not LeadStar Financial) issues the contract and pays valid claims according to that contract. Carrier appointments vary and are not listed on this page until they are verified for public use.",
     },
     {
       type: "heading",
@@ -151,9 +151,9 @@ export const disclosuresDocument = {
     {
       type: "list",
       items: [
-        "Privacy Policy — how the contact form uses the information you submit",
-        "Terms of Use — rules for using the website",
-        "Temporary Use — the limited license to view this material",
+        "Privacy Policy, how the contact form uses the information you submit",
+        "Terms of Use, rules for using the website",
+        "Temporary Use, the limited license to view this material",
       ],
     },
   ],

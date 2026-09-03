@@ -8,9 +8,9 @@ export const finalExpenseProducts = [
     title: "Final Expense Insurance",
     metaTitle: "Final Expense Insurance",
     description:
-      "A plain-language look at final expense insurance: usually a smaller permanent life policy meant to help with last expenses.",
-    hook: "A family is not trying to replace a paycheck. They are trying to keep a smaller set of last bills from landing on the people left behind.",
-    question: "What is final expense insurance actually?",
+      "Final expense insurance is usually a smaller permanent life policy for last expenses. It is not a government program, and Medicare does not pay funeral costs.",
+    hook: "It is not a government burial program. It is a small permanent life policy.",
+    question: "Does a policy you already have already cover the last bills?",
     disclaimerVariant: "standard",
     relatedLinks: [
       { label: "Whole Life", href: "/services/life-insurance/whole-life" },

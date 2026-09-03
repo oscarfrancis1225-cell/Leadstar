@@ -8,9 +8,9 @@ export const healthInsuranceProducts = [
     title: "HMO",
     metaTitle: "HMO Health Plans",
     description:
-      "A plain-language look at HMO network rules for commercial and Marketplace-style health plans. This is not a Medicare Advantage page.",
+      "An HMO is a network type, not a quality ranking. This page is about commercial and Marketplace-style plans, not Medicare Advantage.",
     hook: "Someone sees a lower premium and does not yet see the network trade-off.",
-    question: "What is an HMO actually?",
+    question: "Can you keep your doctors inside this network?",
     disclaimerVariant: "standard",
     relatedLinks: [
       { label: "PPO", href: "/services/health-insurance/ppo" },
@@ -56,9 +56,9 @@ export const healthInsuranceProducts = [
     title: "PPO",
     metaTitle: "PPO Health Plans",
     description:
-      "A plain-language look at PPO network rules. You often pay less in network and can go out of network at a higher cost, usually without a referral.",
-    hook: "Someone wants to keep a doctor and is willing to pay more for that room.",
-    question: "What is a PPO actually?",
+      "A PPO usually costs more for the room to go out of network. “I can go anywhere” is not quite right, the bill can still be much higher.",
+    hook: "Someone wants to keep a doctor and is willing to pay more for that room. The extra cost is the point.",
+    question: "Is the extra flexibility worth the extra premium for your household?",
     disclaimerVariant: "standard",
     relatedLinks: [
       { label: "HMO", href: "/services/health-insurance/hmo" },
@@ -104,9 +104,9 @@ export const healthInsuranceProducts = [
     title: "EPO",
     metaTitle: "EPO Health Plans",
     description:
-      "A plain-language look at EPO network rules: generally in-network coverage only, except in an emergency.",
-    hook: "EPO sits in a confusing middle: it sounds open, but the network can be strict.",
-    question: "What is an EPO actually?",
+      "An EPO generally covers in-network care only, except emergencies. No referral does not mean it works like a PPO.",
+    hook: "People hear “no referral” and think an EPO works like a PPO. Then a bill arrives.",
+    question: "If you go out of network, is anything covered besides an emergency?",
     disclaimerVariant: "standard",
     relatedLinks: [
       { label: "HMO", href: "/services/health-insurance/hmo" },
@@ -137,7 +137,7 @@ export const healthInsuranceProducts = [
       {
         type: "callout",
         title: "Esther can help with these questions",
-        text: "Esther can help you compare the words — HMO, PPO, EPO — so you know which question to ask next. This page is not a quote.",
+        text: "Esther can help you compare the words (HMO, PPO, EPO) so you know which question to ask next. This page is not a quote.",
       },
     ],
   },
@@ -148,9 +148,9 @@ export const healthInsuranceProducts = [
     title: "POS",
     metaTitle: "POS Health Plans",
     description:
-      "A plain-language look at POS network rules: you often pay less in network, and a primary-care referral is commonly required for specialists.",
-    hook: "POS plans borrow a little from HMO and a little from PPO, which is why the name confuses people.",
-    question: "What is a POS plan actually?",
+      "A POS plan mixes network rules. Cost-sharing (Bronze, Silver) is a different question from HMO, PPO, EPO, or POS.",
+    hook: "POS borrows a little from HMO and a little from PPO. The name is why people mix it up with a metal tier.",
+    question: "Are you choosing a network type, or a cost-sharing tier?",
     disclaimerVariant: "standard",
     relatedLinks: [
       { label: "HMO", href: "/services/health-insurance/hmo" },

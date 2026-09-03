@@ -34,11 +34,11 @@ export const mortgageProtectionService = {
       type: "heading",
       level: 2,
       id: "the-useful-comparison",
-      text: "The useful comparison",
+      text: "Who receives the money?",
     },
     {
       type: "paragraph",
-      text: "Mortgage protection is designed around a home loan. Term life insurance is designed around the people you name. Both can put money toward housing if someone dies. They do not always send that money to the same place, and they do not always stay in force the same way.",
+      text: "People shop a product called mortgage protection because the house payment is the number they can see. The harder question is who would receive the check, and who would decide whether to keep the house. Mortgage protection is designed around a home loan. Term life insurance is designed around the people you name. Both can put money toward housing if someone dies. They do not always send that money to the same place.",
     },
     {
       type: "paragraph",
@@ -92,7 +92,7 @@ export const mortgageProtectionService = {
         "No. Homeowners insurance covers the building and related risks while you are alive. Mortgage protection or life insurance is about who can keep paying the loan if a person dies.",
     },
     {
-      question: "Should the bank be the beneficiary?",
+      question: "If I die, who should receive the money, the bank, or a person I name?",
       answer:
         "Sometimes a contract is built that way. Sometimes a person is the beneficiary and chooses to pay the lender. The control difference is the reason to read the form before you apply.",
     },
@@ -114,11 +114,11 @@ export const mortgageProtectionService = {
   ],
   sources: [
     {
-      label: "Insurance Information Institute — Life insurance basics",
+      label: "Insurance Information Institute: Life insurance basics",
       url: "https://www.iii.org/insurance-basics/life",
     },
     {
-      label: "NAIC — Consumer information",
+      label: "NAIC: Consumer information",
       url: "https://content.naic.org/consumer",
     },
   ],

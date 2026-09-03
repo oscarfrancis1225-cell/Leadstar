@@ -6,8 +6,8 @@ type CushionMeterProps = {
 };
 
 const labels = [
-  { id: "limited", label: "Limited", range: "0–3 mo" },
-  { id: "moderate", label: "Moderate", range: "3–6 mo" },
+  { id: "limited", label: "Limited", range: "0-3 mo" },
+  { id: "moderate", label: "Moderate", range: "3-6 mo" },
   { id: "stronger", label: "Stronger", range: "6+ mo" },
 ] as const;
 

@@ -144,6 +144,23 @@ export function Header() {
                               {service.title}
                             </Link>
                           ))}
+                          <Link
+                            id={`${menuId}-${services.length}`}
+                            href="/services"
+                            role="menuitem"
+                            className="block rounded-xl px-3.5 py-2.5 text-sm font-medium text-blue transition-colors hover:bg-cream"
+                            onClick={() => setServicesOpen(false)}
+                            onKeyDown={(event) => {
+                              if (event.key === "ArrowUp") {
+                                event.preventDefault();
+                                document
+                                  .getElementById(`${menuId}-${services.length - 1}`)
+                                  ?.focus();
+                              }
+                            }}
+                          >
+                            All services
+                          </Link>
                         </div>
                       ) : null}
                     </li>
@@ -172,9 +189,8 @@ export function Header() {
               href="/contact"
               className="hidden lg:inline-flex"
               showArrow
-              onClick={() => trackEvent(analyticsEvents.quoteCtaClicked)}
             >
-              Get Started
+              Start a conversation
             </Button>
             <button
               type="button"
@@ -187,7 +203,7 @@ export function Header() {
               <span className="sr-only">
                 {mobileOpen ? "Close navigation" : "Open navigation"}
               </span>
-              <Menu className="h-5 w-5" />
+              <Menu className="h-5 w-5" aria-hidden />
             </button>
           </div>
         </div>

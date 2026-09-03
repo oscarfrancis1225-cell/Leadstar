@@ -10,7 +10,7 @@ export function ProcessSection() {
       <Container wide>
         <SectionHeading
           eyebrow="Our simple planning process"
-          title="A Clear Path to Financial Confidence"
+          title="A clear first conversation"
         />
         <div className="mt-12 grid items-start gap-10 lg:grid-cols-2 lg:items-center lg:gap-12">
           <ol className="relative grid grid-cols-2 gap-x-6 gap-y-10 lg:gap-x-10">

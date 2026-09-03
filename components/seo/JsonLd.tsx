@@ -68,7 +68,7 @@ export function ProfilePageJsonLd() {
     "@type": "ProfilePage",
     "@id": `${siteUrl}${estherFrancis.href}#profile`,
     url: `${siteUrl}${estherFrancis.href}`,
-    name: `${estherFrancis.name} — ${estherFrancis.jobTitle}`,
+    name: `${estherFrancis.name}, ${estherFrancis.jobTitle}`,
     mainEntity: personNode(siteUrl),
     publisher: { "@id": `${siteUrl}/#organization` },
   });
@@ -84,7 +84,7 @@ export function BlogPostingJsonLd({ article }: { article: Article }) {
     image: [`${siteUrl}${article.image.src}`],
     datePublished: article.publishedAt,
     dateModified: article.updatedAt,
-    author: personNode(siteUrl),
+    author: organizationNode(siteUrl),
     publisher: organizationNode(siteUrl),
     mainEntityOfPage: `${siteUrl}${article.href}`,
   });

@@ -37,7 +37,7 @@ export const siteConfig = {
     californiaLookupUrl:
       "https://www.insurance.ca.gov/01-consumers/105-type/findagtbrk.cfm",
     advertisingDisclaimer:
-      "This website is insurance advertising. Esther Francis is an insurance agent licensed in Florida and California. Products, if issued, are issued by insurance companies — not by LeadStar Financial. No product is offered or recommended on this page.",
+      "This website is insurance advertising. Esther Francis is an insurance agent licensed in Florida and California. Products, if issued, are issued by insurance companies, not by LeadStar Financial. No product is offered or recommended on this page.",
   },
   legalUpdatedOn: "August 27, 2026",
 };

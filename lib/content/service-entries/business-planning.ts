@@ -46,11 +46,11 @@ export const businessPlanningService = {
       type: "heading",
       level: 2,
       id: "two-different-jobs",
-      text: "Two different jobs",
+      text: "Key person and buy-sell are not the same job",
     },
     {
       type: "paragraph",
-      text: "Business-owner planning often mixes two problems that should stay separate. The first is cash to keep the business operating if a key person dies — payroll, a line of credit, or time to hire. The second is a written way to transfer an owner’s share when someone dies, becomes disabled, or leaves. Life insurance can fund either job. It does not replace the legal agreement.",
+      text: "Owners often buy one policy and hope it covers everything. It usually cannot. The first job is cash to keep the business operating if a key person dies, payroll, a line of credit, or time to hire. The second is a written way to transfer an owner’s share when someone dies, becomes disabled, or leaves. Life insurance can fund either job. It does not replace the legal agreement.",
     },
     {
       type: "heading",
@@ -80,7 +80,7 @@ export const businessPlanningService = {
         ["Who usually owns the policy?", "The business", "The business or the other owners, depending on the design"],
         ["Who usually is the beneficiary?", "The business", "The party obligated to buy the shares"],
         ["What is the money for?", "Operations, debt, or time to replace the person", "Purchase of an ownership interest"],
-        ["Does it replace a written agreement?", "No", "No — the agreement comes first"],
+        ["Does it replace a written agreement?", "No", "No, the agreement comes first"],
       ],
     },
     {
@@ -115,7 +115,7 @@ export const businessPlanningService = {
   ],
   faqs: [
     {
-      question: "Do I need both key-person and buy-sell coverage?",
+      question: "Is the problem a missing person, or a missing agreement?",
       answer:
         "Only if both jobs exist. A solo owner with no successor agreement has a different problem than two partners who already signed a buy-sell. Name the job first.",
     },
@@ -142,11 +142,11 @@ export const businessPlanningService = {
   ],
   sources: [
     {
-      label: "Insurance Information Institute — Life insurance basics",
+      label: "Insurance Information Institute: Life insurance basics",
       url: "https://www.iii.org/insurance-basics/life",
     },
     {
-      label: "NAIC — Consumer information",
+      label: "NAIC: Consumer information",
       url: "https://content.naic.org/consumer",
     },
   ],

@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next";
 import { getPublishedArticles } from "@/lib/content/articles";
 import { getOwnedProductHrefs } from "@/lib/content/product-entries";
-import { services, tools } from "@/lib/constants";
+import { services } from "@/lib/content/services";
+import { tools } from "@/lib/content/tools";
 import { getSiteUrl } from "@/lib/site-url";
 
 export default function sitemap(): MetadataRoute.Sitemap {

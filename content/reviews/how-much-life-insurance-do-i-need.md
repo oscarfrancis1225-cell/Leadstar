@@ -1,4 +1,4 @@
-# Review record — how-much-life-insurance-do-i-need
+# Review record: how-much-life-insurance-do-i-need
 
 Reviewer: Esther Francis, Financial Services Professional
 Status: PENDING_SIGNATURE

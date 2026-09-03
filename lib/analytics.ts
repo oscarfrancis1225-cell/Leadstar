@@ -1,6 +1,4 @@
 export const analyticsEvents = {
-  quoteCtaClicked: "quote_cta_clicked",
-  consultationCtaClicked: "consultation_cta_clicked",
   serviceClicked: "service_clicked",
   leadFormStarted: "lead_form_started",
   leadFormSubmitted: "lead_form_submitted",

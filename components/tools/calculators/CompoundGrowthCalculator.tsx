@@ -35,14 +35,14 @@ export function CompoundGrowthCalculator() {
   return (
     <CalculatorShell
       summary={{
-        label: "Projected balance",
+        label: "Illustrated balance",
         value: formatUSD(result.projectedBalance),
       }}
       results={
         <div>
           <ResultStat
             primary
-            label="Projected balance"
+            label="Illustrated balance"
             value={formatUSD(result.projectedBalance)}
           />
           <div className="mt-6">
@@ -107,7 +107,7 @@ export function CompoundGrowthCalculator() {
         value={years}
         suffix="yrs"
         onChange={setYears}
-        min={5}
+        min={1}
         max={40}
       />
     </CalculatorShell>

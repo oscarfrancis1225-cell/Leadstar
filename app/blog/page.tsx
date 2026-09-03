@@ -5,9 +5,9 @@ import { Container } from "@/components/ui/Container";
 import { getArticlesByPillar, getPublishedArticles } from "@/lib/content/articles";
 
 export const metadata: Metadata = {
-  title: "Financial Insights for Every Stage of Life",
+  title: "The decisions that are hard to undo",
   description:
-    "Educational articles from LeadStar Financial on protection, retirement, Medicare, health coverage, and working with a financial professional.",
+    "Enrollment windows, the shift from a paycheck to a balance, who is protected if you die. Educational articles from LeadStar Financial. This is not individualized advice.",
   alternates: { canonical: "/blog" },
 };
 
@@ -19,8 +19,8 @@ export default function BlogPage() {
     <>
       <PageHero
         eyebrow="Insights"
-        title="Financial Insights for Every Stage of Life"
-        description="Educational articles designed to help you understand planning and protection questions. This is not individualized advice."
+        title="The decisions that are hard to undo"
+        description="Enrollment windows, the shift from a paycheck to a balance, who is protected if you die. Educational articles designed to help you understand those questions. This is not individualized advice."
       />
       <section className="bg-white py-16">
         <Container className="space-y-16">

@@ -9,31 +9,31 @@ export function WhyLeadStar() {
       <Container wide>
         <SectionHeading
           eyebrow="Why LeadStar"
-          title="Guidance built around real life"
-          description="A relationship-first approach to evaluating protection and planning options with clarity."
+          title="Conversations that start with the decision in front of you"
+          description="Not a product name. The first hour is about what you actually have to decide, and in what order."
         />
         <ul className="mt-8 grid gap-3 sm:mt-10 sm:gap-4 md:grid-cols-2 xl:grid-cols-4">
           {values.map((value) => (
             <li key={value.title}>
-              <article className="flex h-full items-start gap-3.5 rounded-2xl border border-line bg-white p-3.5 shadow-card sm:gap-4 sm:p-5">
-                <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-2xl ring-1 ring-gold/40 sm:h-[4.5rem] sm:w-[4.5rem]">
-                  <Image
-                    src={value.image.src}
-                    alt=""
-                    width={value.image.width}
-                    height={value.image.height}
-                    sizes="72px"
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-                <div className="min-w-0 pt-0.5">
-                  <h3 className="font-serif text-[1.15rem] leading-snug text-navy sm:text-xl">
+              <article className="flex h-full flex-col rounded-2xl border border-line bg-white p-3.5 shadow-card sm:p-5">
+                <div className="flex items-center gap-3.5 sm:gap-4">
+                  <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-2xl ring-1 ring-gold/40 sm:h-16 sm:w-16">
+                    <Image
+                      src={value.image.src}
+                      alt=""
+                      width={value.image.width}
+                      height={value.image.height}
+                      sizes="64px"
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                  <h3 className="min-w-0 font-serif text-[1.15rem] leading-snug text-navy sm:text-xl">
                     {value.title}
                   </h3>
-                  <p className="mt-1 text-[0.82rem] leading-5 text-muted sm:mt-1.5 sm:text-sm sm:leading-6">
-                    {value.description}
-                  </p>
                 </div>
+                <p className="mt-3 text-[0.82rem] leading-5 text-muted sm:mt-3.5 sm:text-sm sm:leading-6">
+                  {value.description}
+                </p>
               </article>
             </li>
           ))}

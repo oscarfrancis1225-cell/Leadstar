@@ -21,9 +21,8 @@ export default function CareersPage() {
       <section className="bg-white py-16">
         <Container className="max-w-2xl">
           <p className="lead">
-            If you would like to introduce yourself, send a note to{" "}
-            {siteConfig.email}. This page is a placeholder until formal openings
-            are published.
+            There are no openings listed right now. If you want to introduce
+            yourself, send a note to {siteConfig.email}.
           </p>
           <div className="mt-8">
             <Button href="/contact" variant="secondary">

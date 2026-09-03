@@ -2,15 +2,8 @@
  * Image sources are centralized so photography can be swapped without
  * hunting through components.
  *
- * Recommended local filenames in /public/images:
- * - hero-family.jpg
- * - advisor-consultation.jpg
- * - resource-life-insurance.jpg
- * - resource-medicare.jpg
- * - resource-retirement.jpg
- *
- * Until those files are added, licensed Unsplash placeholders are used.
- * Update `src` to the local path once final photography is in place.
+ * heroFamily currently uses a licensed Unsplash placeholder until a
+ * local photograph is added.
  */
 export const siteImages = {
   heroFamily: {
@@ -20,40 +13,12 @@ export const siteImages = {
     width: 1800,
     height: 1350,
   },
-  advisorConsultation: {
-    src: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1400&q=80",
-    localHint: "/images/advisor-consultation.jpg",
-    alt: "Advisor meeting with clients at a conference table",
-    width: 1400,
-    height: 1050,
-  },
   advisorPortrait: {
     src: "/images/Office/me.png",
     localHint: "/images/Office/me.png",
     alt: "Portrait of Esther Francis, Financial Services Professional",
     width: 1400,
     height: 1750,
-  },
-  resourceLifeInsurance: {
-    src: "https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1200&q=80",
-    localHint: "/images/resource-life-insurance.jpg",
-    alt: "Family spending time together outdoors",
-    width: 1200,
-    height: 800,
-  },
-  resourceMedicare: {
-    src: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80",
-    localHint: "/images/resource-medicare.jpg",
-    alt: "Healthcare professional reviewing coverage information",
-    width: 1200,
-    height: 800,
-  },
-  resourceRetirement: {
-    src: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80",
-    localHint: "/images/resource-retirement.jpg",
-    alt: "Notebook and planning materials on a desk",
-    width: 1200,
-    height: 800,
   },
   logo: {
     src: "/Assests/logo.png",
@@ -119,24 +84,6 @@ export const officeGallery = [
     width: 1600,
     height: 1060,
   },
-  {
-    src: "/images/Office/ChatGPT Image Aug 27, 2026, 10_47_00 AM.png",
-    alt: "Advisor meeting with a couple in a conference room",
-    width: 1600,
-    height: 1060,
-  },
-  {
-    src: "/images/Office/ChatGPT Image Aug 27, 2026, 10_47_19 AM.png",
-    alt: "Advisor in a professional office setting",
-    width: 1600,
-    height: 1060,
-  },
-  {
-    src: "/images/Office/ChatGPT Image Aug 27, 2026, 10_48_28 AM.png",
-    alt: "Office workspace used for client conversations",
-    width: 1600,
-    height: 1060,
-  },
 ] as const;
 
 export const advisorCarousel = [
@@ -146,34 +93,22 @@ export const advisorCarousel = [
 
 export const processGallery = [
   {
-    src: "/images/Clear Path Images/ChatGPT Image Aug 27, 2026, 12_36_58 PM (1).png",
-    alt: "Advisor reviewing documents with a couple at a conference table",
-    width: 1200,
-    height: 1600,
+    src: "/images/Office/team1.JPG",
+    alt: "LeadStar Financial team standing together in the office",
+    width: 1600,
+    height: 1060,
   },
   {
-    src: "/images/Clear Path Images/ChatGPT Image Aug 27, 2026, 12_36_58 PM (2).png",
-    alt: "Advisors comparing coverage options on a tablet",
-    width: 1200,
-    height: 1600,
+    src: "/images/Office/me.png",
+    alt: "Esther Francis in the office",
+    width: 1400,
+    height: 1750,
   },
   {
-    src: "/images/Clear Path Images/ChatGPT Image Aug 27, 2026, 12_36_58 PM (3).png",
-    alt: "Advisor handing a planning folder to a client",
-    width: 1200,
-    height: 1600,
-  },
-  {
-    src: "/images/Clear Path Images/ChatGPT Image Aug 27, 2026, 12_36_58 PM (4).png",
-    alt: "Advisor standing with clients during a planning session",
-    width: 1200,
-    height: 1600,
-  },
-  {
-    src: "/images/Clear Path Images/ChatGPT Image Aug 27, 2026, 12_36_59 PM (5).png",
-    alt: "Advisors reviewing a plan together in the office lounge",
-    width: 1200,
-    height: 1600,
+    src: "/images/Office/team2.JPG",
+    alt: "LeadStar Financial team in the office lobby",
+    width: 1600,
+    height: 1060,
   },
 ] as const;
 
