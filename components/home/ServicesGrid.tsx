@@ -24,7 +24,7 @@ export function ServicesGrid({ className }: ServicesGridProps) {
         Services
       </h2>
       <div className="rounded-[18px] border border-line bg-white px-3.5 py-6 shadow-card sm:px-6 sm:py-8">
-        <div className="grid grid-cols-2 gap-x-4 gap-y-6 md:grid-cols-3 md:gap-x-6 md:gap-y-8 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-2 md:grid-cols-3 md:gap-x-6 md:gap-y-8 lg:grid-cols-4">
           {services.map((service, index) => {
             const isExtra = index >= MOBILE_PREVIEW_COUNT;
             return (
