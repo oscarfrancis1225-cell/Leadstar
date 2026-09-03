@@ -5,6 +5,8 @@ export {
   californiaLicenseDisplay,
   getProducerIdentificationText,
   getLicensingSummary,
+  formatPublicAddressSingleLine,
+  formatPublicAddressLines,
 } from "@/lib/content/site";
 export { navigation } from "@/lib/content/navigation";
 export { services, type Service } from "@/lib/content/services";

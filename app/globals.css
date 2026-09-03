@@ -146,6 +146,10 @@ body::before {
 
 @layer components {
   :where(.eyebrow) {
+    color: #6b4f16;
+  }
+
+  .advisor-band :where(.eyebrow) {
     color: var(--gold);
   }
 
@@ -406,5 +410,35 @@ body::before {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+.print-only {
+  display: none;
+}
+
+@media print {
+  header,
+  footer,
+  nav,
+  [data-site-chrome],
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  body {
+    background: white;
+  }
+
+  body::before {
+    display: none !important;
+  }
+
+  a[href]::after {
+    content: none !important;
   }
 }

@@ -9,25 +9,25 @@ import { siteConfig } from "@/lib/content/site";
 export const metadata: Metadata = {
   title: "FAQ",
   description:
-    "Common questions about working with LeadStar Financial, licensing, the contact form, and educational tools.",
+    "Do I have to get a quote first? No. Plain answers about life insurance conversations with LeadStar Financial, Florida and California licensing, Medicare pages, and educational tools.",
   alternates: { canonical: "/faq" },
 };
 
 const faqs = [
   {
+    question: "Do I have to get a quote first?",
+    answer:
+      "No. This website does not issue quotes. The form is a request for follow-up. You can arrive with a birthday, a job end date, or a person who depends on you, and still pick Not Sure Yet.",
+  },
+  {
     question: "What happens after I submit the form?",
     answer:
-      "A member of the LeadStar team can follow up to learn more about what you would like help with and discuss possible next steps.",
+      "Esther can follow up to learn what you want help with and discuss possible next steps. Submitting the form does not bind coverage.",
   },
   {
-    question: "Do I have to pick a product before we talk?",
+    question: "Is the website form an application?",
     answer:
-      "No. You can select “Not Sure Yet” and start with a conversation about your goals, timing, and concerns.",
-  },
-  {
-    question: "Is this a quote or an application?",
-    answer:
-      "The website form is a request for follow-up. It is not an application and does not bind coverage.",
+      "No. It is a request for a reply. An application, if one happens later, is a separate document from an insurer.",
   },
   {
     question: "Where is Esther Francis licensed?",
@@ -42,17 +42,22 @@ const faqs = [
   {
     question: "Are the calculators quotes?",
     answer:
-      "No. The tools are illustrations that use the numbers you type. They are not quotes, product illustrations, or recommendations.",
+      "No. The tools are illustrations that use the numbers you type. They are not quotes, product illustrations, or recommendations. Run the numbers before you guess. Then decide whether a conversation is useful.",
   },
   {
     question: "Do Medicare pages recommend a plan?",
     answer:
-      "No. Medicare pages explain program mechanics only. LeadStar Financial is not affiliated with or endorsed by the U.S. government or the federal Medicare program.",
+      "No. Medicare pages explain program mechanics only. LeadStar Financial is not affiliated with or endorsed by the U.S. government or the federal Medicare program. Esther is not described as a Medicare specialist on this site.",
   },
   {
     question: "Does using the website make me a client?",
     answer:
       "No. Browsing, using a tool, or sending the form does not create a client or insurance relationship. See Terms of Use and Temporary Use.",
+  },
+  {
+    question: "Can we talk if I am not sure which service fits?",
+    answer:
+      "Yes. Pick Not Sure Yet. The first conversation is about the job the money has to do, not about picking a product name on the form.",
   },
 ];
 
@@ -68,8 +73,8 @@ export default function FaqPage() {
       <FAQPageJsonLd faqs={faqs} />
       <PageHero
         eyebrow="FAQ"
-        title="A few questions people ask first"
-        description="These answers are general and intended to make the first conversation easier to start."
+        title="Do I have to get a quote first?"
+        description="Plain answers to the questions people ask before they send the form. There is no quote and no application on this website."
       />
       <section className="bg-white py-10">
         <Container className="max-w-3xl">

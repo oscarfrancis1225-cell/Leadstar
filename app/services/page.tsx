@@ -10,7 +10,7 @@ import { services } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Compare life insurance, retirement, Medicare, health insurance, final expense, mortgage protection, and business planning options before you pick a product name.",
+    "Compare the job of the money first, not the product name. Life insurance, term vs whole, retirement income, turning 65 Medicare, health insurance after a job change, final expense, mortgage protection.",
   alternates: { canonical: "/services" },
 };
 
@@ -19,8 +19,8 @@ export default function ServicesPage() {
     <>
       <PageHero
         eyebrow="Services"
-        title="Compare the options before you pick a product name"
-        description="Life, retirement, Medicare, health, a house payment, a business. The first job is naming the decision, then comparing what actually fits."
+        title="Which job does the money have to do?"
+        description="Income replacement is not the same as a house payment. A birthday is not Medicare enrollment. Compare the job first. The product name comes after."
       />
       <section className="bg-white py-16 lg:py-20">
         <Container className="grid gap-6">

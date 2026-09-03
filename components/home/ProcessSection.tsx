@@ -9,8 +9,8 @@ export function ProcessSection() {
     <section className="bg-cream py-20 lg:py-24">
       <Container wide>
         <SectionHeading
-          eyebrow="Our simple planning process"
-          title="A clear first conversation"
+          eyebrow="How a first conversation works"
+          title="Four conversations. Same person."
         />
         <div className="mt-12 grid items-start gap-10 lg:grid-cols-2 lg:items-center lg:gap-12">
           <ol className="relative grid grid-cols-2 gap-x-6 gap-y-10 lg:gap-x-10">

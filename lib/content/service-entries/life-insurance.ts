@@ -2,7 +2,7 @@ import type { ServicePageContent } from "@/lib/content/types";
 
 export const lifeInsuranceService = {
   slug: "life-insurance",
-  metaTitle: "Life Insurance",
+  metaTitle: "Life Insurance | How Much Do I Need",
   disclaimerVariant: "standard",
   productTypes: [
     {
@@ -45,30 +45,49 @@ export const lifeInsuranceService = {
     {
       type: "heading",
       level: 2,
-      id: "start-with-the-job",
-      text: "Someone depends on you. Start there.",
+      id: "two-questions",
+      text: "Two questions. Size first.",
     },
     {
       type: "paragraph",
-      text: "The belief is that you pick a product name first (term, whole, universal) and the job will follow. It works the other way. Life insurance pays a death benefit to the people or entities you name if you die while the policy is in force. Name the job first: replace income for a period of years, pay off a loan, fund a child’s education, or leave a smaller amount for last expenses.",
+      text: "How much life insurance do I need? Then term vs whole life. People reverse those. They pick a product name because a friend has one, or because a form asked for a quote, and they never size the job. Life insurance pays a death benefit to the people or entities you name if you die while the policy is in force. The amount has to do a job: replace income for a stretch of years, pay a loan, fund a child's education, or leave a smaller amount for last expenses.",
     },
     {
       type: "paragraph",
-      text: "A protection-needs estimate can add those obligations and subtract coverage and savings you already have. The result is a range, not a recommendation. You can try that illustration on the Protection Needs tool before a conversation.",
+      text: "A round multiple of income is a starting guess, not a measurement. Two households with the same salary can need very different coverage. For the longer framework, including why \"ten times income\" is not a plan, read the article How much life insurance do I need. This page is the shorter sibling: size the gap, then pick a design that lasts as long as the job.",
+    },
+    {
+      type: "heading",
+      level: 2,
+      id: "size-the-gap",
+      text: "Size the gap before you shop a name",
+    },
+    {
+      type: "paragraph",
+      text: "A protection-needs estimate can add years of income, debts, and education goals, then subtract coverage and savings you already have. Group life through work counts, and it can also end when a job ends. The result is a range, not a recommendation. You can try that illustration on the Protection Needs tool before a conversation.",
+    },
+    {
+      type: "list",
+      items: [
+        "Who depends on your income, and for how many years?",
+        "What debts or education costs would you want funded if you were gone?",
+        "What coverage already exists, including group life, and what happens to it after a job change?",
+        "What liquid savings would actually be available, not money you would hate to spend?",
+      ],
     },
     {
       type: "heading",
       level: 2,
       id: "term-and-permanent",
-      text: "Term and permanent, in plain language",
+      text: "Term vs whole, in kitchen-table language",
     },
     {
       type: "paragraph",
-      text: "Term life covers a set period, often 10, 20, or 30 years. If death occurs during that period and the policy is in force, the insurer pays the death benefit. When the term ends, coverage ends unless the contract allows renewal or conversion. Term is often used when the job itself has an end date: years until children are independent, or years left on a mortgage.",
+      text: "Term life covers a set period, often 10, 20, or 30 years. If death occurs during that period and the policy is in force, the insurer pays the death benefit. When the term ends, coverage ends unless the contract allows renewal or conversion. Term often fits a job with an end date: years until children are independent, or years left on a mortgage.",
     },
     {
       type: "paragraph",
-      text: "Permanent life insurance (commonly whole life or universal life) is designed to last for life if premiums and policy charges are kept as the contract requires. Many permanent policies can build cash value. Cash value is not a savings account at a bank, and it is not a reason to buy coverage you do not need. Loans or withdrawals, if allowed, can reduce the death benefit.",
+      text: "Permanent life insurance, commonly whole life or universal life, is designed to last for life if premiums and policy charges are kept as the contract requires. Many permanent policies can build cash value. Cash value is not a bank savings account. Loans or withdrawals, if allowed, can reduce the death benefit. Permanent coverage can fit a need that does not expire, including a smaller final-expense amount.",
     },
     {
       type: "table",
@@ -82,6 +101,10 @@ export const lifeInsuranceService = {
       ],
     },
     {
+      type: "paragraph",
+      text: "Many households use both for different jobs: a larger term policy for income years, and a smaller permanent policy that is still there later. Neither design is \"better\" in the abstract. The useful test is how long the need lasts, and whether the premium is one you can keep paying.",
+    },
+    {
       type: "heading",
       level: 2,
       id: "who-is-named",
@@ -89,7 +112,7 @@ export const lifeInsuranceService = {
     },
     {
       type: "paragraph",
-      text: "The beneficiary receives the death benefit. The owner controls changes the contract allows, such as beneficiary updates. Those can be different people. Group life through work can be useful and can also end when a job ends. It is worth writing down what continues after a job change.",
+      text: "The beneficiary receives the death benefit. The owner controls changes the contract allows, such as beneficiary updates. Those can be different people. If the house is the number you can see, mortgage protection is a different page, because some designs send the check to a lender. Start here if the people come first.",
     },
     {
       type: "heading",

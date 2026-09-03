@@ -12,22 +12,22 @@ import { siteConfig } from "@/lib/content/site";
 export const metadata: Metadata = {
   title: "About LeadStar Financial",
   description:
-    "LeadStar Financial keeps insurance and financial-protection conversations personal and understandable. Esther Francis is an insurance agent licensed in Florida and California.",
+    "Esther Francis is a single parent in Boca Raton and an insurance agent licensed in Florida and California. LeadStar Financial talks about life insurance, retirement income, and Medicare questions in plain language.",
   alternates: { canonical: "/about" },
 };
 
 const philosophy = [
   {
     title: "Plan",
-    text: "Understand goals, priorities, and circumstances. Create a clear strategy. Coordinate with other professionals when appropriate and authorized.",
+    text: "Write down the job the money has to do. Income for a stretch of years. A month of retirement spending. A house. A business partner. Start there.",
   },
   {
     title: "Protect",
-    text: "Consider risks to income, family, health coverage, home, business, and accumulated assets.",
+    text: "Look at what would actually be there if a paycheck stopped. Existing coverage. Savings. A continuation notice. Then look at the gap.",
   },
   {
     title: "Prosper",
-    text: "Support thoughtful long-term financial progress consistent with the client's goals and available strategies. This is not a promise of a particular outcome.",
+    text: "Then look at options that fit that job. This is not a promise that money will grow or that a certain future will happen.",
   },
 ];
 
@@ -36,8 +36,8 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About LeadStar"
-        title="Protection conversations that stay personal"
-        description="Esther Francis is an insurance agent licensed in Florida and California. LeadStar keeps those conversations understandable, not a harder sell."
+        title="What if the person who keeps the lights on is also the only backup plan?"
+        description="Esther Francis knows that feeling. She is a single parent in Boca Raton. LeadStar Financial starts with the paycheck, not a product name."
       />
       <section className="bg-white py-10">
         <Container>
@@ -53,14 +53,36 @@ export default function AboutPage() {
         <Container className="max-w-3xl space-y-5">
           <h2 className="headline text-3xl">Our story</h2>
           <p className="lead">
-            Most people do not show up looking for a product name. They show up
-            with a date, a person who depends on them, or a question they have
-            been postponing. Esther Francis is an insurance agent licensed in
-            Florida and California. LeadStar Financial keeps those protection
-            conversations personal and understandable, not a harder sell.{" "}
-            {siteConfig.entityNote} A street address and a verified phone number
-            are not published on this page until they are confirmed for public
-            use. License numbers appear on the{" "}
+            What if the person who keeps the lights on is also the only backup
+            plan?
+          </p>
+          <p className="lead">
+            Esther Francis knows that feeling. She is a single parent in Boca
+            Raton. She is a Financial Services Professional and an insurance
+            agent licensed in Florida and California.
+          </p>
+          <p className="lead">
+            That is why LeadStar talks about the paycheck first, not a product
+            name. The firm is the place for those conversations. Esther&apos;s
+            profile is the person behind them.
+          </p>
+          <p className="lead">
+            People often start with term vs whole life, or they hunt for a
+            quote form, before they know the job the money has to do. Figure
+            out how much life insurance you need first. A quote comes later, if
+            it comes at all. There is no application on this website.
+          </p>
+          <p className="lead">
+            {siteConfig.entityNote} Phone, email, and the Margate mailing
+            address are on the{" "}
+            <Link href="/contact" className="text-blue hover:underline">
+              Contact
+            </Link>{" "}
+            and{" "}
+            <Link href="/office" className="text-blue hover:underline">
+              Office
+            </Link>{" "}
+            pages. License numbers appear on the{" "}
             <Link href="/disclosures" className="text-blue hover:underline">
               Disclosures
             </Link>{" "}

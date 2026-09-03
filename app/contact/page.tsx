@@ -3,17 +3,19 @@ import { Check } from "lucide-react";
 import { LeadForm } from "@/components/forms/LeadForm";
 import { Container } from "@/components/ui/Container";
 import { contactHighlights, siteConfig } from "@/lib/constants";
+import { formatPublicAddressLines } from "@/lib/content/site";
 import { isPlaceholderPhone } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Start the conversation in the right order. Tell us what is in front of you and a member of the LeadStar team can follow up.",
+    "What still has to get paid this week? Tell LeadStar Financial about a life insurance, retirement income, or Medicare question. There is no application and no quote on this website.",
   alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {
   const showPhone = !isPlaceholderPhone(siteConfig.phone);
+  const addressLines = formatPublicAddressLines();
 
   return (
     <section className="bg-cream py-16 lg:py-20">
@@ -21,11 +23,12 @@ export default function ContactPage() {
         <div>
           <p className="eyebrow">Contact</p>
           <h1 className="headline mt-3 text-4xl sm:text-5xl">
-            Start the conversation in the right order
+            What still has to get paid?
           </h1>
           <p className="lead mt-5">
-            Tell us what is actually in front of you. A member of our team can
-            follow up. There is no application on this website.
+            This week: a birthday, a job end date, a house payment, a person
+            who depends on you. Write the one that is actually on the table.
+            Esther can follow up. There is no application on this website.
           </p>
           <ul className="mt-8 space-y-3">
             {contactHighlights.map((item) => (
@@ -45,7 +48,17 @@ export default function ContactPage() {
               </>
             ) : null}
             {siteConfig.email}
-            <br />
+            {addressLines.length > 0 ? (
+              <>
+                <br />
+                {addressLines.map((line) => (
+                  <span key={line}>
+                    {line}
+                    <br />
+                  </span>
+                ))}
+              </>
+            ) : null}
             {siteConfig.serviceArea}
           </p>
         </div>

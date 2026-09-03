@@ -15,9 +15,9 @@ export function Hero() {
               <span className="text-blue">Your paycheck already is.</span>
             </h1>
             <p className="lead mt-6 max-w-[30rem]">
-              Your family lives on the money you bring home. Staying healthy
-              helps you keep bringing it. We help you protect that paycheck now,
-              and plan for the years after you stop working.
+              The household already runs on that paycheck. Health is how you
+              keep earning it. Cover the years you still work. Then plan the
+              years you do not.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button href="/contact" variant="primary" showArrow>

@@ -1,48 +1,64 @@
-import { getPublishedArticles } from "@/lib/content/articles";
-import { services } from "@/lib/content/services";
-import { tools } from "@/lib/content/tools";
 import { estherFrancis } from "@/lib/content/authors";
 import { siteConfig } from "@/lib/content/site";
+import {
+  absoluteUrl,
+  clipForLlms,
+  getIndexableEntriesByGroup,
+  type IndexGroup,
+  type IndexableEntry,
+} from "@/lib/seo/site-index";
 import { getSiteUrl } from "@/lib/site-url";
 
 export const dynamic = "force-static";
 
+const LLM_HEADINGS: Record<IndexGroup, string> = {
+  "Start here": "About",
+  Services: "Services",
+  Insights: "Insights",
+  Tools: "Tools",
+  Legal: "Legal",
+};
+
+function disclosureOneLiner() {
+  const first = siteConfig.disclosure.split(/(?<=\.)\s+/)[0];
+  return first || siteConfig.disclosure;
+}
+
+function listItem(entry: IndexableEntry, siteUrl: string) {
+  return `- [${entry.title}](${absoluteUrl(entry.path, siteUrl)}): ${clipForLlms(entry.description)}`;
+}
+
 export function GET() {
   const siteUrl = getSiteUrl();
-  const lines = [
+  const sections = getIndexableEntriesByGroup();
+  const lines: string[] = [
     `# ${siteConfig.name}`,
     "",
-    `> ${siteConfig.tagline}`,
-    "",
-    siteConfig.metadata.description,
+    `> Educational insurance conversations with ${estherFrancis.name}, licensed in Florida and California. ${siteConfig.name} is not affiliated with or endorsed by the U.S. government or the federal Medicare program.`,
     "",
     siteConfig.entityNote,
+    disclosureOneLiner(),
     "",
-    `${estherFrancis.name} is an insurance agent licensed in Florida and California.`,
-    "",
-    "## About",
-    `- [About](${siteUrl}/about): Company story and Plan. Protect. Prosper.`,
-    `- [${estherFrancis.name}](${siteUrl}${estherFrancis.href}): ${estherFrancis.jobTitle}.`,
-    `- [Contact](${siteUrl}/contact): Start a conversation.`,
-    "",
-    "## Legal",
-    `- [Privacy Policy](${siteUrl}/privacy)`,
-    `- [Terms of Use](${siteUrl}/terms)`,
-    `- [Temporary Use](${siteUrl}/temporary-use)`,
-    `- [Disclosures](${siteUrl}/disclosures)`,
-    "",
-    "## Services",
-    ...services.map((service) => `- [${service.title}](${siteUrl}${service.href}): ${service.description}`),
-    "",
-    "## Articles",
-    ...getPublishedArticles().map(
-      (article) => `- [${article.title}](${siteUrl}${article.href}): ${article.summary}`,
-    ),
-    "",
-    "## Tools",
-    `- [Educational tools](${siteUrl}/tools)`,
-    ...tools.map((tool) => `- [${tool.title}](${siteUrl}${tool.href}): ${tool.description}`),
   ];
+
+  for (const section of sections) {
+    const heading = LLM_HEADINGS[section.group];
+    const entries =
+      section.group === "Legal"
+        ? section.entries.filter((item) => item.path !== "/sitemap")
+        : section.entries;
+    lines.push(`## ${heading}`);
+    lines.push(...entries.map((entry) => listItem(entry, siteUrl)));
+    lines.push("");
+  }
+
+  lines.push("## Optional");
+  lines.push(
+    `- [HTML sitemap](${siteUrl}/sitemap): A plain-language list of LeadStar pages for people and search engines.`,
+  );
+  lines.push(
+    `- [XML sitemap](${siteUrl}/sitemap.xml): Machine-readable list of public indexable URLs.`,
+  );
 
   return new Response(lines.join("\n"), {
     headers: {

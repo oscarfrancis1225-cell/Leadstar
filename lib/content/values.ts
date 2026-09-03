@@ -4,7 +4,7 @@ export const values = [
   {
     title: "Personal Guidance",
     description:
-      "The first question is what you have to decide this year. The product name comes later, if it comes at all.",
+      "What do you have to decide this year? That is the first question. The product name comes later, if it comes at all.",
     icon: "UserRound",
     image: siteImages.valuePersonalGuidance,
   },
@@ -18,14 +18,14 @@ export const values = [
   {
     title: "Broad Solutions",
     description:
-      "Health before 65, Medicare timing, life coverage, retirement income, a house payment, a business. Same conversation style for each.",
+      "A job change. A 65th birthday. A house. A business. Same conversation style. Different jobs of money.",
     icon: "Layers",
     image: siteImages.valueBroadSolutions,
   },
   {
     title: "Ongoing Support",
     description:
-      "The first conversation is not the last one. Dates shift. Coverage ends. Someone new depends on you.",
+      "Dates shift. Coverage ends. Someone new depends on you. The first talk is not the last one.",
     icon: "Handshake",
     image: siteImages.valueOngoingSupport,
   },

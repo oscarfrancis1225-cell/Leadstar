@@ -22,7 +22,7 @@ export const mortgageProtectionProducts = [
         type: "heading",
         level: 2,
         id: "what-it-is",
-        text: "This is what mortgage-centered coverage is",
+        text: "Built around a loan, not around a person",
       },
       {
         type: "paragraph",
@@ -36,7 +36,7 @@ export const mortgageProtectionProducts = [
         type: "heading",
         level: 2,
         id: "common-mix-up",
-        text: "What people often mix up",
+        text: "The bank is not always the beneficiary",
       },
       {
         type: "paragraph",

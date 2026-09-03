@@ -9,7 +9,7 @@ export const finalExpenseProducts = [
     metaTitle: "Final Expense Insurance",
     description:
       "Final expense insurance is usually a smaller permanent life policy for last expenses. It is not a government program, and Medicare does not pay funeral costs.",
-    hook: "It is not a government burial program. It is a small permanent life policy.",
+    hook: "Does a policy you already have already cover the last bills? If not, this is usually a small permanent life policy, not a government program.",
     question: "Does a policy you already have already cover the last bills?",
     disclaimerVariant: "standard",
     relatedLinks: [
@@ -22,7 +22,7 @@ export const finalExpenseProducts = [
         type: "heading",
         level: 2,
         id: "what-it-is",
-        text: "This is what final expense insurance is",
+        text: "A small permanent policy, not a burial program",
       },
       {
         type: "paragraph",
@@ -36,7 +36,7 @@ export const finalExpenseProducts = [
         type: "heading",
         level: 2,
         id: "common-mix-up",
-        text: "What people often mix up",
+        text: "A smaller policy is not automatically a better one",
       },
       {
         type: "paragraph",

@@ -23,6 +23,16 @@ const playfair = Playfair_Display({
 
 const siteUrl = getSiteUrl();
 
+const googleVerification = siteConfig.search.googleSiteVerification.trim();
+const bingVerification = siteConfig.search.bingSiteVerification.trim();
+const verification: Metadata["verification"] | undefined =
+  googleVerification || bingVerification
+    ? {
+        ...(googleVerification ? { google: googleVerification } : {}),
+        ...(bingVerification ? { other: { "msvalidate.01": bingVerification } } : {}),
+      }
+    : undefined;
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
@@ -30,8 +40,22 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.metadata.description,
+  authors: [{ name: siteConfig.licenses.producerName }],
+  category: "insurance",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  ...(verification ? { verification } : {}),
   alternates: {
     canonical: "/",
+    types: {
+      "text/plain": [{ url: "/llms.txt", title: "LLM index" }],
+    },
   },
   openGraph: {
     type: "website",

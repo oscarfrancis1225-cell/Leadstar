@@ -22,7 +22,7 @@ export const businessPlanningProducts = [
         type: "heading",
         level: 2,
         id: "what-it-is",
-        text: "This is what key person insurance is",
+        text: "Cash for operations if a key person dies",
       },
       {
         type: "paragraph",
@@ -36,7 +36,7 @@ export const businessPlanningProducts = [
         type: "heading",
         level: 2,
         id: "common-mix-up",
-        text: "What people often mix up",
+        text: "Key person coverage does not replace a buy-sell",
       },
       {
         type: "paragraph",
@@ -70,7 +70,7 @@ export const businessPlanningProducts = [
         type: "heading",
         level: 2,
         id: "what-it-is",
-        text: "This is what buy-sell funding is",
+        text: "Funding for a written transfer, not the transfer itself",
       },
       {
         type: "paragraph",
@@ -84,7 +84,7 @@ export const businessPlanningProducts = [
         type: "heading",
         level: 2,
         id: "common-mix-up",
-        text: "What people often mix up",
+        text: "A policy does not create a written agreement",
       },
       {
         type: "paragraph",

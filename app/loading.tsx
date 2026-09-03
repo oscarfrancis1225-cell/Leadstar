@@ -5,7 +5,9 @@ export default function Loading() {
     <section className="bg-cream py-24" aria-busy="true" aria-live="polite">
       <Container className="max-w-xl text-center">
         <p className="eyebrow">Loading</p>
-        <h1 className="headline mt-3 text-3xl">Getting the next page ready.</h1>
+        <p className="headline mt-3 text-3xl" role="status">
+          Getting the next page ready.
+        </p>
       </Container>
     </section>
   );

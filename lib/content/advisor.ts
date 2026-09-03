@@ -1,10 +1,10 @@
 export const advisor = {
   eyebrow: "Meet your advisor",
   title: "Meet Esther Francis",
-  bio: "Esther Francis is a Financial Services Professional and an insurance agent licensed in Florida and California. She starts with the decision in front of you, in plain language, so you can compare options in the right order before anyone names a product.",
+  bio: "Esther Francis is a single parent in Boca Raton. She is an insurance agent licensed in Florida and California. She starts with the paycheck, not a product name.",
   ctaLabel: "Read Esther's profile",
   ctaHref: "/about/esther-francis",
-  officeLabel: "Visit the office gallery",
+  officeLabel: "See office photographs",
   officeHref: "/office#gallery",
 } as const;
 

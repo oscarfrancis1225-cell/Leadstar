@@ -19,7 +19,8 @@ import { services, tools } from "@/lib/constants";
 
 const serviceToolSlugs: Record<string, string[]> = {
   "retirement-services": ["retirement-income", "retirement-goal", "compound-growth"],
-  "life-insurance": ["protection-needs"],
+  "life-insurance": ["protection-needs", "beneficiary-checklist"],
+  "medicare-insurance": ["turning-65"],
   "mortgage-protection": ["mortgage-protection"],
   "final-expense": [],
 };

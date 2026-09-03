@@ -1,11 +1,11 @@
-﻿export const tools = [
+export const tools = [
   {
     slug: "retirement-income",
     title: "Retirement Income Planner",
     shortDescription:
       "If the paycheck stopped, would the income you typed cover the month?",
     description:
-      "This tool illustrates whether savings grown to retirement, plus Social Security or pension income you enter, may cover the monthly retirement expenses you enter.",
+      "This tool illustrates whether savings grown to retirement, plus Social Security or pension income you enter, may cover the monthly retirement expenses you enter. It is a worksheet, not a forecast.",
     href: "/tools/retirement-income",
     icon: "Landmark",
     relatedServiceHref: "/services/retirement-services",
@@ -24,7 +24,7 @@
       "The Social Security or pension amount you typed",
     ],
     excludes: [
-      "Inflation, taxes, and market sequence risk",
+      "Inflation, taxes, and the risk that returns arrive in a hard year-by-year pattern",
       "Guaranteed income products and actual Social Security calculations",
       "Healthcare or Medicare costs, and any product recommendation",
     ],
@@ -54,7 +54,7 @@
     shortDescription:
       "If the rate you enter held still, what would the balance look like?",
     description:
-      "This tool illustrates how a starting balance and a consistent monthly contribution could grow if the annual return you enter stayed constant.",
+      "This tool illustrates how a starting balance and a consistent monthly contribution could grow if the annual return you enter stayed constant. The rate is an assumption, not a forecast.",
     href: "/tools/compound-growth",
     icon: "TrendingUp",
     relatedServiceHref: "/services/retirement-services",
@@ -147,7 +147,7 @@
     shortDescription:
       "If someone depends on you, what is the gap after coverage you already have?",
     description:
-      "This tool adds a few common financial responsibilities and subtracts coverage and savings you already have, so you can see a rough protection range.",
+      "This tool adds a few common financial responsibilities and subtracts coverage and savings you already have, so you can see a rough range for how much life insurance you might discuss. It is not a quote.",
     href: "/tools/protection-needs",
     icon: "Umbrella",
     relatedServiceHref: "/services/life-insurance",
@@ -194,7 +194,7 @@
     shortDescription:
       "What cash obligation is still attached to the house?",
     description:
-      "This tool multiplies the monthly housing payment you enter by the remaining term so you can see the approximate cash obligation still attached to the home.",
+      "This tool multiplies the monthly housing payment you enter by the remaining term so you can see the approximate cash obligation still attached to the home. It sizes a housing number. It does not pick a policy.",
     href: "/tools/mortgage-protection",
     icon: "Home",
     relatedServiceHref: "/services/mortgage-protection",
@@ -240,7 +240,7 @@
     shortDescription:
       "How many months would current cash last if the paycheck paused?",
     description:
-      "This tool divides current cash savings by essential monthly expenses and debt payments to illustrate how many months those reserves could cover.",
+      "This tool divides current cash savings by essential monthly expenses and debt payments to illustrate how many months those reserves could cover. Household needs differ.",
     href: "/tools/financial-safety",
     icon: "Wallet",
     relatedServiceHref: "/tools",
@@ -277,6 +277,119 @@
         question: "Does this include investment accounts?",
         answer:
           "Only if you type them into cash savings. Accounts you would not spend should stay out of the input.",
+      },
+    ],
+  },
+  {
+    slug: "turning-65",
+    title: "Turning 65 Enrollment-Period Calendar",
+    shortDescription:
+      "What seven months sit around a 65th birthday for Medicare Initial Enrollment Period?",
+    description:
+      "Enter a date of birth to see the 65th birthday and the seven months of Medicare Initial Enrollment Period. If the birthday is the 1st of the month, the period starts a month earlier and ends a month earlier. This page does not compare Medicare Advantage, Medigap, Part D, premiums, star ratings, or carriers. It is not a signup. LeadStar is not affiliated with Medicare.",
+    href: "/tools/turning-65",
+    icon: "Calendar",
+    relatedServiceHref: "/services/medicare-insurance",
+    relatedServiceLabel: "Medicare Insurance",
+    ctaLabel: "Start a conversation",
+    secondaryCtaLabel: "Explore Medicare Insurance",
+    relatedSlugs: ["retirement-income", "financial-safety", "beneficiary-checklist"],
+    howToUse: [
+      "Enter your date of birth so the tool can find your 65th birthday.",
+      "Read which seven months are in Initial Enrollment Period, including the first-of-the-month note if it applies.",
+      "Use the checklist and the official Medicare.gov and Social Security links. Print or email the page to yourself if you want a copy.",
+    ],
+    includes: [
+      "The 65th birthday from the date you typed",
+      "Seven Initial Enrollment Period months, with the first-of-the-month shift when it applies",
+      "A local checklist and links to Medicare.gov and Social Security",
+    ],
+    excludes: [
+      "Medicare Advantage, Medigap, or Part D plan comparison",
+      "Premiums, star ratings, carriers, and any plan recommendation",
+      "A Social Security benefit estimate or an enrollment form",
+    ],
+    disclosures: [
+      "This calendar is an illustration, not a quote, and not advice. Confirm dates on Medicare.gov.",
+      "LeadStar Financial is not affiliated with or endorsed by the U.S. government or the federal Medicare program.",
+      "If you are still working, ask the employer benefits office whether coverage is creditable. This tool does not answer that.",
+    ],
+    summary:
+      "This calendar illustrates the seven months of Medicare Initial Enrollment Period around a 65th birthday. If the birthday is the 1st of the month, the period starts and ends a month earlier. It does not compare plans, premiums, star ratings, or carriers. LeadStar is not affiliated with Medicare.",
+    faqs: [
+      {
+        question: "Does this page enroll me in Medicare?",
+        answer:
+          "No. It shows months. Sign up through Social Security or the official Medicare process. Confirm dates on Medicare.gov.",
+      },
+      {
+        question: "What if my birthday is on the 1st of the month?",
+        answer:
+          "Medicare.gov says Initial Enrollment Period then starts a month earlier and ends a month earlier. The table on this page follows that rule. Still confirm your months on Medicare.gov.",
+      },
+      {
+        question: "Does this compare Medicare Advantage, Medigap, or Part D?",
+        answer:
+          "No. This page does not compare Medicare Advantage, Medigap, Part D, premiums, star ratings, or carriers. It does not recommend a plan.",
+      },
+      {
+        question: "Is LeadStar part of Medicare?",
+        answer:
+          "No. LeadStar is not affiliated with Medicare or Social Security. Official dates and accounts live on Medicare.gov and ssa.gov.",
+      },
+    ],
+  },
+  {
+    slug: "beneficiary-checklist",
+    title: "Beneficiary and Life-Event Checklist",
+    shortDescription:
+      "After a life change, which beneficiary forms still need a look?",
+    description:
+      "Mark life events and the account types that still need a beneficiary review. A divorce decree does not automatically change a beneficiary form. Employer plans may follow ERISA and the plan document. This is not legal advice. Nothing is saved on LeadStar servers. Print the list or email it only to yourself.",
+    href: "/tools/beneficiary-checklist",
+    icon: "ListChecks",
+    relatedServiceHref: "/services/life-insurance",
+    relatedServiceLabel: "Life Insurance",
+    ctaLabel: "Start a conversation",
+    secondaryCtaLabel: "Learn About Life Insurance",
+    relatedSlugs: ["protection-needs", "financial-safety", "mortgage-protection"],
+    howToUse: [
+      "Check any life events that happened since you last looked at beneficiary forms.",
+      "For each account type, jot where it lives. Do not type account numbers.",
+      "Print the list or email it to yourself. Nothing is saved on this site.",
+    ],
+    includes: [
+      "Life-event checkboxes you can mark on this device",
+      "Account types people often forget to review, with an optional institution name",
+      "A reminder that a decree does not rewrite the form that pays",
+    ],
+    excludes: [
+      "Account numbers, Social Security numbers, and policy numbers",
+      "Legal advice, a claim form, or an automatic change to any beneficiary",
+      "A product recommendation or a quote",
+    ],
+    disclosures: [
+      "This checklist is an illustration, not a quote, and not advice. It is not a legal document.",
+      "A divorce decree does not automatically change a beneficiary form. Employer plans may follow ERISA and the plan document.",
+      "Nothing you type here is saved on LeadStar servers. Email only opens your own mail app.",
+    ],
+    summary:
+      "This worksheet helps you mark life events and account types whose beneficiary forms may need a review. A divorce decree does not automatically change those forms. Nothing is saved on LeadStar servers. It is not legal advice and not a quote.",
+    faqs: [
+      {
+        question: "Does a divorce decree change my beneficiaries?",
+        answer:
+          "Usually no. Life insurance, IRAs, and many other accounts pay whoever is on the beneficiary form unless the plan or policy says otherwise. Employer plans may follow ERISA and the plan document. This is not legal advice.",
+      },
+      {
+        question: "Does LeadStar store what I type?",
+        answer:
+          "No. Checks and notes stay on this device. Print the page. If you email it, your own mail app sends it. LeadStar does not receive the list.",
+      },
+      {
+        question: "Should I put account numbers here?",
+        answer:
+          "No. You can type an institution name. Do not type account numbers, Social Security numbers, or policy numbers.",
       },
     ],
   },

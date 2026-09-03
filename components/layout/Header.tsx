@@ -59,6 +59,7 @@ export function Header() {
   return (
     <>
       <header
+        data-site-chrome
         className={cn(
           "sticky top-0 z-40 border-b bg-white/92 backdrop-blur-md transition-all duration-200",
           scrolled ? "border-line shadow-header" : "border-transparent",

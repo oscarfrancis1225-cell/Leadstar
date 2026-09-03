@@ -28,7 +28,7 @@ export const disclosuresDocument = {
     },
     {
       type: "paragraph",
-      text: "A street address is not listed on this site until it is confirmed for public use. A phone number appears only as a placeholder until a verified number replaces it. Please use the website form if you want a reply.",
+      text: `Public mailing address: 6666 Saltaire Terrace, Margate, FL 33063. Phone: ${siteConfig.phone}. Email: ${siteConfig.email}. Esther lives in Boca Raton. Use the website form if you want a reply.`,
     },
     {
       type: "heading",
@@ -110,7 +110,7 @@ export const disclosuresDocument = {
     },
     {
       type: "paragraph",
-      text: "Medicare pages on this site explain program mechanics only: parts of Medicare, enrollment windows, and official concepts such as creditable coverage. They do not describe, compare, or recommend specific Medicare Advantage plans, prescription-drug plans, premiums, cost-sharing, star ratings, or carriers. Esther is not described as a Medicare specialist on this site.",
+      text: "Medicare pages on this site explain program mechanics only: parts of Medicare, enrollment periods, and official concepts such as creditable coverage. They do not describe, compare, or recommend specific Medicare Advantage plans, prescription-drug plans, premiums, cost-sharing, star ratings, or carriers. Esther is not described as a Medicare specialist on this site.",
     },
     {
       type: "heading",
@@ -140,7 +140,7 @@ export const disclosuresDocument = {
     },
     {
       type: "paragraph",
-      text: `Use the contact form on this website. You may also write ${siteConfig.email}. Do not send Social Security numbers, medical records, or account numbers through the form.`,
+      text: `Use the contact form on this website. You may also call ${siteConfig.phone} or write ${siteConfig.email}. Mailing address: 6666 Saltaire Terrace, Margate, FL 33063. Do not send Social Security numbers, medical records, or account numbers through the form.`,
     },
     {
       type: "heading",

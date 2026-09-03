@@ -2,7 +2,7 @@ import type { ServicePageContent } from "@/lib/content/types";
 
 export const retirementServicesService = {
   slug: "retirement-services",
-  metaTitle: "Retirement Services",
+  metaTitle: "Retirement Income Conversations",
   disclaimerVariant: "tax-adjacent",
   productTypes: [
     {
@@ -57,12 +57,16 @@ export const retirementServicesService = {
     {
       type: "heading",
       level: 2,
-      id: "balance-is-not-a-paycheck",
-      text: "A balance is not a paycheck",
+      id: "first-month-without-a-deposit",
+      text: "The first month without a deposit",
     },
     {
       type: "paragraph",
-      text: "The belief is that a large number in an account means you are ready. It is not. Retirement is the shift from saving to spending, how savings, Social Security, and other sources become monthly income. The work is a conversation about timing, spending, and gaps. Not a promise of a return or a particular lifestyle.",
+      text: "A balance sits in an account. Retirement income has to hit the checking account. That is a different job. The large number on a statement can look like you are ready. Then the paycheck stops, and the question becomes: what covers rent, food, and the rest of the month? Savings, Social Security, a pension, and other sources have to become a method. Not a promise of a return. Not a particular lifestyle.",
+    },
+    {
+      type: "paragraph",
+      text: "The longer essay on that shift, including why a withdrawal rule is a heuristic and not a wage, lives in the article Retirement income: a balance is not a paycheck. This page is the conversation map: which sources already have a name, which accounts you would draw from first, and which questions belong with a tax professional or an investment adviser LeadStar is not.",
     },
     {
       type: "paragraph",
@@ -78,7 +82,7 @@ export const retirementServicesService = {
       type: "list",
       items: [
         "When do you hope to stop relying on a paycheck?",
-        "What does a month of retirement spending look like in today’s dollars?",
+        "What does a month of retirement spending look like in today's dollars?",
         "Which income already has a name: Social Security, a pension, rental income?",
         "Which accounts would you draw from first, and which would you rather leave alone?",
         "What happens to a spouse if one person dies earlier than expected?",
@@ -92,11 +96,21 @@ export const retirementServicesService = {
     },
     {
       type: "paragraph",
-      text: "The Retirement Income Planner and Retirement Goal Calculator illustrate numbers you type. They can show a gap or a surplus under a planning withdrawal rate. They do not calculate your official Social Security benefit, they do not include inflation unless you change an assumption the tool allows, and they do not recommend a product.",
+      text: "The Retirement Income Planner and Retirement Goal Calculator illustrate numbers you type. They can show a gap or a surplus under a planning withdrawal rate. They do not calculate your official Social Security benefit, they do not include inflation unless you change an assumption the tool allows, and they do not recommend a product. Run the numbers before you guess. Then decide whether the illustration is even in the right neighborhood.",
     },
     {
       type: "paragraph",
-      text: "The Compound Growth Calculator shows what a starting balance and a monthly contribution could become if a constant return held for the whole period. That return is an assumption you enter. It is not a forecast of any account LeadStar manages: LeadStar does not manage investment accounts on this site.",
+      text: "The Compound Growth Calculator shows what a starting balance and a monthly contribution could become if a constant return held for the whole period. That return is an assumption you enter. It is not a forecast of any account LeadStar manages. LeadStar does not manage investment accounts on this site.",
+    },
+    {
+      type: "heading",
+      level: 2,
+      id: "accounts-are-not-the-paycheck",
+      text: "An IRA is an account, not the paycheck",
+    },
+    {
+      type: "paragraph",
+      text: "Traditional IRA, Roth IRA, SEP, SIMPLE, and employer plans are account structures. What you hold inside them is a separate choice. An annuity is an insurance contract, not a bank account. Those product pages stay educational. None of them is offered or recommended on this website.",
     },
     {
       type: "heading",

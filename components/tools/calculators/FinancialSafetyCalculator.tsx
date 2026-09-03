@@ -5,6 +5,7 @@ import { CalculatorCta } from "@/components/tools/CalculatorCta";
 import { CalculatorField } from "@/components/tools/CalculatorField";
 import { CalculatorShell } from "@/components/tools/CalculatorShell";
 import { CushionMeter } from "@/components/tools/CushionMeter";
+import { KeepWorksheet } from "@/components/tools/KeepWorksheet";
 import { formatMonths, formatUSD, calculateSafetyCushion } from "@/lib/calculators";
 
 const bandCopy = {
@@ -25,6 +26,9 @@ export function FinancialSafetyCalculator() {
     monthlyDebtPayments: debt,
   });
 
+  const monthsLabel =
+    result.displayMonths === null ? "-" : `${formatMonths(result.displayMonths)} months`;
+
   return (
     <CalculatorShell
       summary={{
@@ -34,6 +38,21 @@ export function FinancialSafetyCalculator() {
             ? "-"
             : `${formatMonths(result.displayMonths)} mo`,
       }}
+      keep={
+        <KeepWorksheet
+          title="Financial Safety Cushion"
+          rows={[
+            { label: "Monthly essential expenses", value: formatUSD(expenses) },
+            { label: "Current cash savings", value: formatUSD(savings) },
+            { label: "Monthly debt payments", value: formatUSD(debt) },
+            { label: "Monthly outflow illustrated", value: formatUSD(result.monthlyOutflow) },
+            { label: "Illustrated months covered", value: monthsLabel },
+            { label: "Category label", value: bandCopy[result.band] },
+          ]}
+          disclaimer="This worksheet is an illustration of how long cash might last, not a quote, not advice, and not a recommended reserve target. Household needs differ."
+          toolHref="/tools/financial-safety"
+        />
+      }
       results={
         <div>
           <p className="text-sm font-medium text-navy">

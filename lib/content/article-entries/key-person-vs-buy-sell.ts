@@ -14,57 +14,77 @@ export const keyPersonVsBuySell = {
   pillar: "Business Owner Planning",
   image: articleHero(
     "key-person-vs-buy-sell",
-    "Illustrative photograph of professionals reviewing documents in a conference room",
+    "Illustrative photograph of two shop owners reviewing a document at a counter",
     "Illustrative image: a business-continuity conversation. Not a LeadStar client.",
   ),
   publishedAt: "2026-08-27",
-  updatedAt: "2026-08-27",
-  lastReviewedAt: "2026-08-27",
+  updatedAt: "2026-09-03",
+  lastReviewedAt: "2026-09-03",
   reviewedBy: "Esther Francis",
   reviewAttestation: "pending",
   freshnessType: "evergreen",
   nextReviewAt: "2027-08-27",
-  readingTimeMinutes: 4,
+  readingTimeMinutes: 6,
   summary:
     "Key person insurance helps a company absorb the financial shock if a critical person dies. A buy-sell agreement decides how ownership transfers. Life insurance can fund the agreement, but one policy structure does not usually do both jobs well. An unfunded agreement is a promise. A policy without an agreement is money without instructions. Ownership transfers have legal and tax consequences that belong with an attorney and tax professional.",
   sections: [
     {
       type: "paragraph",
-      text: "If the person who holds the relationships died this month, would the company have cash to keep operating? Would anyone have the right, and the money, to buy the shares?",
+      text: "If the person who holds the client relationships died this month, would the company have cash to keep operating? Separate question: would anyone have the right, and the money, to buy the shares?",
     },
     {
       type: "paragraph",
-      text: "Those are not the same question. Why do so many owners treat them as one policy?",
+      text: "Those are not the same job. Why do so many owners treat them as one policy?",
     },
     {
       type: "heading",
       level: 2,
-      id: "who-gets-the-check-decides-the-job",
-      text: "Who gets the check decides the job",
+      id: "two-risks-two-different-checks",
+      text: "Two risks, two different checks",
     },
     {
       type: "paragraph",
-      text: "What most people miss is the beneficiary. If a business would struggle to replace a person, that is an operating problem. If an owner's share would pass to an estate, that is an ownership problem. Life insurance can support both. It does not make them the same problem.",
+      text: "If a business would struggle to replace a person, that is an operating problem. If an owner's share would pass to an estate, that is an ownership problem. Life insurance can support both. It does not make them the same problem. The check follows the beneficiary form, not the intention you described over coffee.",
+    },
+    {
+      type: "paragraph",
+      text: "Say the two jobs out loud before anyone fills out an application. Who could the company not afford to lose for even a few months? What happens to the shares if an owner dies? Different answers. Often different policy structures. Often different documents sitting with an attorney.",
     },
     {
       type: "heading",
       level: 2,
-      id: "job-one-keeping-the-business-running",
-      text: "Job 1: keeping the business running",
+      id: "key-person-coverage-is-operating-cash",
+      text: "Key person coverage is operating cash",
     },
     {
       type: "paragraph",
-      text: "Key person life insurance is typically owned by the business, paid by the business, and payable to the business. The insured is the person whose absence would damage revenue, credit, or operations. The death benefit is meant to buy time: replace the person, reassure lenders, or cover a period of lower cash flow.",
+      text: "Key person life insurance is typically owned by the business, paid by the business, and payable to the business. The insured is the person whose absence would damage revenue, credit, or operations. That might be an owner. It might be a non-owner rainmaker. Title on the door is not the test. The hole in the next quarter is the test.",
+    },
+    {
+      type: "paragraph",
+      text: "The death benefit is meant to buy time: replace the person, reassure lenders, or cover a period of lower cash flow. It arrives as a company asset. That can help payroll, recruiting, and the bank conversation. It does not, by itself, buy the deceased owner's shares from the family.",
+    },
+    {
+      type: "paragraph",
+      text: "How much is enough for this job? Start with the work the person does, how long it would take to replace them, and what revenue or credit would wobble in the meantime. This page will not invent a multiple of salary or a premium. The IRS has general information on life insurance proceeds. Tax treatment depends on facts. Ask a tax professional before you assume the check is \"free money.\"",
     },
     {
       type: "heading",
       level: 2,
-      id: "job-two-transferring-ownership-cleanly",
-      text: "Job 2: transferring ownership cleanly",
+      id: "a-buy-sell-is-the-ownership-instruction",
+      text: "A buy-sell is the ownership instruction",
     },
     {
       type: "paragraph",
-      text: "A buy-sell agreement is a legal contract. It says who can buy an owner's interest, what triggers the purchase, and how value is determined. Attorneys draft those terms. Insurance is often how the purchase is funded so the remaining owners are not writing a personal check in a crisis.",
+      text: "A buy-sell agreement is a legal contract. It says who can buy an owner's interest, what triggers the purchase, and how value is determined. Attorneys draft those terms. Insurance is often how the purchase is funded so the remaining owners are not writing a personal check in a crisis, and so the family is not stuck as accidental partners.",
+    },
+    {
+      type: "paragraph",
+      text: "There are different legal designs (entity purchase, cross purchase, and others). This article does not recommend one. Ownership, beneficiary, and valuation choices can change the outcome for the estate and the remaining owners. Those questions belong to your attorney and tax professional.",
+    },
+    {
+      type: "paragraph",
+      text: "An agreement without funding is a promise. A policy without an agreement is money without instructions. Families and remaining partners often discover the missing piece at the worst time. Review both documents together.",
     },
     {
       type: "heading",
@@ -78,41 +98,52 @@ export const keyPersonVsBuySell = {
     },
     {
       type: "paragraph",
-      text: "An agreement without funding is a promise. A policy without an agreement is money without instructions. Families and remaining partners often discover the missing piece at the worst time. Review both documents together.",
+      text: "The common error is to insure \"the business\" and stop there. A handshake. An unsigned draft. A company-owned policy that was meant, in someone's mind, to buy out a spouse. The check follows the beneficiary form. The operating risk and the ownership risk have to be named separately before any application is completed.",
+    },
+    {
+      type: "callout",
+      title: "Hypothetical example",
+      text: "This company is invented for illustration. It is not a client, not a valuation, and not a recommendation.",
+    },
+    {
+      type: "paragraph",
+      text: "Picture a two-owner shop. One owner holds most of the client relationships. The other runs operations. They have a draft buy-sell that has sat unsigned in a folder for three years. They also have one life policy, owned by the company, on the rainmaker, because a lender asked about \"key person coverage\" during a line-of-credit review.",
+    },
+    {
+      type: "paragraph",
+      text: "If the rainmaker died this month, the company might receive cash. That could keep the lights on and buy time to hire. The unsigned draft still would not transfer the shares. The family and the remaining owner would still need instructions, a value, and money earmarked for a purchase. One check arrived. One job got done. The ownership job did not.",
     },
     {
       type: "heading",
       level: 2,
-      id: "the-mistake-is-buying-one-policy-for-two-jobs",
-      text: "The mistake is buying one policy for two jobs",
+      id: "value-disability-and-the-bank",
+      text: "Value, disability, and the bank",
     },
     {
       type: "paragraph",
-      text: "The common error is to insure \"the business\" and stop there. A handshake. An unsigned draft. A company-owned policy that was meant, in someone's mind, to buy out a spouse. But the check follows the beneficiary form, not the intention. Therefore the operating risk and the ownership risk have to be named separately before any application is completed.",
+      text: "A buy-sell that leaves the price for later is how families fight. Valuation methods belong in the agreement. Attorneys and valuation professionals do that work. Insurance can fund a number. It cannot invent a number the owners never agreed on.",
+    },
+    {
+      type: "paragraph",
+      text: "Many agreements also trigger on disability, not only death. Disability is a different risk and, if you fund it, a different policy conversation. Do not assume a life policy covers a living owner who cannot work. It does not.",
+    },
+    {
+      type: "paragraph",
+      text: "Banks sometimes ask for key person coverage as a condition of a loan. That request is about the lender's risk. It may still be a useful operating policy. It is not a buy-sell. If the lender is listed in a way that sends the check to the bank first, ask how much would be left for payroll and hiring. Read the assignment. The operating job only works if the company actually receives usable cash.",
     },
     {
       type: "heading",
       level: 2,
-      id: "name-the-risk-then-fund-that-risk",
-      text: "Name the risk, then fund that risk",
+      id: "bring-the-attorney-and-the-tax-person",
+      text: "Bring the attorney and the tax person",
     },
     {
       type: "paragraph",
-      text: "A better way to think about the decision is to inventory two exposures. Who could the company not afford to lose for even a few months? What happens to the shares if an owner dies? Those answers point to different documents, and often different policy structures.",
+      text: "LeadStar can help you inventory the operating risk and the ownership risk, then coordinate with the attorney and CPA you already trust. Insurance is not the legal document. It is not the tax memo. Putting a policy in force before the agreement exists is how you end up with cash and no instructions, or instructions and no cash.",
     },
     {
       type: "paragraph",
-      text: "Ownership transfers have legal and tax consequences. How a policy is owned, who is the beneficiary, and how a company is valued can change the outcome for the estate and the remaining owners. Those questions belong to your attorney and tax professional. This article does not recommend a specific legal structure.",
-    },
-    {
-      type: "paragraph",
-      text: "Consider a hypothetical company with two owners, one of whom also holds most of the client relationships. A single policy payable to the company might keep the lights on. It would not, by itself, buy the deceased owner's shares from the family. The family and the remaining owner would still need instructions.",
-    },
-    {
-      type: "heading",
-      level: 2,
-      id: "an-order-for-the-next-planning-conversation",
-      text: "An order for the next planning conversation",
+      text: "If the company later hires a new rainmaker, or an owner gets divorced, or a third partner buys in, the documents age. Review ownership, beneficiaries, and the agreement when the people at the table change. A policy built for last year's org chart is a file, not a plan.",
     },
     {
       type: "list",
@@ -128,7 +159,7 @@ export const keyPersonVsBuySell = {
     },
     {
       type: "paragraph",
-      text: "Fund the right job on purpose. Do not ask one policy to be both the cash and the contract.",
+      text: "Name the operating job and the ownership job. Then fund each one on purpose.",
     },
   ],
   sources: [
@@ -137,7 +168,7 @@ export const keyPersonVsBuySell = {
       url: "https://content.naic.org/consumer",
     },
     {
-      label: "IRS: Life insurance & disability insurance proceeds",
+      label: "IRS: Life insurance and disability insurance proceeds",
       url: "https://www.irs.gov/faqs/interest-dividends-other-types-of-income/life-insurance-disability-insurance-proceeds",
     },
   ],
@@ -150,7 +181,7 @@ export const keyPersonVsBuySell = {
   midCta: {
     text: "If your company has partners or a key person, a conversation can separate the two jobs before you place a policy.",
     href: "/contact",
-    label: "Start a conversation",
+    label: "Separate the two business jobs",
   },
   finalCta: {
     text: "LeadStar can help you inventory the operating risk and the ownership risk, then coordinate with the attorney and CPA you already trust.",

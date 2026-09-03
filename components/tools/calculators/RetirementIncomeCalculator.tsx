@@ -5,6 +5,7 @@ import { AssumptionsPanel } from "@/components/tools/AssumptionsPanel";
 import { CalculatorCta } from "@/components/tools/CalculatorCta";
 import { CalculatorField } from "@/components/tools/CalculatorField";
 import { CalculatorShell } from "@/components/tools/CalculatorShell";
+import { KeepWorksheet } from "@/components/tools/KeepWorksheet";
 import { ResultStat } from "@/components/tools/ResultStat";
 import {
   PLANNING_AGE,
@@ -80,6 +81,34 @@ export function RetirementIncomeCalculator() {
             max={100}
           />
         </AssumptionsPanel>
+      }
+      keep={
+        <KeepWorksheet
+          title="Retirement Income Planner"
+          rows={[
+            { label: "Current age", value: String(currentAge) },
+            { label: "Desired retirement age", value: String(retirementAge) },
+            { label: "Current monthly income", value: formatUSD(currentMonthlyIncome) },
+            { label: "Expected retirement monthly expenses", value: formatUSD(expenses) },
+            { label: "Estimated Social Security or pension", value: `${formatUSD(socialSecurity)}/mo` },
+            { label: "Current retirement savings", value: formatUSD(savings) },
+            { label: "Monthly retirement contribution", value: formatUSD(contribution) },
+            { label: "Illustrated growth rate before retirement", value: `${preRetireReturn}%` },
+            { label: "Planning withdrawal rate", value: `${withdrawalRate}%` },
+            { label: "Planning age", value: String(planningAge) },
+            { label: "Illustrated retirement income", value: `${formatUSD(result.projectedMonthlyIncome)}/month` },
+            { label: "Estimated need", value: `${formatUSD(result.estimatedNeed)}/month` },
+            {
+              label: result.status === "shortfall" ? "Potential income gap" : "Estimated surplus",
+              value: `${formatUSD(result.monthlyGap)}/month`,
+            },
+            { label: "Projected savings at retirement", value: formatUSD(result.projectedNestEgg) },
+            { label: "Illustrated income from savings", value: `${formatUSD(result.monthlyFromSavings)}/month` },
+            { label: "Social Security or pension entered", value: `${formatUSD(result.socialSecurityPension)}/month` },
+          ]}
+          disclaimer="This worksheet is an illustration, not a quote, not a forecast, and not advice. Actual investment performance is not guaranteed. Official Social Security figures come from the Social Security Administration."
+          toolHref="/tools/retirement-income"
+        />
       }
       results={
         <div>

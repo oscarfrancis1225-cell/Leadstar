@@ -46,11 +46,15 @@ export const businessPlanningService = {
       type: "heading",
       level: 2,
       id: "two-different-jobs",
-      text: "Key person and buy-sell are not the same job",
+      text: "Two jobs. Two checks. One agreement for the second.",
     },
     {
       type: "paragraph",
-      text: "Owners often buy one policy and hope it covers everything. It usually cannot. The first job is cash to keep the business operating if a key person dies, payroll, a line of credit, or time to hire. The second is a written way to transfer an owner’s share when someone dies, becomes disabled, or leaves. Life insurance can fund either job. It does not replace the legal agreement.",
+      text: "Key person coverage keeps the doors open. Buy-sell funding transfers the shares. Owners often buy one policy and hope it covers everything. It usually cannot. The first job is cash to keep the business operating if a key person dies: payroll, a line of credit, or time to hire. The second is a written way to transfer an owner's share when someone dies, becomes disabled, or leaves. Life insurance can fund either job. It does not replace the legal agreement.",
+    },
+    {
+      type: "paragraph",
+      text: "The longer essay, including why key person insurance does not transfer ownership, lives in the article of that name. This page is the conversation map: who cannot be absent, whether an agreement already exists, and why mixing the two jobs on one check often creates a fight.",
     },
     {
       type: "heading",
@@ -60,7 +64,7 @@ export const businessPlanningService = {
     },
     {
       type: "paragraph",
-      text: "Key-person insurance is typically owned by the business, with the business as beneficiary. The idea is to replace the economic value of someone whose absence would strain operations. The amount is a judgment, not a formula. Lenders sometimes ask for it. That request still does not tell you the right face amount.",
+      text: "Key-person insurance is typically owned by the business, with the business as beneficiary. The idea is to replace the economic value of someone whose absence would strain operations. The amount is a judgment, not a formula. Lenders sometimes ask for it. That request still does not tell you the face amount that fits.",
     },
     {
       type: "heading",
@@ -70,7 +74,7 @@ export const businessPlanningService = {
     },
     {
       type: "paragraph",
-      text: "A buy-sell agreement is a legal document. Counsel should draft or review it. Insurance, if used, is only the funding layer: cash so the remaining owners can purchase a deceased owner’s interest under the price method the agreement names. Cross-purchase and entity-purchase designs put ownership of the policies in different places. Getting that wrong can create tax and control problems. This page is not tax or legal advice.",
+      text: "A buy-sell agreement is a legal document. Counsel should draft or review it. Insurance, if used, is only the funding layer: cash so the remaining owners can purchase a deceased owner's interest under the price method the agreement names. Cross-purchase and entity-purchase designs put ownership of the policies in different places. Getting that wrong can create tax and control problems. This page is not tax or legal advice.",
     },
     {
       type: "table",
@@ -110,7 +114,7 @@ export const businessPlanningService = {
     },
     {
       type: "paragraph",
-      text: "No sample premiums appear here. No carrier is named. Esther Francis can discuss protection questions for Florida and California businesses; corporate formalities and tax elections belong with your attorney and tax professional.",
+      text: "No sample premiums appear here. No carrier is named. Esther Francis can discuss protection questions for Florida and California businesses. Corporate formalities and tax elections belong with your attorney and tax professional.",
     },
   ],
   faqs: [

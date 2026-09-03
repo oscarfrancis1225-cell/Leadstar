@@ -33,16 +33,16 @@ export const finalExpenseService = {
     {
       type: "heading",
       level: 2,
-      id: "what-it-is",
-      text: "It is not a government program",
+      id: "the-check-goes-to-a-person",
+      text: "The check usually goes to a person, not a funeral home",
     },
     {
       type: "paragraph",
-      text: "Advertisements can make final expense sound like a public burial benefit. It is not. Final expense coverage is usually a small whole life policy. The job is modest and specific: put cash in a beneficiary’s hands for funeral or memorial costs, remaining medical bills, or other last expenses. The beneficiary generally decides how to use the money. The check does not have to go to a funeral home.",
+      text: "Final expense insurance is typically a small permanent life policy. The job is modest and specific: put cash in a beneficiary's hands for funeral or memorial costs, remaining medical bills, or other last expenses. The beneficiary generally decides how to use the money. Advertisements can make it sound like a public burial benefit. It is not a government program. It is not Medicare. It is not income replacement.",
     },
     {
       type: "paragraph",
-      text: "Advertisements sometimes call the same idea burial insurance or funeral insurance. Those labels describe marketing, not a separate government program. The contract is still life insurance, issued by an insurance company, with premiums, a death benefit, and policy terms you can read before anyone applies.",
+      text: "Advertisements sometimes call the same idea burial insurance or funeral insurance. Those labels describe marketing, not a separate government program. The contract is still life insurance, issued by an insurance company, with premiums, a death benefit, and policy terms you can read before anyone applies. For the longer read on waiting periods and what the ads skip, see the article What does final expense insurance do.",
     },
     {
       type: "heading",
@@ -83,7 +83,7 @@ export const finalExpenseService = {
     },
     {
       type: "paragraph",
-      text: "Industry materials often describe face amounts in a range around $5,000 to $25,000. That is a market norm, not a quote and not a recommendation. Some products allow more; some cap lower. Funeral prices change by year, city, and the type of service. Use current local quotes, then add a margin for related bills, then subtract money already set aside.",
+      text: "Industry materials often describe face amounts in a range around $5,000 to $25,000. That is a market norm, not a quote and not a recommendation. Some products allow more; some cap lower. Funeral prices change by year, city, and the type of service. Use current local figures, then add a margin for related bills, then subtract money already set aside.",
     },
     {
       type: "paragraph",
@@ -97,7 +97,7 @@ export const finalExpenseService = {
     },
     {
       type: "paragraph",
-      text: "People often look at this coverage later in life, or when a larger medically underwritten policy is hard to obtain. Adult children sometimes ask about a policy for a parent. The parent still has to apply, qualify, and agree. Paying a parent’s premium does not make the payer the owner unless the application is written that way.",
+      text: "People often look at this coverage later in life, or when a larger medically underwritten policy is hard to obtain. Adult children sometimes ask about a policy for a parent. The parent still has to apply, qualify, and agree. Paying a parent's premium does not make the payer the owner unless the application is written that way.",
     },
     {
       type: "paragraph",

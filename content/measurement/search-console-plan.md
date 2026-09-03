@@ -29,3 +29,9 @@ Connect after the production domain is final.
 - Brand citations in ChatGPT and Perplexity
 - Server logs for allowed search/citation crawlers
 - Duplicate titles and descriptions via `npm run content:validate`
+
+## Sitemaps and citation files
+
+- After the production domain is final, submit `https://PRODUCTION/sitemap.xml` in Google Search Console and Bing Webmaster Tools. Replace `PRODUCTION` with the live host. Do not submit a preview URL as the production sitemap.
+- An HTML sitemap for people lives at `/sitemap`. It is not a substitute for the XML sitemap.
+- `/llms.txt` (and `/llms-full.txt`) are citation aids for answer engines. They are not Google ranking files. Do not treat them as a Search Console sitemap.

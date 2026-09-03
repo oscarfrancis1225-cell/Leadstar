@@ -5,6 +5,7 @@ import { AssumptionsPanel } from "@/components/tools/AssumptionsPanel";
 import { CalculatorCta } from "@/components/tools/CalculatorCta";
 import { CalculatorField } from "@/components/tools/CalculatorField";
 import { CalculatorShell } from "@/components/tools/CalculatorShell";
+import { KeepWorksheet } from "@/components/tools/KeepWorksheet";
 import { ResultStat } from "@/components/tools/ResultStat";
 import {
   PLANNING_AGE,
@@ -69,6 +70,31 @@ export function RetirementGoalCalculator() {
             suffix="%"
           />
         </AssumptionsPanel>
+      }
+      keep={
+        <KeepWorksheet
+          title="Retirement Goal Calculator"
+          rows={[
+            { label: "Current age", value: String(currentAge) },
+            { label: "Retirement age", value: String(retirementAge) },
+            { label: "Desired retirement monthly income", value: formatUSD(desiredIncome) },
+            { label: "Expected Social Security or pension", value: `${formatUSD(socialSecurity)}/mo` },
+            { label: "Current savings", value: formatUSD(savings) },
+            { label: "Current monthly contributions", value: formatUSD(contribution) },
+            { label: "Planning age", value: String(planningAge) },
+            { label: "Illustrated growth rate before retirement", value: `${preRetireReturn}%` },
+            { label: "Planning withdrawal rate", value: `${withdrawalRate}%` },
+            { label: "Estimated retirement goal", value: formatUSD(result.retirementGoal) },
+            { label: "Current projected savings", value: formatUSD(result.projectedSavings) },
+            {
+              label: result.status === "shortfall" ? "Estimated planning gap" : "Estimated surplus",
+              value: formatUSD(result.planningGap),
+            },
+            { label: "Net monthly income illustrated", value: `${formatUSD(result.netMonthlyNeed)}/month` },
+          ]}
+          disclaimer="This worksheet is an educational estimate in today's dollars, not a quote, not a savings-target recommendation, and not advice. A planning withdrawal rate is a shorthand, not a promise that assets last to any age."
+          toolHref="/tools/retirement-goal"
+        />
       }
       results={
         <div>

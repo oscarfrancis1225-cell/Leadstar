@@ -22,25 +22,25 @@ export const healthInsuranceProducts = [
         type: "heading",
         level: 2,
         id: "what-it-is",
-        text: "This is what an HMO is",
+        text: "A network type, not a quality ranking",
       },
       {
         type: "paragraph",
-        text: "An HMO, or Health Maintenance Organization, is a network type. Care is usually covered when you use doctors and hospitals in the plan’s network, except in an emergency. Many HMOs ask you to pick a primary-care doctor and get a referral before you see a specialist.",
+        text: "An HMO, or Health Maintenance Organization, is a network type. Care is usually covered when you use doctors and hospitals in the plan's network, except in an emergency. Many HMOs ask you to pick a primary-care doctor and get a referral before you see a specialist.",
       },
       {
         type: "paragraph",
-        text: "This page is about commercial and Marketplace-style plans. It is not a Medicare Advantage page. Medicare Advantage can also use HMO designs. That is a different program, explained under Medicare.",
+        text: "This page is about commercial and Marketplace-style plans. It is not a Medicare Advantage page. Medicare Advantage can also use HMO designs. That is a different program, explained under Medicare. The parent health page is about the last day of coverage after a job change. This page is about one network word on the card.",
       },
       {
         type: "heading",
         level: 2,
         id: "common-mix-up",
-        text: "What people often mix up",
+        text: "HMO is not a quality ranking",
       },
       {
         type: "paragraph",
-        text: "HMO is not a quality ranking. It is a set of network rules. Actual referral rules and service areas vary by plan. Out-of-network care is often not covered, except emergencies.",
+        text: "HMO is not a quality ranking. It is a set of network rules. Actual referral rules and service areas vary by plan. Out-of-network care is often not covered, except emergencies. After a job change, the useful test is whether the doctors you already use sit inside the new network.",
       },
       {
         type: "callout",
@@ -56,7 +56,7 @@ export const healthInsuranceProducts = [
     title: "PPO",
     metaTitle: "PPO Health Plans",
     description:
-      "A PPO usually costs more for the room to go out of network. “I can go anywhere” is not quite right, the bill can still be much higher.",
+      "A PPO usually costs more for the room to go out of network. I can go anywhere is not quite right. The bill can still be much higher.",
     hook: "Someone wants to keep a doctor and is willing to pay more for that room. The extra cost is the point.",
     question: "Is the extra flexibility worth the extra premium for your household?",
     disclaimerVariant: "standard",
@@ -70,11 +70,11 @@ export const healthInsuranceProducts = [
         type: "heading",
         level: 2,
         id: "what-it-is",
-        text: "This is what a PPO is",
+        text: "Room to go out of network, at a price",
       },
       {
         type: "paragraph",
-        text: "A PPO, or Preferred Provider Organization, is a network type. You usually pay less when you stay in the plan’s network. You can often use out-of-network doctors without a referral, at a higher cost.",
+        text: "A PPO, or Preferred Provider Organization, is a network type. You usually pay less when you stay in the plan's network. You can often use out-of-network doctors without a referral, at a higher cost.",
       },
       {
         type: "paragraph",
@@ -84,11 +84,11 @@ export const healthInsuranceProducts = [
         type: "heading",
         level: 2,
         id: "common-mix-up",
-        text: "What people often mix up",
+        text: "Out of network is not the same as anywhere",
       },
       {
         type: "paragraph",
-        text: "“I can go anywhere” is not quite right. You can often go out of network, but the bill can be much higher, and some services may still need approval. Premiums are often higher than a tighter network. The useful question is whether the extra flexibility is worth the extra cost for your household.",
+        text: "I can go anywhere is not quite right. You can often go out of network, but the bill can be much higher, and some services may still need approval. Premiums are often higher than a tighter network. The useful question is whether the extra flexibility is worth the extra cost for your household, especially after a job change when doctors and travel are already in flux.",
       },
       {
         type: "callout",
@@ -105,7 +105,7 @@ export const healthInsuranceProducts = [
     metaTitle: "EPO Health Plans",
     description:
       "An EPO generally covers in-network care only, except emergencies. No referral does not mean it works like a PPO.",
-    hook: "People hear “no referral” and think an EPO works like a PPO. Then a bill arrives.",
+    hook: "People hear no referral and think an EPO works like a PPO. Then a bill arrives.",
     question: "If you go out of network, is anything covered besides an emergency?",
     disclaimerVariant: "standard",
     relatedLinks: [
@@ -118,21 +118,21 @@ export const healthInsuranceProducts = [
         type: "heading",
         level: 2,
         id: "what-it-is",
-        text: "This is what an EPO is",
+        text: "No referral is not the same as a PPO",
       },
       {
         type: "paragraph",
-        text: "An EPO, or Exclusive Provider Organization, generally covers care only if you use doctors and hospitals in the plan’s network, except in an emergency. Referrals are often not required the way they are in many HMOs. The exclusive part is the network.",
+        text: "An EPO, or Exclusive Provider Organization, generally covers care only if you use doctors and hospitals in the plan's network, except in an emergency. Referrals are often not required the way they are in many HMOs. The exclusive part is the network.",
       },
       {
         type: "heading",
         level: 2,
         id: "common-mix-up",
-        text: "What people often mix up",
+        text: "No referral is not a PPO",
       },
       {
         type: "paragraph",
-        text: "People hear “no referral” and think it works like a PPO. Then a bill arrives for an out-of-network visit. That is the mix-up. Actual rules vary. Read the plan documents before you assume a specialist is covered.",
+        text: "People hear no referral and think it works like a PPO. Then a bill arrives for an out-of-network visit. That is the mix-up. Actual rules vary. Read the plan documents before you assume a specialist is covered. After a job change, confirm the network before the first appointment, not after the bill.",
       },
       {
         type: "callout",
@@ -162,7 +162,7 @@ export const healthInsuranceProducts = [
         type: "heading",
         level: 2,
         id: "what-it-is",
-        text: "This is what a POS plan is",
+        text: "A mix of network rules, not a metal tier",
       },
       {
         type: "paragraph",
@@ -172,11 +172,11 @@ export const healthInsuranceProducts = [
         type: "heading",
         level: 2,
         id: "common-mix-up",
-        text: "What people often mix up",
+        text: "POS is not a metal tier",
       },
       {
         type: "paragraph",
-        text: "POS is not a metal tier. Bronze and Silver describe cost-sharing. HMO, PPO, EPO, and POS describe network rules. A plan can be both a network type and a metal category. They answer different questions.",
+        text: "POS is not a metal tier. Bronze and Silver describe cost-sharing. HMO, PPO, EPO, and POS describe network rules. A plan can be both a network type and a metal category. They answer different questions. After a job change, write down both: how you get to a specialist, and how much you pay when you do.",
       },
       {
         type: "callout",

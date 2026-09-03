@@ -33,16 +33,16 @@ export const mortgageProtectionService = {
     {
       type: "heading",
       level: 2,
-      id: "the-useful-comparison",
-      text: "Who receives the money?",
+      id: "who-gets-the-check",
+      text: "Who gets the check?",
     },
     {
       type: "paragraph",
-      text: "People shop a product called mortgage protection because the house payment is the number they can see. The harder question is who would receive the check, and who would decide whether to keep the house. Mortgage protection is designed around a home loan. Term life insurance is designed around the people you name. Both can put money toward housing if someone dies. They do not always send that money to the same place.",
+      text: "The house payment is the number everyone can see. The harder question is who would receive the check, and who would decide whether to keep the house. Mortgage protection is designed around a home loan. Term life insurance is designed around the people you name. Both can put money toward housing if someone dies. They do not always send that money to the same place.",
     },
     {
       type: "paragraph",
-      text: "Some mortgage-protection designs pay a lender, or pay a benefit that shrinks as the loan shrinks. A term life policy pays the beneficiary you list. That person can keep the house, sell it, or use the money for something else. Neither design is automatically better. The question is who you want to control the funds.",
+      text: "Some mortgage-protection designs pay a lender, or pay a benefit that shrinks as the loan shrinks. A term life policy pays the beneficiary you list. That person can keep the house, sell it, or use the money for something else. Neither design is automatically better. The question is who you want to control the funds. The longer side-by-side, including what paying off a house does not replace, lives in the article Mortgage protection vs term life.",
     },
     {
       type: "table",
@@ -54,6 +54,16 @@ export const mortgageProtectionService = {
         ["What if you refinance or move?", "Some policies end or need to be rewritten", "A term policy can continue if you keep it in force"],
         ["What if the loan is smaller than the face amount?", "A decreasing benefit may follow the loan", "The listed face amount is what the contract states"],
       ],
+    },
+    {
+      type: "heading",
+      level: 2,
+      id: "refinance",
+      text: "A refinance can point the old policy at the wrong loan",
+    },
+    {
+      type: "paragraph",
+      text: "Imagine a household that refinances two years after buying a policy that was written only to the first loan. The old contract may no longer match the new note. That is a paperwork problem as much as an insurance problem. Write the loan number and the policy number in the same place.",
     },
     {
       type: "heading",
@@ -82,7 +92,7 @@ export const mortgageProtectionService = {
     },
     {
       type: "paragraph",
-      text: "Imagine a household that refinances two years after buying a policy that was written only to the first loan. The old contract may no longer match the new note. That is a paperwork problem as much as an insurance problem. Write the loan number and the policy number in the same place.",
+      text: "If the job is bigger than the house (income, childcare, school), start with the life insurance page and the Protection Needs tool. Paying off a mortgage does not replace a paycheck.",
     },
   ],
   faqs: [

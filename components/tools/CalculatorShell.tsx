@@ -6,6 +6,7 @@ type CalculatorShellProps = {
     label: string;
     value: string;
   };
+  keep?: React.ReactNode;
 };
 
 export function CalculatorShell({
@@ -13,12 +14,13 @@ export function CalculatorShell({
   results,
   assumptions,
   summary,
+  keep,
 }: CalculatorShellProps) {
   return (
     <div className="rounded-[18px] border border-line bg-white p-4 shadow-card sm:p-6 lg:p-8">
       <div className="grid gap-6 lg:grid-cols-2 lg:items-start lg:gap-10">
-        <div>
-          <p className="eyebrow">Build your estimate</p>
+        <div className="no-print">
+          <p className="eyebrow">Enter your numbers</p>
           <div className="mt-4 grid gap-4 sm:gap-5">{children}</div>
           {assumptions ? <div className="mt-5">{assumptions}</div> : null}
           {summary ? (
@@ -35,8 +37,11 @@ export function CalculatorShell({
           ) : null}
         </div>
         <div className="lg:sticky lg:top-24">
-          <p className="eyebrow">Your illustration</p>
-          <div className="mt-4 rounded-[14px] bg-cream p-4 sm:p-5">{results}</div>
+          <p className="eyebrow no-print">What the illustration shows</p>
+          <div className="mt-4 rounded-[14px] bg-cream p-4 sm:p-5">
+            {results}
+            {keep}
+          </div>
         </div>
       </div>
     </div>

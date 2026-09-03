@@ -8,8 +8,8 @@ export const lifeInsuranceProducts = [
     title: "Term Life",
     metaTitle: "Term Life Insurance",
     description:
-      "Term life is for a job with an end date (years of income, years left on a loan), not a product you pick because the name is familiar.",
-    hook: "Most people shop a product name first. Term life is for a job with an end date.",
+      "Term life insurance is for a job with an end date (years of income, years left on a loan). People often ask about affordable term life insurance before they know how long the need lasts.",
+    hook: "Term life insurance is for a job with an end date. Years of income. Years left on a loan.",
     question: "How long does the need actually last?",
     disclaimerVariant: "standard",
     relatedLinks: [
@@ -22,7 +22,7 @@ export const lifeInsuranceProducts = [
         type: "heading",
         level: 2,
         id: "what-it-is",
-        text: "This is what term life is",
+        text: "A job with an end date",
       },
       {
         type: "paragraph",
@@ -36,7 +36,7 @@ export const lifeInsuranceProducts = [
         type: "heading",
         level: 2,
         id: "common-mix-up",
-        text: "What people often mix up",
+        text: "Term is not a cheaper version of the same thing",
       },
       {
         type: "paragraph",
@@ -81,7 +81,7 @@ export const lifeInsuranceProducts = [
     title: "Whole Life",
     metaTitle: "Whole Life Insurance",
     description:
-      "Whole life can last for life if the contract stays funded. The useful question is whether the need itself expires, not whether cash value sounds appealing.",
+      "Whole life insurance can last for life if the contract stays funded. The useful question is whether the need itself expires, not whether cash value sounds appealing.",
     hook: "People wait for the need to expire. Some needs do not.",
     question: "Does this need have an end date, or does it last?",
     disclaimerVariant: "standard",
@@ -95,7 +95,7 @@ export const lifeInsuranceProducts = [
         type: "heading",
         level: 2,
         id: "what-it-is",
-        text: "This is what whole life is",
+        text: "A need that may not expire",
       },
       {
         type: "paragraph",
@@ -109,7 +109,7 @@ export const lifeInsuranceProducts = [
         type: "heading",
         level: 2,
         id: "common-mix-up",
-        text: "What people often mix up",
+        text: "Cash value is not the reason to buy",
       },
       {
         type: "paragraph",
@@ -171,7 +171,7 @@ export const lifeInsuranceProducts = [
         type: "heading",
         level: 2,
         id: "what-it-is",
-        text: "This is what universal life is",
+        text: "Flexible is not the same as optional",
       },
       {
         type: "paragraph",
@@ -185,7 +185,7 @@ export const lifeInsuranceProducts = [
         type: "heading",
         level: 2,
         id: "common-mix-up",
-        text: "What people often mix up",
+        text: "Flexible is not the same as optional",
       },
       {
         type: "paragraph",

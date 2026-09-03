@@ -11,8 +11,9 @@ import { getPublishedArticles } from "@/lib/content/articles";
 import { estherFrancis } from "@/lib/content/authors";
 
 export const metadata: Metadata = {
-  title: `${estherFrancis.name} | ${estherFrancis.jobTitle}`,
-  description: estherFrancis.shortBio,
+  title: "Esther Francis",
+  description:
+    "Esther Francis is a single parent in Boca Raton and an insurance agent licensed in Florida and California. She starts with the paycheck, not a product name. Life insurance, retirement income, and Medicare questions in plain language.",
   alternates: { canonical: estherFrancis.href },
 };
 
@@ -32,7 +33,9 @@ export default function EstherFrancisPage() {
             ]}
           />
           <p className="eyebrow">Professional profile</p>
-          <h1 className="headline text-4xl sm:text-5xl">{estherFrancis.name}</h1>
+          <h1 className="headline text-4xl sm:text-5xl">
+            Esther Francis. She starts with the paycheck, not a product name.
+          </h1>
           <p className="text-lg text-muted">{estherFrancis.jobTitle}</p>
           <EditorialImage
             src={estherFrancis.image.src}

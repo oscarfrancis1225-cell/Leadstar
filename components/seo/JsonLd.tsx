@@ -2,6 +2,13 @@ import { estherFrancis } from "@/lib/content/authors";
 import { siteConfig } from "@/lib/content/site";
 import { siteImages } from "@/lib/images";
 import type { Article } from "@/lib/content/types";
+import {
+  getLicenseCredentials,
+  getPublicEmail,
+  getPublicPostalAddress,
+  getPublicSameAs,
+  getPublicTelephone,
+} from "@/lib/seo/public-identity";
 import { getSiteUrl } from "@/lib/site-url";
 
 function jsonLdScript(data: Record<string, unknown>) {
@@ -15,20 +22,9 @@ function jsonLdScript(data: Record<string, unknown>) {
   );
 }
 
-function organizationNode(siteUrl: string) {
-  return {
-    "@type": "Organization",
-    "@id": `${siteUrl}/#organization`,
-    name: siteConfig.name,
-    url: siteUrl,
-    description: siteConfig.metadata.description,
-    slogan: siteConfig.tagline,
-    logo: `${siteUrl}${siteImages.logo.src}`,
-    image: `${siteUrl}${siteImages.ogShare.src}`,
-  };
-}
-
 function personNode(siteUrl: string) {
+  const credentials = getLicenseCredentials();
+
   return {
     "@type": "Person",
     "@id": `${siteUrl}${estherFrancis.href}#person`,
@@ -38,6 +34,43 @@ function personNode(siteUrl: string) {
     worksFor: { "@id": `${siteUrl}/#organization` },
     image: `${siteUrl}${estherFrancis.image.src}`,
     description: estherFrancis.shortBio,
+    ...(credentials.length > 0 ? { hasCredential: credentials } : {}),
+  };
+}
+
+function organizationNode(siteUrl: string) {
+  const telephone = getPublicTelephone();
+  const email = getPublicEmail();
+  const address = getPublicPostalAddress();
+  const sameAs = getPublicSameAs();
+
+  return {
+    "@type": ["Organization", "InsuranceAgency"],
+    "@id": `${siteUrl}/#organization`,
+    name: siteConfig.name,
+    url: siteUrl,
+    description: siteConfig.metadata.description,
+    slogan: siteConfig.tagline,
+    logo: `${siteUrl}${siteImages.logo.src}`,
+    image: `${siteUrl}${siteImages.ogShare.src}`,
+    areaServed: [
+      { "@type": "AdministrativeArea", name: "Florida" },
+      { "@type": "AdministrativeArea", name: "California" },
+    ],
+    knowsAbout: [
+      "life insurance",
+      "retirement income",
+      "Medicare education",
+      "health coverage",
+      "final expense",
+      "mortgage protection",
+      "business planning",
+    ],
+    employee: personNode(siteUrl),
+    ...(telephone ? { telephone } : {}),
+    ...(email ? { email } : {}),
+    ...(address ? { address } : {}),
+    ...(sameAs.length > 0 ? { sameAs } : {}),
   };
 }
 
@@ -57,6 +90,7 @@ export function WebSiteJsonLd() {
     "@id": `${siteUrl}/#website`,
     name: siteConfig.name,
     url: siteUrl,
+    inLanguage: "en-US",
     publisher: { "@id": `${siteUrl}/#organization` },
   });
 }
@@ -84,7 +118,7 @@ export function BlogPostingJsonLd({ article }: { article: Article }) {
     image: [`${siteUrl}${article.image.src}`],
     datePublished: article.publishedAt,
     dateModified: article.updatedAt,
-    author: organizationNode(siteUrl),
+    author: personNode(siteUrl),
     publisher: organizationNode(siteUrl),
     mainEntityOfPage: `${siteUrl}${article.href}`,
   });

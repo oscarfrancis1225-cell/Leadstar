@@ -8,7 +8,6 @@ export const footerColumns = {
   company: [
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
-    { label: "Careers", href: "/careers" },
     { label: "Esther Francis", href: "/about/esther-francis" },
   ],
   resources: [
@@ -22,13 +21,14 @@ export const footerColumns = {
 export const legalLinks = [
   { label: "Privacy Policy", href: "/privacy" },
   { label: "Terms of Use", href: "/terms" },
-  { label: "Temporary Use", href: "/temporary-use" },
+  { label: "Viewing terms", href: "/temporary-use" },
   { label: "Disclosures", href: "/disclosures" },
+  { label: "Sitemap", href: "/sitemap" },
 ] as const;
 
 export const contactHighlights = [
-  "No-obligation conversation",
-  "Clear answers",
-  "Personal guidance",
+  "No application on this website",
+  "You can pick Not Sure Yet",
   "We'll only use this to reply",
+  "Licensed in Florida and California",
 ] as const;

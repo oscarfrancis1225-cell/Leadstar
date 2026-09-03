@@ -8,9 +8,9 @@ export const medicareInsuranceProducts = [
     title: "Medicare Part A",
     metaTitle: "Medicare Part A",
     description:
-      "Part A is hospital insurance, not the whole Medicare program. This page explains program mechanics only.",
+      "Part A is hospital insurance, not the whole Medicare program. Turning 65 does not always mean a card arrives. This page explains program mechanics only.",
     hook: "Part A is hospital insurance. It is not the whole Medicare program.",
-    question: "Do you already have Part A, or are you assuming the card will arrive?",
+    question: "Turning 65: do you already have Part A, or are you assuming the card will arrive?",
     disclaimerVariant: "medicare",
     relatedLinks: [
       { label: "Part B", href: "/services/medicare-insurance/part-b" },
@@ -22,17 +22,21 @@ export const medicareInsuranceProducts = [
         type: "heading",
         level: 2,
         id: "what-it-is",
-        text: "This is what Part A is",
+        text: "Hospital insurance, not the whole program",
       },
       {
         type: "paragraph",
-        text: "Part A is hospital insurance. Medicare.gov says it helps cover inpatient hospital care, skilled nursing facility care, hospice care, and some home health care. “Helps cover” is the right phrase. It does not mean every bill is paid in full.",
+        text: "Part A is hospital insurance. Medicare.gov says it helps cover inpatient hospital care, skilled nursing facility care, hospice care, and some home health care. Helps cover is the honest phrase. It does not mean every bill is paid in full.",
+      },
+      {
+        type: "paragraph",
+        text: "The parent Medicare page is about the enrollment calendar. This page is about one part. If you mix Part A with Advantage, Medigap, or Part B, you will shop the wrong thing.",
       },
       {
         type: "heading",
         level: 2,
         id: "common-mix-up",
-        text: "What people often mix up",
+        text: "Part A is not the whole Medicare program",
       },
       {
         type: "paragraph",
@@ -40,7 +44,7 @@ export const medicareInsuranceProducts = [
       },
       {
         type: "paragraph",
-        text: "This page does not list premiums, deductibles, or hospital day counts. Those change. Medicare.gov is the official source.",
+        text: "Some people who already receive Social Security before 65 are enrolled in Part A automatically. People who wait on Social Security often have to sign up. Do not assume a card will arrive because a birthday arrived. This page does not list premiums, deductibles, or hospital day counts. Those change. Medicare.gov is the official source.",
       },
       {
         type: "callout",
@@ -58,7 +62,7 @@ export const medicareInsuranceProducts = [
     description:
       "Part B is medical insurance. Delay it without creditable coverage and a late-enrollment penalty can follow. This page explains program mechanics only.",
     hook: "Hospital coverage is only half the picture. Delay Part B without creditable coverage and a penalty can follow.",
-    question: "When does your Part B window actually open?",
+    question: "When does your Part B enrollment period actually open?",
     disclaimerVariant: "medicare",
     relatedLinks: [
       { label: "Part A", href: "/services/medicare-insurance/part-a" },
@@ -70,7 +74,7 @@ export const medicareInsuranceProducts = [
         type: "heading",
         level: 2,
         id: "what-it-is",
-        text: "This is what Part B is",
+        text: "Medical insurance, the half people delay",
       },
       {
         type: "paragraph",
@@ -80,7 +84,7 @@ export const medicareInsuranceProducts = [
         type: "heading",
         level: 2,
         id: "common-mix-up",
-        text: "What people often mix up",
+        text: "Part B is not drug coverage or Medigap",
       },
       {
         type: "paragraph",
@@ -88,7 +92,7 @@ export const medicareInsuranceProducts = [
       },
       {
         type: "paragraph",
-        text: "Delaying Part B without creditable coverage can lead to a late-enrollment penalty. Confirm the timing on Medicare.gov or with Social Security. This page does not calculate a penalty.",
+        text: "Delaying Part B without creditable coverage can lead to a late-enrollment penalty. People with qualifying employer coverage sometimes wait, and a Special Enrollment Period may apply when that coverage ends. Confirm the timing on Medicare.gov or with Social Security. This page does not calculate a penalty.",
       },
       {
         type: "callout",
@@ -118,7 +122,7 @@ export const medicareInsuranceProducts = [
         type: "heading",
         level: 2,
         id: "what-it-is",
-        text: "This is what Medicare Advantage is",
+        text: "Another way to receive Medicare, not a replacement for it",
       },
       {
         type: "paragraph",
@@ -126,13 +130,13 @@ export const medicareInsuranceProducts = [
       },
       {
         type: "paragraph",
-        text: "You generally need both Part A and Part B to join. You may need to use doctors in the plan’s network. You usually cannot buy Medigap to use with a Medicare Advantage plan.",
+        text: "You generally need both Part A and Part B to join. You may need to use doctors in the plan's network. You usually cannot buy Medigap to use with a Medicare Advantage plan.",
       },
       {
         type: "heading",
         level: 2,
         id: "common-mix-up",
-        text: "What people often mix up",
+        text: "Advantage is not Medigap",
       },
       {
         type: "paragraph",
@@ -140,7 +144,7 @@ export const medicareInsuranceProducts = [
       },
       {
         type: "paragraph",
-        text: "Some Advantage plans are HMO or PPO designs. That is not the same as the health-insurance HMO and PPO pages on this site, which explain commercial and Marketplace-style networks.",
+        text: "Some Advantage plans are HMO or PPO designs. That is not the same as the health-insurance HMO and PPO pages on this site, which explain commercial and Marketplace-style networks. Same letters. Different program.",
       },
       {
         type: "callout",
@@ -170,7 +174,7 @@ export const medicareInsuranceProducts = [
         type: "heading",
         level: 2,
         id: "what-it-is",
-        text: "This is what Part D is",
+        text: "Prescription coverage is a separate path",
       },
       {
         type: "paragraph",
@@ -180,7 +184,7 @@ export const medicareInsuranceProducts = [
         type: "heading",
         level: 2,
         id: "common-mix-up",
-        text: "What people often mix up",
+        text: "Hospital coverage does not automatically include drugs",
       },
       {
         type: "paragraph",
@@ -218,7 +222,7 @@ export const medicareInsuranceProducts = [
         type: "heading",
         level: 2,
         id: "what-it-is",
-        text: "This is what Medigap is",
+        text: "Extra insurance on Original Medicare",
       },
       {
         type: "paragraph",
@@ -232,7 +236,7 @@ export const medicareInsuranceProducts = [
         type: "heading",
         level: 2,
         id: "common-mix-up",
-        text: "What people often mix up",
+        text: "Medigap is not Medicare Advantage",
       },
       {
         type: "paragraph",
@@ -245,7 +249,7 @@ export const medicareInsuranceProducts = [
       {
         type: "callout",
         title: "Esther can help with these questions",
-        text: "Esther can help you keep Advantage and Medigap in the right boxes so you know what you are even comparing. This site does not sell or rank Medigap policies.",
+        text: "Esther can help you keep Advantage and Medigap in separate boxes so you know what you are even comparing. This site does not sell or rank Medigap policies.",
       },
     ],
   },

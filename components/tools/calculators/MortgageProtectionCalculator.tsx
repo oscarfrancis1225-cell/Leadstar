@@ -4,6 +4,7 @@ import { useState } from "react";
 import { CalculatorCta } from "@/components/tools/CalculatorCta";
 import { CalculatorField } from "@/components/tools/CalculatorField";
 import { CalculatorShell } from "@/components/tools/CalculatorShell";
+import { KeepWorksheet } from "@/components/tools/KeepWorksheet";
 import { ResultStat } from "@/components/tools/ResultStat";
 import {
   calculateMortgageProtection,
@@ -32,6 +33,29 @@ export function MortgageProtectionCalculator() {
         label: "Approx. obligation",
         value: formatUSD(result.totalObligation),
       }}
+      keep={
+        <KeepWorksheet
+          title="Mortgage Protection Calculator"
+          rows={[
+            { label: "Mortgage balance", value: formatUSD(balance) },
+            { label: "Interest rate", value: `${rate}%` },
+            { label: "Years remaining", value: String(years) },
+            { label: "Monthly mortgage payment", value: formatUSD(payment) },
+            { label: "Optional other housing obligations", value: `${formatUSD(otherHousing)}/mo` },
+            { label: "Approximate remaining payment obligation", value: formatUSD(result.totalObligation) },
+            { label: "Mortgage remaining", value: formatUSD(result.mortgageBalance) },
+            { label: "Estimated payments remaining", value: String(result.paymentsRemaining) },
+            ...(result.approximateRemainingInterest > 0
+              ? [{ label: "Estimated interest remaining", value: formatUSD(result.approximateRemainingInterest) }]
+              : []),
+            ...(result.otherOutlay > 0
+              ? [{ label: "Other housing over the remaining term", value: formatUSD(result.otherOutlay) }]
+              : []),
+          ]}
+          disclaimer="This worksheet is an illustration of remaining cash obligation, not a quote, not a lender statement, and not advice. It does not recommend a policy."
+          toolHref="/tools/mortgage-protection"
+        />
+      }
       results={
         <div>
           <ResultStat

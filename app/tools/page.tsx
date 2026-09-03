@@ -10,7 +10,7 @@ import { siteConfig } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Financial Tools",
   description:
-    "Run the numbers before you guess. Educational calculators for protection needs, retirement income, compound growth, mortgage obligation, and cash reserves. These are illustrations, not quotes.",
+    "Run the numbers before you guess. Educational calculators for how much life insurance you need, retirement income, compound growth, mortgage obligation, and cash reserves, plus a turning 65 enrollment-period calendar and a printable beneficiary checklist. Illustrations, not quotes.",
   alternates: { canonical: "/tools" },
 };
 
@@ -19,8 +19,8 @@ export default function ToolsPage() {
     <>
       <PageHero
         eyebrow="Financial Tools & Calculators"
-        title="Run the numbers before you guess"
-        description="Each calculator uses the numbers you enter and a small set of planning assumptions. Results are illustrations, not quotes or recommendations."
+        title="Run the numbers before you guess."
+        description="Each tool uses what you type. Results stay on screen. Print, save as PDF, or email the illustration to yourself. These are illustrations, not quotes."
       />
       <section className="bg-white py-10 lg:py-16">
         <Container>

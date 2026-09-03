@@ -4,6 +4,7 @@ import { useState } from "react";
 import { CalculatorCta } from "@/components/tools/CalculatorCta";
 import { CalculatorField } from "@/components/tools/CalculatorField";
 import { CalculatorShell } from "@/components/tools/CalculatorShell";
+import { KeepWorksheet } from "@/components/tools/KeepWorksheet";
 import { ResultStat } from "@/components/tools/ResultStat";
 import { calculateProtectionNeeds, formatUSD } from "@/lib/calculators";
 
@@ -32,6 +33,26 @@ export function ProtectionNeedsCalculator() {
         label: "Estimated need",
         value: formatUSD(result.estimatedProtectionNeed),
       }}
+      keep={
+        <KeepWorksheet
+          title="Protection Needs Estimator"
+          rows={[
+            { label: "Annual household income", value: formatUSD(income) },
+            { label: "Years of income replacement", value: String(years) },
+            { label: "Remaining mortgage", value: formatUSD(mortgage) },
+            { label: "Other debts", value: formatUSD(debts) },
+            { label: "Future education goal", value: formatUSD(education) },
+            { label: "Existing life coverage", value: formatUSD(coverage) },
+            { label: "Liquid savings available", value: formatUSD(savings) },
+            { label: "Income replacement", value: formatUSD(result.incomeReplacement) },
+            { label: "Gross need illustrated", value: formatUSD(result.grossNeed) },
+            { label: "Coverage and savings entered", value: formatUSD(result.resources) },
+            { label: "Estimated protection need", value: formatUSD(result.estimatedProtectionNeed) },
+          ]}
+          disclaimer="This worksheet is an illustration, not a quote, and not advice. It does not offer or recommend a policy. Individual needs vary."
+          toolHref="/tools/protection-needs"
+        />
+      }
       results={
         <div>
           <ResultStat

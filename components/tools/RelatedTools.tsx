@@ -15,7 +15,7 @@ export function RelatedTools({ slug }: RelatedToolsProps) {
   }
 
   return (
-    <section className="bg-white py-12 lg:py-16">
+    <section className="no-print bg-white py-12 lg:py-16">
       <div className="container-site">
         <p className="eyebrow">Other tools</p>
         <h2 className="headline mt-3 text-3xl">Continue exploring</h2>

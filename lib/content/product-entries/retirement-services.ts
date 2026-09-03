@@ -22,7 +22,7 @@ export const retirementServicesProducts = [
         type: "heading",
         level: 2,
         id: "what-it-is",
-        text: "This is what a Traditional IRA is",
+        text: "An account structure, not the investment",
       },
       {
         type: "paragraph",
@@ -36,7 +36,7 @@ export const retirementServicesProducts = [
         type: "heading",
         level: 2,
         id: "common-mix-up",
-        text: "What people often mix up",
+        text: "An IRA is not the stock market",
       },
       {
         type: "paragraph",
@@ -80,7 +80,7 @@ export const retirementServicesProducts = [
         type: "heading",
         level: 2,
         id: "what-it-is",
-        text: "This is what a Roth IRA is",
+        text: "After-tax in, maybe tax-free out, if the rules are met",
       },
       {
         type: "paragraph",
@@ -94,7 +94,7 @@ export const retirementServicesProducts = [
         type: "heading",
         level: 2,
         id: "common-mix-up",
-        text: "What people often mix up",
+        text: "Tax-free is not automatic",
       },
       {
         type: "paragraph",
@@ -138,7 +138,7 @@ export const retirementServicesProducts = [
         type: "heading",
         level: 2,
         id: "what-it-is",
-        text: "This is what a SEP IRA is",
+        text: "Who would this account actually cover?",
       },
       {
         type: "paragraph",
@@ -152,7 +152,7 @@ export const retirementServicesProducts = [
         type: "heading",
         level: 2,
         id: "common-mix-up",
-        text: "What people often mix up",
+        text: "A SEP is not a SIMPLE IRA or a 401(k)",
       },
       {
         type: "paragraph",
@@ -196,7 +196,7 @@ export const retirementServicesProducts = [
         type: "heading",
         level: 2,
         id: "what-it-is",
-        text: "This is what a SIMPLE IRA is",
+        text: "Employee deferrals plus an employer contribution",
       },
       {
         type: "paragraph",
@@ -210,7 +210,7 @@ export const retirementServicesProducts = [
         type: "heading",
         level: 2,
         id: "common-mix-up",
-        text: "What people often mix up",
+        text: "SIMPLE and SEP are not the same plan",
       },
       {
         type: "paragraph",
@@ -244,7 +244,7 @@ export const retirementServicesProducts = [
         type: "heading",
         level: 2,
         id: "what-it-is",
-        text: "This is what employer plans are",
+        text: "Workplace accounts you did not design",
       },
       {
         type: "paragraph",
@@ -262,7 +262,7 @@ export const retirementServicesProducts = [
         type: "heading",
         level: 2,
         id: "common-mix-up",
-        text: "What people often mix up",
+        text: "Leaving a job does not mean the money has to move",
       },
       {
         type: "paragraph",
@@ -300,7 +300,7 @@ export const retirementServicesProducts = [
         type: "heading",
         level: 2,
         id: "what-it-is",
-        text: "This is what an annuity is",
+        text: "An insurance contract, not a bank account",
       },
       {
         type: "paragraph",

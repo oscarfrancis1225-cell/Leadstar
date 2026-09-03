@@ -12,6 +12,7 @@ import {
   serviceInterestValues,
   type LeadInput,
 } from "@/lib/lead-schema";
+import { siteConfig } from "@/lib/content/site";
 
 type FormState = {
   fullName: string;
@@ -44,6 +45,7 @@ export function LeadForm({ compact = false, onSuccess }: LeadFormProps) {
   const [values, setValues] = useState<FormState>(initialState);
   const [errors, setErrors] = useState<Partial<Record<keyof LeadInput, string>>>({});
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
   const [started, setStarted] = useState(false);
 
   const fieldIds = useMemo(
@@ -91,6 +93,7 @@ export function LeadForm({ compact = false, onSuccess }: LeadFormProps) {
     }
 
     setStatus("submitting");
+    setErrorMessage("");
 
     try {
       const response = await fetch("/api/lead", {
@@ -100,6 +103,18 @@ export function LeadForm({ compact = false, onSuccess }: LeadFormProps) {
       });
 
       if (!response.ok) {
+        let serverMessage = "";
+        try {
+          const data = (await response.json()) as { message?: unknown };
+          if (typeof data.message === "string") {
+            serverMessage = data.message.trim();
+          }
+        } catch {
+          serverMessage = "";
+        }
+        if (response.status === 503 && serverMessage) {
+          setErrorMessage(serverMessage);
+        }
         throw new Error("Request failed");
       }
 
@@ -118,8 +133,8 @@ export function LeadForm({ compact = false, onSuccess }: LeadFormProps) {
         <p className="eyebrow">Request received</p>
         <h3 className="headline mt-3 text-3xl">Thank you.</h3>
         <p className="lead mx-auto mt-4 max-w-md">
-          We&apos;ve received your request. A member of the LeadStar team will
-          follow up with you soon.
+          We&apos;ve received your request. Esther will follow up with you
+          soon.
         </p>
         <div className="mt-7">
           <Button href="/" variant="primary">
@@ -279,8 +294,23 @@ export function LeadForm({ compact = false, onSuccess }: LeadFormProps) {
 
       {status === "error" ? (
         <p className="rounded-xl bg-[#fef3f2] px-4 py-3 text-sm text-[#b42318]" role="alert">
-          We couldn&apos;t submit your request right now. Please try again or
-          contact us directly.
+          {errorMessage ? (
+            <>
+              {errorMessage}{" "}
+              <a
+                href={`mailto:${siteConfig.email}`}
+                className="font-semibold underline"
+              >
+                Email {siteConfig.email}
+              </a>
+              .
+            </>
+          ) : (
+            <>
+              We couldn&apos;t submit your request right now. Please try again
+              or contact us directly.
+            </>
+          )}
         </p>
       ) : null}
 

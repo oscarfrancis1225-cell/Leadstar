@@ -9,8 +9,8 @@ export function WhyLeadStar() {
       <Container wide>
         <SectionHeading
           eyebrow="Why LeadStar"
-          title="Conversations that start with the decision in front of you"
-          description="Not a product name. The first hour is about what you actually have to decide, and in what order."
+          title="Start with a question you can actually answer"
+          description="Not a product catalog. The first hour is about the job the money has to do."
         />
         <ul className="mt-8 grid gap-3 sm:mt-10 sm:gap-4 md:grid-cols-2 xl:grid-cols-4">
           {values.map((value) => (

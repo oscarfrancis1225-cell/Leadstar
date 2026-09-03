@@ -2,16 +2,15 @@
  * Image sources are centralized so photography can be swapped without
  * hunting through components.
  *
- * heroFamily currently uses a licensed Unsplash placeholder until a
- * local photograph is added.
+ * heroFamily uses the owned portrait of Esther Francis.
  */
 export const siteImages = {
   heroFamily: {
-    src: "https://images.unsplash.com/photo-1609220136736-443140cffec6?auto=format&fit=crop&w=1800&q=80",
-    localHint: "/images/hero-family.jpg",
-    alt: "Parents and two children sitting together in a bright living room",
-    width: 1800,
-    height: 1350,
+    src: "/images/Office/me.png",
+    localHint: "/images/Office/me.png",
+    alt: "Esther Francis",
+    width: 1400,
+    height: 1750,
   },
   advisorPortrait: {
     src: "/images/Office/me.png",

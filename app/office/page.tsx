@@ -4,21 +4,26 @@ import { Container } from "@/components/ui/Container";
 import { PageHero } from "@/components/layout/PageHero";
 import { SmartImage } from "@/components/ui/SmartImage";
 import { officeGallery, siteImages } from "@/lib/images";
+import { siteConfig, formatPublicAddressLines } from "@/lib/content/site";
+import { isPlaceholderPhone } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Office",
   description:
-    "Photographs of the LeadStar Financial office setting. Visit details can be confirmed during a conversation.",
+    "Office photographs and the public mailing address for LeadStar Financial in Margate, Florida.",
   alternates: { canonical: "/office" },
 };
 
 export default function OfficePage() {
+  const addressLines = formatPublicAddressLines();
+  const showPhone = !isPlaceholderPhone(siteConfig.phone);
+
   return (
     <>
       <PageHero
-        eyebrow="The office"
-        title="A place for thoughtful conversations"
-        description="These photographs show the setting where planning conversations take place. A street address is shared when it is confirmed for public use."
+        eyebrow="Office photographs"
+        title="Office photographs and mailing address"
+        description="These are office photographs. They are not a tour of a meeting room. The public mailing address is listed below."
       />
       <section className="bg-white py-16 lg:py-20">
         <Container className="grid items-center gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:gap-14">
@@ -33,17 +38,24 @@ export default function OfficePage() {
             />
           </div>
           <div>
-            <h2 className="headline text-3xl">Guidance with clarity and care</h2>
+            <h2 className="headline text-3xl">Mailing address</h2>
             <p className="lead mt-4">
-              Every conversation starts with listening. The goal is to help you
-              compare insurance and financial-protection options in language
-              that is easy to follow, then choose what fits your household,
-              timing, and priorities.
+              {addressLines.length > 0
+                ? addressLines.join(", ")
+                : siteConfig.serviceArea}
             </p>
             <p className="lead mt-4">
-              Whether you are reviewing coverage for the first time or
-              revisiting a plan as life changes, the process stays personal,
-              organized, and unhurried.
+              {showPhone ? (
+                <>
+                  {siteConfig.phone}
+                  <br />
+                </>
+              ) : null}
+              {siteConfig.email}
+            </p>
+            <p className="lead mt-4">
+              Esther lives in Boca Raton. Conversations can be scheduled after
+              you write. {siteConfig.serviceArea}
             </p>
           </div>
         </Container>
@@ -52,6 +64,10 @@ export default function OfficePage() {
         <Container>
           <p className="eyebrow">Gallery</p>
           <h2 className="headline mt-3 text-3xl">Office photographs</h2>
+          <p className="lead mt-4 max-w-2xl">
+            Photographs from the office. They are labeled as photographs, not
+            as a visit-us tour.
+          </p>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {officeGallery.map((image) => (
               <div

@@ -58,12 +58,14 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
         ]}
       />
       <FAQPageJsonLd faqs={tool.faqs} />
+      <div className="no-print">
       <PageHero
         eyebrow="Financial Tools"
         title={tool.title}
         description={tool.description}
       />
-      <section className="bg-white py-8">
+      </div>
+      <section className="no-print bg-white py-8">
         <Container className="max-w-3xl space-y-6">
           <Breadcrumb
             items={[
@@ -81,7 +83,7 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
         <Container>
           <Link
             href="/tools"
-            className="inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-blue"
+            className="no-print inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-blue"
           >
             <ArrowLeft className="h-4 w-4" aria-hidden />
             All financial tools
@@ -92,7 +94,7 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
         </Container>
       </section>
       {tool.faqs.length > 0 ? (
-        <section className="bg-cream py-12">
+        <section className="no-print bg-cream py-12">
           <Container className="max-w-3xl space-y-6">
             <h2 className="headline text-3xl">Questions about this tool</h2>
             {tool.faqs.map((item) => (
@@ -106,7 +108,9 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
       ) : null}
       <UnderstandEstimate tool={tool} />
       <RelatedTools slug={tool.slug} />
+      <div className="no-print">
       <FinalCTA />
+      </div>
     </>
   );
 }

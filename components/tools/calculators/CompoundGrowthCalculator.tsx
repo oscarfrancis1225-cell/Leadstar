@@ -5,6 +5,7 @@ import { CalculatorCta } from "@/components/tools/CalculatorCta";
 import { CalculatorField } from "@/components/tools/CalculatorField";
 import { CalculatorShell } from "@/components/tools/CalculatorShell";
 import { GrowthChart } from "@/components/tools/GrowthChart";
+import { KeepWorksheet } from "@/components/tools/KeepWorksheet";
 import { ResultStat } from "@/components/tools/ResultStat";
 import {
   buildGrowthSeries,
@@ -38,6 +39,23 @@ export function CompoundGrowthCalculator() {
         label: "Illustrated balance",
         value: formatUSD(result.projectedBalance),
       }}
+      keep={
+        <KeepWorksheet
+          title="Compound Growth Calculator"
+          rows={[
+            { label: "Starting balance", value: formatUSD(startingBalance) },
+            { label: "Monthly contribution", value: formatUSD(monthlyContribution) },
+            { label: "Estimated annual return", value: `${annualReturn}%` },
+            { label: "Number of years", value: String(years) },
+            { label: "Starting savings", value: formatUSD(result.startingBalance) },
+            { label: "Contributions", value: formatUSD(result.totalContributions) },
+            { label: "Estimated growth", value: formatUSD(result.estimatedGrowth) },
+            { label: "Illustrated balance", value: formatUSD(result.projectedBalance) },
+          ]}
+          disclaimer="This worksheet is an illustrative projection, not a quote, not advice, and not a forecast of any account. Actual investment performance is not guaranteed."
+          toolHref="/tools/compound-growth"
+        />
+      }
       results={
         <div>
           <ResultStat

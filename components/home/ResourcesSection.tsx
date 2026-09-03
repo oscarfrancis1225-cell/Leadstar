@@ -12,9 +12,9 @@ export function ResourcesSection() {
       <Container wide>
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="eyebrow">Before the scramble</p>
+            <p className="eyebrow">Before you shop a name</p>
             <h2 className="headline mt-3 max-w-xl text-3xl sm:text-4xl">
-              The questions people usually wait too long to ask
+              How much life insurance do I need? What changes at 65?
             </h2>
           </div>
           <Link

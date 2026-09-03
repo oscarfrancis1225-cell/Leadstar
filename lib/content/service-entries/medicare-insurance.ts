@@ -2,7 +2,7 @@ import type { ServicePageContent } from "@/lib/content/types";
 
 export const medicareInsuranceService = {
   slug: "medicare-insurance",
-  metaTitle: "Medicare Insurance Education",
+  metaTitle: "Turning 65 Medicare Enrollment Period",
   disclaimerVariant: "medicare",
   productTypes: [
     {
@@ -51,12 +51,16 @@ export const medicareInsuranceService = {
     {
       type: "heading",
       level: 2,
-      id: "turning-65-is-not-enrollment",
-      text: "Turning 65 is not the same as being enrolled",
+      id: "birthday-is-not-enrollment",
+      text: "A birthday cake is not an enrollment form",
     },
     {
       type: "paragraph",
-      text: "A lot of people treat the birthday as the enrollment. It is not. Medicare has windows. Miss one, and the next step can cost more or wait longer. The useful first move is the calendar, not a plan name.",
+      text: "Turning 65 is a date you can put on a cake. Medicare enrollment is a calendar with rules. People treat the birthday as the enrollment. It is not. Medicare has enrollment periods. Miss one, and the next step can cost more or wait longer. The useful first move is the calendar, not a plan name.",
+    },
+    {
+      type: "paragraph",
+      text: "The month-by-month timeline, including what happens if you keep working past 65, lives in the article Turning 65 Medicare: the birthday does not enroll you. This page is the shorter sibling: what the parts are, when people can sign up, and why LeadStar will not shop Advantage plans on a website.",
     },
     {
       type: "heading",
@@ -99,11 +103,11 @@ export const medicareInsuranceService = {
     },
     {
       type: "paragraph",
-      text: "The Initial Enrollment Period is a seven-month window: the three months before you turn 65, your birthday month, and the three months after. Coverage start dates depend on when you enroll inside that window. Medicare.gov explains the timing.",
+      text: "The Initial Enrollment Period is a seven-month enrollment period: the three months before you turn 65, your birthday month, and the three months after. Coverage start dates depend on when you enroll inside that period. Medicare.gov explains the timing.",
     },
     {
       type: "paragraph",
-      text: "The annual Open Enrollment Period runs from October 15 through December 7. Changes made then generally take effect January 1. People already in a Medicare Advantage plan also have a Medicare Advantage Open Enrollment Period from January 1 through March 31, with limits on what can change. A General Enrollment Period for Part A and Part B runs January 1 through March 31 if you missed earlier windows. Late-enrollment penalties can apply if you delay Part B or Part D without creditable coverage. Treat that as a concept to confirm on Medicare.gov, this page does not calculate a penalty.",
+      text: "The annual Open Enrollment Period runs from October 15 through December 7. Changes made then generally take effect January 1. People already in a Medicare Advantage plan also have a Medicare Advantage Open Enrollment Period from January 1 through March 31, with limits on what can change. A General Enrollment Period for Part A and Part B runs January 1 through March 31 if you missed earlier enrollment periods. Late-enrollment penalties can apply if you delay Part B or Part D without creditable coverage. Treat that as a concept to confirm on Medicare.gov. This page does not calculate a penalty.",
     },
     {
       type: "paragraph",
@@ -137,9 +141,9 @@ export const medicareInsuranceService = {
   ],
   faqs: [
     {
-      question: "When is the annual window, and is that the same as turning 65?",
+      question: "When is the annual enrollment period, and is that the same as turning 65?",
       answer:
-        "The annual Open Enrollment Period is October 15 through December 7. Coverage changes generally start January 1. Confirm details on Medicare.gov.",
+        "The annual Open Enrollment Period is October 15 through December 7. Coverage changes generally start January 1. Confirm details on Medicare.gov. Turning 65 has its own Initial Enrollment Period, which is a different calendar.",
     },
     {
       question: "If turning 65 is not enrollment, what is the Initial Enrollment Period?",
@@ -159,7 +163,7 @@ export const medicareInsuranceService = {
     {
       question: "What is creditable coverage?",
       answer:
-        "It is coverage that is expected to pay, on average, at least as much as Medicare’s standard drug coverage. It can matter if you delay Part D. Your current plan administrator can tell you whether a notice of creditable coverage applies.",
+        "It is coverage that is expected to pay, on average, at least as much as Medicare's standard drug coverage. It can matter if you delay Part D. Your current plan administrator can tell you whether a notice of creditable coverage applies.",
     },
     {
       question: "Can I get Medicare before 65?",

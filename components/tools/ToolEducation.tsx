@@ -6,9 +6,9 @@ type ToolEducationProps = {
 
 export function ToolEducation({ tool }: ToolEducationProps) {
   return (
-    <section className="border-b border-line bg-white">
+    <section className="no-print border-b border-line bg-white">
       <div className="container-site max-w-3xl py-8 lg:py-10">
-        <p className="eyebrow">How to use this calculator</p>
+        <p className="eyebrow">How to use this tool</p>
         <ol className="mt-4 grid gap-3 md:grid-cols-3 md:gap-5">
           {tool.howToUse.map((step, index) => (
             <li key={step} className="flex gap-3 text-sm leading-6 text-muted">
@@ -20,8 +20,9 @@ export function ToolEducation({ tool }: ToolEducationProps) {
           ))}
         </ol>
         <p className="mt-4 text-xs leading-5 text-muted">
-          Figures update as you adjust the inputs. Nothing is submitted until
-          you choose to start a conversation.
+          What you type stays on this page. You will see the illustration on
+          screen either way. Email, if you use it, only opens your own mail
+          app. These are illustrations, not quotes.
         </p>
       </div>
     </section>

@@ -9,7 +9,7 @@ export const articleBodies: Record<string, string[]> = {
   "understanding-medicare": [
     "Medicare can feel complicated because it is not a single product. It is a set of coverage parts and related choices that people typically begin reviewing as they approach eligibility.",
     "A simple starting point is to understand the difference between Original Medicare, Medicare Advantage, and additional coverage that some people consider for services or prescription costs.",
-    "Enrollment windows, eligibility, and plan availability can vary. This page is educational and should not be treated as enrollment advice.",
+    "Enrollment periods, eligibility, and plan availability can vary. This page is educational and should not be treated as enrollment advice.",
     "Many people find it helpful to list current doctors, prescriptions, travel habits, and budget preferences before comparing options.",
     "If you would like a guided conversation, we can walk through the questions that usually matter first and help you organize the next step.",
   ],

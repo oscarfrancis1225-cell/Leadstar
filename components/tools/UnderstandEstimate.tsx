@@ -7,7 +7,7 @@ type UnderstandEstimateProps = {
 
 export function UnderstandEstimate({ tool }: UnderstandEstimateProps) {
   return (
-    <section className="bg-cream py-12 lg:py-16">
+    <section className="no-print bg-cream py-12 lg:py-16">
       <div className="container-site">
         <p className="eyebrow">Understand this estimate</p>
         <h2 className="headline mt-3 text-3xl">What this illustration covers</h2>

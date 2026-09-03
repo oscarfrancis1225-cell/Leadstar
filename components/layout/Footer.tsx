@@ -6,6 +6,7 @@ import {
   legalLinks,
   siteConfig,
 } from "@/lib/constants";
+import { formatPublicAddressLines } from "@/lib/content/site";
 import { analyticsEvents } from "@/lib/analytics";
 import { formatPhoneHref, isPlaceholderPhone } from "@/lib/utils";
 import { ContactLink } from "@/components/layout/ContactLink";
@@ -14,9 +15,10 @@ import { ProducerIdentification } from "@/components/legal/ProducerIdentificatio
 export function Footer() {
   const year = new Date().getFullYear();
   const showPhone = !isPlaceholderPhone(siteConfig.phone);
+  const addressLines = formatPublicAddressLines();
 
   return (
-    <footer className="bg-navy-deep text-white">
+    <footer data-site-chrome className="bg-navy-deep text-white">
       <div className="container-wide grid gap-12 py-16 md:grid-cols-2 xl:grid-cols-[1.3fr_repeat(4,minmax(0,1fr))]">
         <div className="max-w-sm">
           <Logo inverted />
@@ -51,10 +53,24 @@ export function Footer() {
                 {siteConfig.email}
               </ContactLink>
             </li>
-            <li className="flex items-start gap-3">
-              <MapPin className="mt-0.5 h-4 w-4 text-gold" aria-hidden />
-              <span>{siteConfig.serviceArea}</span>
-            </li>
+            {addressLines.length > 0 ? (
+              <li className="flex items-start gap-3">
+                <MapPin className="mt-0.5 h-4 w-4 text-gold" aria-hidden />
+                <span>
+                  {addressLines.map((line) => (
+                    <span key={line} className="block">
+                      {line}
+                    </span>
+                  ))}
+                </span>
+              </li>
+            ) : (
+              <li className="flex items-start gap-3">
+                <MapPin className="mt-0.5 h-4 w-4 text-gold" aria-hidden />
+                <span>{siteConfig.serviceArea}</span>
+              </li>
+            )}
+            <li className="text-white/55">{siteConfig.serviceArea}</li>
           </ul>
         </div>
       </div>

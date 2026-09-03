@@ -60,7 +60,7 @@ export function MobileNavigation({ open, onClose }: MobileNavigationProps) {
   }
 
   return (
-    <div className="fixed inset-0 z-50 lg:hidden">
+    <div data-site-chrome className="fixed inset-0 z-50 lg:hidden">
       <div
         aria-hidden
         className="absolute inset-0 bg-navy-deep/45"
