@@ -26,7 +26,7 @@ export default function CareersPage() {
           </p>
           <div className="mt-8">
             <Button href="/contact" variant="secondary">
-              Contact the team
+              Contact Esther
             </Button>
           </div>
         </Container>

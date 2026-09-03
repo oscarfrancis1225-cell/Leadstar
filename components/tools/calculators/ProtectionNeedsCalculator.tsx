@@ -5,6 +5,7 @@ import { CalculatorCta } from "@/components/tools/CalculatorCta";
 import { CalculatorField } from "@/components/tools/CalculatorField";
 import { CalculatorShell } from "@/components/tools/CalculatorShell";
 import { KeepWorksheet } from "@/components/tools/KeepWorksheet";
+import { ResultCard } from "@/components/tools/ResultCard";
 import { ResultStat } from "@/components/tools/ResultStat";
 import { calculateProtectionNeeds, formatUSD } from "@/lib/calculators";
 
@@ -27,57 +28,62 @@ export function ProtectionNeedsCalculator() {
     liquidSavings: savings,
   });
 
+  const meaning =
+    result.estimatedProtectionNeed === 0
+      ? "After the coverage and savings you typed, this picture does not show extra life insurance to talk about."
+      : `This picture adds ${years} years of pay, the house loan, other debts, and school money. Then it subtracts coverage and cash you already have. The leftover is ${formatUSD(result.estimatedProtectionNeed)}.`;
+  const notMeaning =
+    "This is not a quote and not the amount you should buy. Taxes, underwriting, and final-expense costs are left out unless you typed them in.";
+
   return (
     <CalculatorShell
       summary={{
-        label: "Estimated need",
+        label: "Leftover in this picture",
         value: formatUSD(result.estimatedProtectionNeed),
       }}
       keep={
         <KeepWorksheet
           title="Protection Needs Estimator"
-          rows={[
-            { label: "Annual household income", value: formatUSD(income) },
-            { label: "Years of income replacement", value: String(years) },
-            { label: "Remaining mortgage", value: formatUSD(mortgage) },
-            { label: "Other debts", value: formatUSD(debts) },
-            { label: "Future education goal", value: formatUSD(education) },
-            { label: "Existing life coverage", value: formatUSD(coverage) },
-            { label: "Liquid savings available", value: formatUSD(savings) },
-            { label: "Income replacement", value: formatUSD(result.incomeReplacement) },
-            { label: "Gross need illustrated", value: formatUSD(result.grossNeed) },
-            { label: "Coverage and savings entered", value: formatUSD(result.resources) },
-            { label: "Estimated protection need", value: formatUSD(result.estimatedProtectionNeed) },
+          subtitle="A leftover after coverage and savings you already have."
+          inputs={[
+            { label: "Yearly household pay (dollars)", value: formatUSD(income) },
+            { label: "Years of pay to picture replacing", value: String(years) },
+            { label: "House loan still owed (dollars)", value: formatUSD(mortgage) },
+            { label: "Other debts (dollars)", value: formatUSD(debts) },
+            { label: "School money you would want funded (dollars)", value: formatUSD(education) },
+            { label: "Life insurance you already have (dollars)", value: formatUSD(coverage) },
+            { label: "Cash you could use (dollars)", value: formatUSD(savings) },
           ]}
+          results={[
+            { label: "Pay times years", value: formatUSD(result.incomeReplacement) },
+            { label: "All needs added up", value: formatUSD(result.grossNeed) },
+            { label: "Coverage and cash you typed", value: formatUSD(result.resources) },
+            { label: "Leftover in this picture", value: formatUSD(result.estimatedProtectionNeed) },
+          ]}
+          meaning={[meaning, notMeaning]}
           disclaimer="This worksheet is an illustration, not a quote, and not advice. It does not offer or recommend a policy. Individual needs vary."
           toolHref="/tools/protection-needs"
         />
       }
       results={
         <div>
-          <ResultStat
-            primary
-            label="Estimated protection need"
-            value={formatUSD(result.estimatedProtectionNeed)}
-            hint="Educational estimate"
-          />
-          <div className="mt-6">
-            <ResultStat label="Income replacement" value={formatUSD(result.incomeReplacement)} />
-            <ResultStat label="Gross need illustrated" value={formatUSD(result.grossNeed)} />
-            <ResultStat label="Coverage and savings entered" value={formatUSD(result.resources)} />
-          </div>
-          <p className="mt-5 text-sm leading-6 text-muted">
-            {result.estimatedProtectionNeed === 0
-              ? "This illustration does not show an additional protection gap from the items you entered."
-              : "This is an educational estimate, not a coverage recommendation. Individual needs vary."}
-          </p>
+          <ResultCard
+            question="After coverage you already have, what leftover is in this picture?"
+            answer={formatUSD(result.estimatedProtectionNeed)}
+            meaning={meaning}
+            notMeaning={notMeaning}
+          >
+            <ResultStat label="Pay times years" value={formatUSD(result.incomeReplacement)} />
+            <ResultStat label="All needs added up" value={formatUSD(result.grossNeed)} />
+            <ResultStat label="Coverage and cash you typed" value={formatUSD(result.resources)} />
+          </ResultCard>
           <CalculatorCta toolSlug="protection-needs" />
         </div>
       }
     >
       <CalculatorField
         id="pn-income"
-        label="Annual household income"
+        label="Yearly household pay (dollars)"
         value={income}
         prefix="$"
         onChange={setIncome}
@@ -87,7 +93,7 @@ export function ProtectionNeedsCalculator() {
       />
       <CalculatorField
         id="pn-years"
-        label="Years of income replacement"
+        label="Years of pay to picture replacing (years)"
         value={years}
         suffix="yrs"
         onChange={setYears}
@@ -96,7 +102,7 @@ export function ProtectionNeedsCalculator() {
       />
       <CalculatorField
         id="pn-mortgage"
-        label="Remaining mortgage"
+        label="House loan still owed (dollars)"
         value={mortgage}
         prefix="$"
         onChange={setMortgage}
@@ -106,7 +112,7 @@ export function ProtectionNeedsCalculator() {
       />
       <CalculatorField
         id="pn-debts"
-        label="Other debts"
+        label="Other debts (dollars)"
         value={debts}
         prefix="$"
         onChange={setDebts}
@@ -116,7 +122,7 @@ export function ProtectionNeedsCalculator() {
       />
       <CalculatorField
         id="pn-education"
-        label="Future education goal"
+        label="School money you would want funded (dollars)"
         value={education}
         prefix="$"
         onChange={setEducation}
@@ -126,7 +132,7 @@ export function ProtectionNeedsCalculator() {
       />
       <CalculatorField
         id="pn-coverage"
-        label="Existing life coverage"
+        label="Life insurance you already have (dollars)"
         value={coverage}
         prefix="$"
         onChange={setCoverage}
@@ -136,7 +142,7 @@ export function ProtectionNeedsCalculator() {
       />
       <CalculatorField
         id="pn-savings"
-        label="Liquid savings available"
+        label="Cash you could use (dollars)"
         value={savings}
         prefix="$"
         onChange={setSavings}

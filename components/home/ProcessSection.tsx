@@ -1,8 +1,6 @@
-import { FadeCarousel } from "@/components/ui/FadeCarousel";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { processSteps } from "@/lib/constants";
-import { processGallery } from "@/lib/images";
 
 export function ProcessSection() {
   return (
@@ -26,14 +24,20 @@ export function ProcessSection() {
           </ol>
           <div className="official-frame">
             <div className="official-frame-mat">
-              <div className="relative aspect-[3/2] overflow-hidden bg-navy">
-                <FadeCarousel
-                  images={processGallery}
-                  label="Planning process photos"
-                  sizes="(min-width: 1024px) 36rem, 100vw"
-                  encodeSrc
-                  imageClassName="object-cover object-[center_20%]"
-                />
+              <div className="flex min-h-[17rem] flex-col justify-center bg-navy px-8 py-10 sm:px-10">
+                <p className="eyebrow text-gold">What stays the same</p>
+                <p className="headline mt-3 text-[1.6rem] leading-tight text-white sm:text-[1.85rem]">
+                  One licensed agent, from the first question to the
+                  follow-up.
+                </p>
+                <p className="mt-4 max-w-md text-sm leading-7 text-white/85">
+                  Esther Francis is an insurance agent licensed in Florida and
+                  California. She starts with the paycheck, not a product name.
+                </p>
+                <p className="mt-5 border-t border-white/15 pt-4 text-sm leading-7 text-white/75">
+                  There is no application on this website. No product is
+                  offered or recommended on this page.
+                </p>
               </div>
             </div>
           </div>

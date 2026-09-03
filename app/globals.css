@@ -418,11 +418,35 @@ body::before {
 }
 
 @media print {
+  @page {
+    size: auto;
+    margin: 12mm;
+  }
+
   header,
   footer,
   nav,
   [data-site-chrome],
-  .no-print {
+  .no-print,
+  .skip-link,
+  button,
+  input,
+  select,
+  textarea,
+  svg,
+  details,
+  form {
+    display: none !important;
+  }
+
+  html,
+  body {
+    background: white !important;
+    color: #000;
+    font-size: 11pt;
+  }
+
+  body::before {
     display: none !important;
   }
 
@@ -430,12 +454,89 @@ body::before {
     display: block !important;
   }
 
-  body {
-    background: white;
+  /* One worksheet, one page where it fits. No decorative frames or shadows. */
+  .print-worksheet {
+    border: 0 !important;
+    box-shadow: none !important;
+    background: white !important;
+    margin: 0;
+    padding: 0;
+    page-break-inside: avoid;
   }
 
-  body::before {
-    display: none !important;
+  .print-worksheet-eyebrow {
+    font-size: 8pt;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #333;
+    margin: 0;
+  }
+
+  .print-worksheet-title {
+    font-size: 16pt;
+    font-weight: 600;
+    margin: 2mm 0 0;
+  }
+
+  .print-worksheet-sub {
+    font-size: 9.5pt;
+    color: #333;
+    margin: 1mm 0 0;
+  }
+
+  .print-worksheet-heading {
+    font-size: 10pt;
+    font-weight: 700;
+    margin: 5mm 0 1.5mm;
+    padding-bottom: 1mm;
+    border-bottom: 1px solid #999;
+    page-break-after: avoid;
+  }
+
+  .print-worksheet-list {
+    margin: 0;
+  }
+
+  .print-worksheet-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 8mm;
+    padding: 1mm 0;
+    border-bottom: 1px dotted #ccc;
+    page-break-inside: avoid;
+  }
+
+  .print-worksheet-row dt {
+    font-size: 9.5pt;
+    color: #333;
+    margin: 0;
+  }
+
+  .print-worksheet-row dd {
+    font-size: 9.5pt;
+    font-weight: 600;
+    text-align: right;
+    margin: 0;
+  }
+
+  .print-worksheet-notes {
+    margin: 0;
+    padding-left: 5mm;
+    list-style: disc;
+  }
+
+  .print-worksheet-notes li {
+    font-size: 9.5pt;
+    line-height: 1.35;
+    margin-bottom: 1mm;
+  }
+
+  .print-worksheet-fine {
+    font-size: 8pt;
+    line-height: 1.35;
+    color: #333;
+    margin: 3mm 0 0;
   }
 
   a[href]::after {

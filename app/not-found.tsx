@@ -9,7 +9,7 @@ export default function NotFound() {
         <h1 className="headline mt-3 text-4xl">This page is unavailable.</h1>
         <p className="lead mt-4">
           The page you are looking for may have moved. Return home or start a
-          conversation with the team.
+          conversation with Esther.
         </p>
         <div className="mt-8 flex justify-center gap-3">
           <Button href="/" variant="primary">

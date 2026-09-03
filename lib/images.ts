@@ -70,45 +70,4 @@ export const siteImages = {
   },
 } as const;
 
-export const officeGallery = [
-  {
-    src: "/images/Office/team1.JPG",
-    alt: "LeadStar Financial team standing together in the office",
-    width: 1600,
-    height: 1060,
-  },
-  {
-    src: "/images/Office/team2.JPG",
-    alt: "LeadStar Financial team in the office lobby",
-    width: 1600,
-    height: 1060,
-  },
-] as const;
-
-export const advisorCarousel = [
-  siteImages.advisorPortrait,
-  ...officeGallery,
-] as const;
-
-export const processGallery = [
-  {
-    src: "/images/Office/team1.JPG",
-    alt: "LeadStar Financial team standing together in the office",
-    width: 1600,
-    height: 1060,
-  },
-  {
-    src: "/images/Office/me.png",
-    alt: "Esther Francis in the office",
-    width: 1400,
-    height: 1750,
-  },
-  {
-    src: "/images/Office/team2.JPG",
-    alt: "LeadStar Financial team in the office lobby",
-    width: 1600,
-    height: 1060,
-  },
-] as const;
-
 export type SiteImage = (typeof siteImages)[keyof typeof siteImages];

@@ -96,9 +96,11 @@ Do not call coverage a state-regulated benefit, government program, or burial pr
 
 ## Bylines
 
-Display: "Prepared by the LeadStar editorial team (Reviewed by Esther Francis, Financial Services Professional) [date]."
+Default display while no signed attestation exists: "Prepared for general education [date]."
 
-Never attach that byline unless a signed review attestation exists in `content/reviews/`.
+After a signed attestation: "Reviewed by Esther Francis, Financial Services Professional [date]."
+
+Never attach a reviewer byline, and never name an intended reviewer in public copy, unless a signed review attestation exists in `content/reviews/`. Do not credit an editorial team or any other staff. LeadStar Financial is a one-person practice.
 
 ## Thin pages
 

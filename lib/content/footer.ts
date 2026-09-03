@@ -29,6 +29,6 @@ export const legalLinks = [
 export const contactHighlights = [
   "No application on this website",
   "You can pick Not Sure Yet",
-  "We'll only use this to reply",
+  "Esther will only use this to reply",
   "Licensed in Florida and California",
 ] as const;

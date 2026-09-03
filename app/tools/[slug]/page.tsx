@@ -4,15 +4,14 @@ import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import { AnswerSummary } from "@/components/blog/AnswerSummary";
 import { Breadcrumb } from "@/components/blog/Breadcrumb";
-import { FinalCTA } from "@/components/home/FinalCTA";
-import { LicensingNotice } from "@/components/legal/LicensingNotice";
-import { PageHero } from "@/components/layout/PageHero";
 import { BreadcrumbJsonLd, FAQPageJsonLd } from "@/components/seo/JsonLd";
 import { RelatedTools } from "@/components/tools/RelatedTools";
 import { ToolCalculator } from "@/components/tools/ToolCalculator";
 import { ToolEducation } from "@/components/tools/ToolEducation";
+import { ToolFaqs } from "@/components/tools/ToolFaqs";
 import { UnderstandEstimate } from "@/components/tools/UnderstandEstimate";
 import { Container } from "@/components/ui/Container";
+import { getPublishedArticles } from "@/lib/content/articles";
 import { getTool, tools } from "@/lib/constants";
 
 type ToolPageProps = {
@@ -58,15 +57,8 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
         ]}
       />
       <FAQPageJsonLd faqs={tool.faqs} />
-      <div className="no-print">
-      <PageHero
-        eyebrow="Financial Tools"
-        title={tool.title}
-        description={tool.description}
-      />
-      </div>
-      <section className="no-print bg-white py-8">
-        <Container className="max-w-3xl space-y-6">
+      <section className="no-print border-b border-line bg-cream">
+        <Container className="max-w-3xl py-8 lg:py-10">
           <Breadcrumb
             items={[
               { label: "Home", href: "/" },
@@ -74,13 +66,16 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
               { label: tool.title },
             ]}
           />
-          <AnswerSummary text={tool.summary} />
-          <LicensingNotice />
+          <p className="eyebrow mt-5">Financial Tools</p>
+          <h1 className="headline mt-2 text-4xl sm:text-5xl">{tool.title}</h1>
+          <p className="lead mt-4">{tool.shortDescription}</p>
+          <div className="mt-5">
+            <AnswerSummary text={tool.summary} />
+          </div>
         </Container>
       </section>
-      <ToolEducation tool={tool} />
-      <section className="bg-white py-8 lg:py-12">
-        <Container>
+      <section className="bg-white py-6 lg:py-8">
+        <Container className="space-y-6">
           <Link
             href="/tools"
             className="no-print inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-blue"
@@ -88,29 +83,16 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
             <ArrowLeft className="h-4 w-4" aria-hidden />
             All financial tools
           </Link>
-          <div className="mt-4">
-            <ToolCalculator slug={tool.slug} />
-          </div>
+          <ToolEducation tool={tool} />
+          <ToolCalculator
+            slug={tool.slug}
+            liveArticleSlugs={getPublishedArticles().map((article) => article.slug)}
+          />
+          <UnderstandEstimate tool={tool} />
+          <ToolFaqs faqs={tool.faqs} />
         </Container>
       </section>
-      {tool.faqs.length > 0 ? (
-        <section className="no-print bg-cream py-12">
-          <Container className="max-w-3xl space-y-6">
-            <h2 className="headline text-3xl">Questions about this tool</h2>
-            {tool.faqs.map((item) => (
-              <article key={item.question} className="card p-6">
-                <h3 className="font-serif text-2xl text-navy">{item.question}</h3>
-                <p className="mt-3 text-sm leading-7 text-muted">{item.answer}</p>
-              </article>
-            ))}
-          </Container>
-        </section>
-      ) : null}
-      <UnderstandEstimate tool={tool} />
       <RelatedTools slug={tool.slug} />
-      <div className="no-print">
-      <FinalCTA />
-      </div>
     </>
   );
 }

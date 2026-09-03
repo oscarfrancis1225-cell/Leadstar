@@ -13,7 +13,7 @@ import { BreadcrumbJsonLd, FAQPageJsonLd } from "@/components/seo/JsonLd";
 import { Container } from "@/components/ui/Container";
 import { ProductTypeCards } from "@/components/services/ProductTypeCards";
 import { getDisclaimer } from "@/lib/content/disclaimers";
-import { getArticle } from "@/lib/content/articles";
+import { getVisibleArticles } from "@/lib/content/articles";
 import { getServicePage } from "@/lib/content/service-entries";
 import { services, tools } from "@/lib/constants";
 
@@ -85,9 +85,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
     notFound();
   }
 
-  const relatedArticles = page.relatedArticleSlugs
-    .map((articleSlug) => getArticle(articleSlug))
-    .filter((article): article is NonNullable<typeof article> => Boolean(article));
+  const relatedArticles = getVisibleArticles(page.relatedArticleSlugs);
 
   return (
     <>

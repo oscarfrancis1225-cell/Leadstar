@@ -9,6 +9,7 @@ Public site copy must stay inside verified or rewritten-safer language until thi
 | Claim / asset | Status | Notes |
 | --- | --- | --- |
 | Fabricated testimonials on `/reviews` and home | `DO NOT PUBLISH` | Unpublished 2026-08-27. Delete `lib/content/testimonials.ts` and `public/images/testimonials/` manually when ready. |
+| AI-generated staff and lobby photos `public/images/Office/team1.JPG`, `public/images/Office/team2.JPG` | `DO NOT PUBLISH` | Removed 2026-09-03. Both were AI-generated group photos showing six or seven fictional employees, one posed in front of a fabricated "LeadStar Financial / PLAN. PROTECT. PROSPER." gold-starburst marble wall. LeadStar is a one-person practice (Esther Francis), so both images published a fake staff roster and a fake branded lobby. Image files deleted; the `officeGallery`, `processGallery`, and `advisorCarousel` exports were removed from `lib/images.ts`; the gallery section was removed from `/office`; the home process and advisor panels no longer use photography that was not taken for this practice. Only `/images/Office/me.png` (real portrait of Esther) and the `/images/value-*.jpg` tiles remain. Do not republish staff, office, or lobby imagery unless it is a real photograph of this practice. |
 | "Serving clients across the United States" | `REWRITE SAFER` | Do not claim nationwide service. Public copy may say licensed in Florida and California only. |
 | "15+ Years Experience" | `REWRITE SAFER` | Removed from the live advisor band. Do not republish a tenure badge such as 16 years. You MAY say she has been licensed in Florida for life insurance since 2010 (DFS life-license issue date). |
 | Phone `(954) 449-3101` | `VERIFIED` | User asked to publish. Was the CA DOI listing number. In `siteConfig.phone`. `contactVerified.phone` is true. |
@@ -60,6 +61,9 @@ These may not appear in public copy, captions, schema, or ads:
 | 18+ years experience | `NEEDS VERIFICATION` | Attribute to Esther personally, never to the firm age. Do not republish a tenure figure. Licensed in Florida for life insurance since 2010 is allowed. |
 | Plan. Protect. Prosper. | `REWRITE SAFER` | Tagline only, with the approved semantics in the About page. Never next to product-performance language. |
 | Protect and grow assets | `PROHIBITED` | Use "consider strategies for protection and long-term progress." |
+| "Prepared by the LeadStar editorial team" byline | `REWRITE SAFER` | Changed 2026-09-03. There is no editorial team; LeadStar is a one-person practice. Public article bylines now read "Prepared for general education" while `reviewAttestation` is `pending`. |
+| "Intended reviewer: Esther Francis" in public article copy | `REWRITE SAFER` | Removed 2026-09-03. Naming a reviewer before a signed attestation reads as a completed professional review. The data field is now `intendedReviewer` and stays internal until a signed record exists in `content/reviews/`. |
+| Staff-implying visitor copy ("Contact the team", "conversation with the team", "LeadStar editorial team") | `REWRITE SAFER` | Rewritten 2026-09-03 to name Esther or LeadStar Financial. One licensed agent, no staff. |
 
 ## Phase 0 open items for the business owner
 

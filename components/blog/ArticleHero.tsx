@@ -18,12 +18,13 @@ export function ArticleHero({ article }: { article: Article }) {
       <h1 className="headline max-w-4xl text-4xl sm:text-5xl">{article.h1}</h1>
       <p className="lead max-w-3xl">{article.dek}</p>
       <p className="text-sm text-muted">
-        Prepared by the LeadStar editorial team ·{" "}
-        <a href={estherFrancis.href} className="text-blue hover:underline">
-          {article.reviewAttestation === "signed"
-            ? `Reviewed by ${estherFrancis.name}`
-            : `Intended reviewer: ${estherFrancis.name}`}
-        </a>
+        {article.reviewAttestation === "signed" ? (
+          <a href={estherFrancis.href} className="text-blue hover:underline">
+            {`Reviewed by ${estherFrancis.name}, ${estherFrancis.jobTitle}`}
+          </a>
+        ) : (
+          "Prepared for general education"
+        )}
         {" · "}
         <time dateTime={article.publishedAt}>Published {article.publishedAt}</time>
         {article.updatedAt !== article.publishedAt ? (

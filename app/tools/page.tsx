@@ -18,18 +18,18 @@ export default function ToolsPage() {
   return (
     <>
       <PageHero
-        eyebrow="Financial Tools & Calculators"
+        eyebrow="Financial Tools"
         title="Run the numbers before you guess."
-        description="Each tool uses what you type. Results stay on screen. Print, save as PDF, or email the illustration to yourself. These are illustrations, not quotes."
+        description="Pick a question below. Type your numbers. You get one clear result, plus a worksheet you can print or copy. Nothing you type leaves your device."
       />
-      <section className="bg-white py-10 lg:py-16">
+      <section className="bg-white py-10 lg:py-14">
         <Container>
           <ToolsGrid />
-          <div className="mt-10 max-w-3xl space-y-3 text-sm leading-7 text-muted">
+          <div className="mt-8 max-w-3xl space-y-3 text-sm leading-7 text-muted">
             <p>
-              These calculators provide illustrated estimates only. They do not
-              create a recommendation, quote, or advisory relationship.{" "}
-              {siteConfig.disclosure}{" "}
+              Every tool here is an illustration. It uses the numbers you type.
+              It is not a quote, not a recommendation, and it does not start an
+              advisory relationship. {siteConfig.disclosure}{" "}
               <Link href="/disclosures" className="font-semibold text-blue">
                 Read disclosures
               </Link>

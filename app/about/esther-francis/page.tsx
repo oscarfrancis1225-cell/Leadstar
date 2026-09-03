@@ -86,7 +86,7 @@ export default function EstherFrancisPage() {
         <Container className="mt-16 max-w-6xl">
           <h2 className="headline text-3xl">Related articles</h2>
           <p className="lead mt-3 max-w-2xl">
-            These articles were prepared by the LeadStar editorial team.
+            These articles are prepared for general education.
             Esther&apos;s signed review attestation is pending unless an
             article says otherwise.
           </p>

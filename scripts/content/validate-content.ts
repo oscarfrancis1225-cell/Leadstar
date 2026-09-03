@@ -1,10 +1,10 @@
-import { getPublishedArticles } from "../../lib/content/articles";
+import { articles } from "../../lib/content/articles";
 
 const titles = new Map<string, string>();
 const descriptions = new Map<string, string>();
 const issues: string[] = [];
 
-for (const article of getPublishedArticles()) {
+for (const article of articles) {
   if (article.relatedSlugs.length !== 3) {
     issues.push(`${article.slug}: expected 3 related slugs, found ${article.relatedSlugs.length}`);
   }
@@ -32,4 +32,4 @@ if (issues.length) {
   process.exit(1);
 }
 
-console.log(`Validated ${getPublishedArticles().length} published articles.`);
+console.log(`Validated ${articles.length} articles, published and scheduled.`);

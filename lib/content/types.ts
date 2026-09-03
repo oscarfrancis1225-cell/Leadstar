@@ -102,7 +102,11 @@ export type Article = {
   readonly publishedAt: string;
   readonly updatedAt: string;
   readonly lastReviewedAt: string;
-  readonly reviewedBy: string;
+  /**
+   * Internal tracking only. No public reviewer byline until reviewAttestation
+   * is "signed" and a signed record exists in content/reviews/.
+   */
+  readonly intendedReviewer: string;
   readonly reviewAttestation: "pending" | "signed";
   readonly freshnessType: FreshnessType;
   readonly nextReviewAt: string;

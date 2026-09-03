@@ -24,8 +24,12 @@ export { values } from "@/lib/content/values";
 export {
   articles,
   getArticle,
+  getPublicationToday,
   getPublishedArticles,
   getRelatedArticles,
+  getVisibleArticle,
+  getVisibleArticles,
+  isArticleVisible,
   getFeaturedArticles,
   getArticlesByPillar,
 } from "@/lib/content/articles";

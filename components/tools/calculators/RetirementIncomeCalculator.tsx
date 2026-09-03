@@ -6,6 +6,7 @@ import { CalculatorCta } from "@/components/tools/CalculatorCta";
 import { CalculatorField } from "@/components/tools/CalculatorField";
 import { CalculatorShell } from "@/components/tools/CalculatorShell";
 import { KeepWorksheet } from "@/components/tools/KeepWorksheet";
+import { ResultCard } from "@/components/tools/ResultCard";
 import { ResultStat } from "@/components/tools/ResultStat";
 import {
   PLANNING_AGE,
@@ -43,6 +44,15 @@ export function RetirementIncomeCalculator() {
     planningAge,
   });
 
+  const gapLabel =
+    result.status === "shortfall" ? "Money still needed each month" : "Extra each month in this picture";
+  const meaning =
+    result.status === "shortfall"
+      ? `Bills in this picture are ${formatUSD(result.estimatedNeed)} a month. Illustrated income is ${formatUSD(result.projectedMonthlyIncome)} a month. The difference is ${formatUSD(result.monthlyGap)}.`
+      : `Illustrated income is ${formatUSD(result.projectedMonthlyIncome)} a month. That covers the ${formatUSD(result.estimatedNeed)} in bills you typed, with ${formatUSD(result.monthlyGap)} left over in this picture.`;
+  const notMeaning =
+    "This is not your official Social Security number, not a forecast, and not a plan to buy anything. Growth and the withdrawal rate are assumptions you can change.";
+
   return (
     <CalculatorShell
       summary={{
@@ -53,7 +63,7 @@ export function RetirementIncomeCalculator() {
         <AssumptionsPanel>
           <CalculatorField
             id="ri-return"
-            label="Illustrated growth rate before retirement"
+            label="Growth rate before retirement (percent per year)"
             value={preRetireReturn}
             onChange={setPreRetireReturn}
             min={0}
@@ -63,7 +73,8 @@ export function RetirementIncomeCalculator() {
           />
           <CalculatorField
             id="ri-withdrawal"
-            label="Planning withdrawal rate (illustration only)"
+            label="Planning withdrawal rate (percent per year)"
+            hint="A teaching shortcut. It does not promise money lasts to any age."
             value={withdrawalRate}
             onChange={setWithdrawalRate}
             min={WITHDRAWAL_PERCENT_MIN}
@@ -73,8 +84,8 @@ export function RetirementIncomeCalculator() {
           />
           <CalculatorField
             id="ri-planning-age"
-            label="Planning age"
-            hint="Shown for context. It does not change the dollar conversion."
+            label="Planning age (years)"
+            hint="Shown so you can see how long retirement might last. It does not change the dollar math."
             value={planningAge}
             onChange={setPlanningAge}
             min={retirementAge}
@@ -85,81 +96,79 @@ export function RetirementIncomeCalculator() {
       keep={
         <KeepWorksheet
           title="Retirement Income Planner"
-          rows={[
-            { label: "Current age", value: String(currentAge) },
-            { label: "Desired retirement age", value: String(retirementAge) },
-            { label: "Current monthly income", value: formatUSD(currentMonthlyIncome) },
-            { label: "Expected retirement monthly expenses", value: formatUSD(expenses) },
-            { label: "Estimated Social Security or pension", value: `${formatUSD(socialSecurity)}/mo` },
-            { label: "Current retirement savings", value: formatUSD(savings) },
-            { label: "Monthly retirement contribution", value: formatUSD(contribution) },
-            { label: "Illustrated growth rate before retirement", value: `${preRetireReturn}%` },
-            { label: "Planning withdrawal rate", value: `${withdrawalRate}%` },
-            { label: "Planning age", value: String(planningAge) },
-            { label: "Illustrated retirement income", value: `${formatUSD(result.projectedMonthlyIncome)}/month` },
-            { label: "Estimated need", value: `${formatUSD(result.estimatedNeed)}/month` },
+          subtitle="Would the income in this picture cover the monthly bills you typed?"
+          inputs={[
+            { label: "Current age (years)", value: String(currentAge) },
+            { label: "Retirement age (years)", value: String(retirementAge) },
+            { label: "Pay today (dollars per month)", value: formatUSD(currentMonthlyIncome) },
+            { label: "Bills in retirement (dollars per month)", value: formatUSD(expenses) },
             {
-              label: result.status === "shortfall" ? "Potential income gap" : "Estimated surplus",
-              value: `${formatUSD(result.monthlyGap)}/month`,
+              label: "Social Security or pension you typed (dollars per month)",
+              value: formatUSD(socialSecurity),
             },
-            { label: "Projected savings at retirement", value: formatUSD(result.projectedNestEgg) },
-            { label: "Illustrated income from savings", value: `${formatUSD(result.monthlyFromSavings)}/month` },
-            { label: "Social Security or pension entered", value: `${formatUSD(result.socialSecurityPension)}/month` },
+            { label: "Savings now (dollars)", value: formatUSD(savings) },
+            { label: "Added each month (dollars)", value: formatUSD(contribution) },
+            { label: "Growth rate before retirement (percent per year)", value: `${preRetireReturn}%` },
+            { label: "Planning withdrawal rate (percent per year)", value: `${withdrawalRate}%` },
+            { label: "Planning age (years)", value: String(planningAge) },
           ]}
+          results={[
+            {
+              label: "Illustrated monthly income",
+              value: `${formatUSD(result.projectedMonthlyIncome)} per month`,
+            },
+            { label: "Bills you typed", value: `${formatUSD(result.estimatedNeed)} per month` },
+            { label: gapLabel, value: `${formatUSD(result.monthlyGap)} per month` },
+            { label: "Savings at retirement in this picture", value: formatUSD(result.projectedNestEgg) },
+            {
+              label: "Income from savings in this picture",
+              value: `${formatUSD(result.monthlyFromSavings)} per month`,
+            },
+            {
+              label: "Social Security or pension you typed",
+              value: `${formatUSD(result.socialSecurityPension)} per month`,
+            },
+          ]}
+          meaning={[meaning, notMeaning]}
           disclaimer="This worksheet is an illustration, not a quote, not a forecast, and not advice. Actual investment performance is not guaranteed. Official Social Security figures come from the Social Security Administration."
           toolHref="/tools/retirement-income"
         />
       }
       results={
         <div>
-          <ResultStat
-            primary
-            label="Illustrated retirement income"
-            value={`${formatUSD(result.projectedMonthlyIncome)}/month`}
-          />
-          <div className="mt-6">
+          <ResultCard
+            question="Would this income cover the monthly bills you typed?"
+            answer={`${formatUSD(result.projectedMonthlyIncome)} a month`}
+            meaning={meaning}
+            notMeaning={notMeaning}
+          >
+            <ResultStat label="Bills you typed" value={`${formatUSD(result.estimatedNeed)} per month`} />
+            <ResultStat label={gapLabel} value={`${formatUSD(result.monthlyGap)} per month`} />
             <ResultStat
-              label="Estimated need"
-              value={`${formatUSD(result.estimatedNeed)}/month`}
-            />
-            <ResultStat
-              label={
-                result.status === "shortfall"
-                  ? "Potential income gap"
-                  : "Estimated surplus"
-              }
-              value={`${formatUSD(result.monthlyGap)}/month`}
-            />
-            <ResultStat
-              label="Projected savings at retirement"
+              label="Savings at retirement in this picture"
               value={formatUSD(result.projectedNestEgg)}
             />
             <ResultStat
-              label="Illustrated income from savings"
-              value={`${formatUSD(result.monthlyFromSavings)}/month`}
+              label="Income from savings in this picture"
+              value={`${formatUSD(result.monthlyFromSavings)} per month`}
             />
             <ResultStat
-              label="Social Security or pension entered"
-              value={`${formatUSD(result.socialSecurityPension)}/month`}
+              label="Social Security or pension you typed"
+              value={`${formatUSD(result.socialSecurityPension)} per month`}
             />
-          </div>
-          {!result.planningHorizonValid ? (
-            <p className="mt-4 text-sm text-muted">
-              Choose a planning age after retirement so the horizon is clear.
-            </p>
-          ) : null}
-          <p className="mt-5 text-sm leading-6 text-muted">
-            {result.status === "shortfall"
-              ? "There may be a gap worth planning for."
-              : "This illustration suggests the income sources you entered may cover the expenses you entered. A conversation can still help you stress-test the picture."}
-          </p>
+            {!result.planningHorizonValid ? (
+              <p className="mt-3 text-sm text-muted">
+                Choose a planning age after retirement so the years in retirement are clear.
+              </p>
+            ) : null}
+          </ResultCard>
           <CalculatorCta toolSlug="retirement-income" />
         </div>
       }
     >
       <CalculatorField
         id="ri-age"
-        label="Current age"
+        label="Your age today (years)"
         value={currentAge}
         onChange={setCurrentAge}
         min={18}
@@ -167,7 +176,7 @@ export function RetirementIncomeCalculator() {
       />
       <CalculatorField
         id="ri-retire-age"
-        label="Desired retirement age"
+        label="Age you hope to stop working (years)"
         value={retirementAge}
         onChange={setRetirementAge}
         min={18}
@@ -175,8 +184,8 @@ export function RetirementIncomeCalculator() {
       />
       <CalculatorField
         id="ri-income"
-        label="Current monthly income"
-        hint="Used only to suggest a starting expense figure."
+        label="Pay today (dollars per month)"
+        hint="Used only to suggest a starting bill figure. You can change the next box."
         value={currentMonthlyIncome}
         prefix="$"
         onChange={(value) => {
@@ -191,7 +200,7 @@ export function RetirementIncomeCalculator() {
       />
       <CalculatorField
         id="ri-expenses"
-        label="Expected retirement monthly expenses"
+        label="Bills in retirement (dollars per month)"
         value={expenses}
         prefix="$"
         onChange={(value) => {
@@ -204,7 +213,8 @@ export function RetirementIncomeCalculator() {
       />
       <CalculatorField
         id="ri-ss"
-        label="Estimated Social Security or pension"
+        label="Social Security or pension you expect (dollars per month)"
+        hint="Type the amount you already know. This page does not look it up."
         value={socialSecurity}
         prefix="$"
         suffix="/mo"
@@ -215,7 +225,7 @@ export function RetirementIncomeCalculator() {
       />
       <CalculatorField
         id="ri-savings"
-        label="Current retirement savings"
+        label="Savings set aside for retirement (dollars)"
         value={savings}
         prefix="$"
         onChange={setSavings}
@@ -225,7 +235,7 @@ export function RetirementIncomeCalculator() {
       />
       <CalculatorField
         id="ri-contribution"
-        label="Monthly retirement contribution"
+        label="Amount you may add each month (dollars)"
         value={contribution}
         prefix="$"
         onChange={setContribution}

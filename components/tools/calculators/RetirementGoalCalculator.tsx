@@ -6,6 +6,7 @@ import { CalculatorCta } from "@/components/tools/CalculatorCta";
 import { CalculatorField } from "@/components/tools/CalculatorField";
 import { CalculatorShell } from "@/components/tools/CalculatorShell";
 import { KeepWorksheet } from "@/components/tools/KeepWorksheet";
+import { ResultCard } from "@/components/tools/ResultCard";
 import { ResultStat } from "@/components/tools/ResultStat";
 import {
   PLANNING_AGE,
@@ -41,17 +42,23 @@ export function RetirementGoalCalculator() {
     planningAge,
   });
 
+  const gapLabel =
+    result.status === "shortfall" ? "Savings still missing in this picture" : "Extra savings in this picture";
+  const meaning = `To draw ${formatUSD(result.netMonthlyNeed)} a month from savings, after the Social Security or pension you typed, this picture uses a ${withdrawalRate}% yearly withdrawal rate and lands on ${formatUSD(result.retirementGoal)}.`;
+  const notMeaning =
+    "This is not a savings target you must hit. It is not official Social Security. The withdrawal rate is a teaching shortcut, not a promise money lasts to the planning age.";
+
   return (
     <CalculatorShell
       summary={{
-        label: "Estimated goal",
+        label: "Illustrated savings figure",
         value: formatUSD(result.retirementGoal),
       }}
       assumptions={
         <AssumptionsPanel>
           <CalculatorField
             id="rg-return"
-            label="Illustrated growth rate before retirement"
+            label="Growth rate before retirement (percent per year)"
             value={preRetireReturn}
             onChange={setPreRetireReturn}
             min={0}
@@ -61,7 +68,8 @@ export function RetirementGoalCalculator() {
           />
           <CalculatorField
             id="rg-withdrawal"
-            label="Planning withdrawal rate (illustration only)"
+            label="Planning withdrawal rate (percent per year)"
+            hint="A teaching shortcut. It does not promise money lasts to any age."
             value={withdrawalRate}
             onChange={setWithdrawalRate}
             min={WITHDRAWAL_PERCENT_MIN}
@@ -74,23 +82,36 @@ export function RetirementGoalCalculator() {
       keep={
         <KeepWorksheet
           title="Retirement Goal Calculator"
-          rows={[
-            { label: "Current age", value: String(currentAge) },
-            { label: "Retirement age", value: String(retirementAge) },
-            { label: "Desired retirement monthly income", value: formatUSD(desiredIncome) },
-            { label: "Expected Social Security or pension", value: `${formatUSD(socialSecurity)}/mo` },
-            { label: "Current savings", value: formatUSD(savings) },
-            { label: "Current monthly contributions", value: formatUSD(contribution) },
-            { label: "Planning age", value: String(planningAge) },
-            { label: "Illustrated growth rate before retirement", value: `${preRetireReturn}%` },
-            { label: "Planning withdrawal rate", value: `${withdrawalRate}%` },
-            { label: "Estimated retirement goal", value: formatUSD(result.retirementGoal) },
-            { label: "Current projected savings", value: formatUSD(result.projectedSavings) },
+          subtitle="A savings figure that could support the monthly income you typed."
+          inputs={[
+            { label: "Current age (years)", value: String(currentAge) },
+            { label: "Retirement age (years)", value: String(retirementAge) },
+            { label: "Monthly income you have in mind (dollars)", value: formatUSD(desiredIncome) },
             {
-              label: result.status === "shortfall" ? "Estimated planning gap" : "Estimated surplus",
-              value: formatUSD(result.planningGap),
+              label: "Social Security or pension you typed (dollars per month)",
+              value: formatUSD(socialSecurity),
             },
-            { label: "Net monthly income illustrated", value: `${formatUSD(result.netMonthlyNeed)}/month` },
+            { label: "Savings now (dollars)", value: formatUSD(savings) },
+            { label: "Added each month (dollars)", value: formatUSD(contribution) },
+            { label: "Planning age (years)", value: String(planningAge) },
+            { label: "Growth rate before retirement (percent per year)", value: `${preRetireReturn}%` },
+            { label: "Planning withdrawal rate (percent per year)", value: `${withdrawalRate}%` },
+          ]}
+          results={[
+            { label: "Illustrated savings figure", value: formatUSD(result.retirementGoal) },
+            { label: "Savings at retirement in this picture", value: formatUSD(result.projectedSavings) },
+            { label: gapLabel, value: formatUSD(result.planningGap) },
+            {
+              label: "Monthly amount left for savings to cover",
+              value: `${formatUSD(result.netMonthlyNeed)} per month`,
+            },
+          ]}
+          meaning={[
+            meaning,
+            result.planningHorizonValid
+              ? `The planning age of ${planningAge} is context for how long retirement might last. The dollar figure uses the withdrawal rate, not a spend-down to that age.`
+              : "Choose a planning age after retirement so the years in retirement are clear.",
+            notMeaning,
           ]}
           disclaimer="This worksheet is an educational estimate in today's dollars, not a quote, not a savings-target recommendation, and not advice. A planning withdrawal rate is a shorthand, not a promise that assets last to any age."
           toolHref="/tools/retirement-goal"
@@ -98,47 +119,39 @@ export function RetirementGoalCalculator() {
       }
       results={
         <div>
-          <ResultStat
-            primary
-            label="Estimated retirement goal"
-            value={formatUSD(result.retirementGoal)}
-          />
-          <div className="mt-6">
+          <ResultCard
+            question="What savings figure would support the monthly income you typed?"
+            answer={formatUSD(result.retirementGoal)}
+            meaning={meaning}
+            notMeaning={notMeaning}
+          >
             <ResultStat
-              label="Current projected savings"
+              label="Savings at retirement in this picture"
               value={formatUSD(result.projectedSavings)}
             />
+            <ResultStat label={gapLabel} value={formatUSD(result.planningGap)} />
             <ResultStat
-              label={
-                result.status === "shortfall"
-                  ? "Estimated planning gap"
-                  : "Estimated surplus"
-              }
-              value={formatUSD(result.planningGap)}
+              label="Monthly amount left for savings to cover"
+              value={`${formatUSD(result.netMonthlyNeed)} per month`}
             />
-            <ResultStat
-              label="Net monthly income illustrated"
-              value={`${formatUSD(result.netMonthlyNeed)}/month`}
-            />
-          </div>
-          {!result.planningHorizonValid ? (
-            <p className="mt-4 text-sm text-muted">
-              Choose a planning age after retirement so the horizon is clear.
-            </p>
-          ) : (
-            <p className="mt-5 text-sm leading-6 text-muted">
-              This illustration uses a planning horizon to age {planningAge}. The
-              dollar target uses the planning withdrawal rate, not a spend-down
-              to that age.
-            </p>
-          )}
+            {result.planningHorizonValid ? (
+              <p className="mt-3 text-sm leading-6 text-muted">
+                Planning age {planningAge} is context. The dollar figure uses the
+                withdrawal rate, not a spend-down to that age.
+              </p>
+            ) : (
+              <p className="mt-3 text-sm text-muted">
+                Choose a planning age after retirement so the years in retirement are clear.
+              </p>
+            )}
+          </ResultCard>
           <CalculatorCta toolSlug="retirement-goal" />
         </div>
       }
     >
       <CalculatorField
         id="rg-age"
-        label="Current age"
+        label="Your age today (years)"
         value={currentAge}
         onChange={setCurrentAge}
         min={18}
@@ -146,7 +159,7 @@ export function RetirementGoalCalculator() {
       />
       <CalculatorField
         id="rg-retire-age"
-        label="Retirement age"
+        label="Age you hope to stop working (years)"
         value={retirementAge}
         onChange={setRetirementAge}
         min={18}
@@ -154,7 +167,7 @@ export function RetirementGoalCalculator() {
       />
       <CalculatorField
         id="rg-income"
-        label="Desired retirement monthly income"
+        label="Monthly income you have in mind (dollars)"
         value={desiredIncome}
         prefix="$"
         onChange={setDesiredIncome}
@@ -164,7 +177,8 @@ export function RetirementGoalCalculator() {
       />
       <CalculatorField
         id="rg-ss"
-        label="Expected Social Security or pension"
+        label="Social Security or pension you expect (dollars per month)"
+        hint="Type the amount you already know. This page does not look it up."
         value={socialSecurity}
         prefix="$"
         suffix="/mo"
@@ -175,7 +189,7 @@ export function RetirementGoalCalculator() {
       />
       <CalculatorField
         id="rg-savings"
-        label="Current savings"
+        label="Savings set aside now (dollars)"
         value={savings}
         prefix="$"
         onChange={setSavings}
@@ -185,7 +199,7 @@ export function RetirementGoalCalculator() {
       />
       <CalculatorField
         id="rg-contribution"
-        label="Current monthly contributions"
+        label="Amount you may add each month (dollars)"
         value={contribution}
         prefix="$"
         onChange={setContribution}
@@ -195,8 +209,8 @@ export function RetirementGoalCalculator() {
       />
       <CalculatorField
         id="rg-planning-age"
-        label="Planning age / life expectancy assumption"
-        hint="Shown as context for how long retirement might last."
+        label="Planning age (years)"
+        hint="Shown so you can see how long retirement might last."
         value={planningAge}
         onChange={setPlanningAge}
         min={retirementAge}

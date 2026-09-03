@@ -11,6 +11,14 @@ import { RetirementIncomeCalculator } from "@/components/tools/calculators/Retir
 import { Turning65Calendar } from "@/components/tools/calculators/Turning65Calendar";
 import type { ToolSlug } from "@/lib/content/tools";
 
+/**
+ * Calculators run on the client, so the publication schedule is resolved on the
+ * server and passed down. Only slugs that are live today may be linked.
+ */
+export type CalculatorProps = {
+  readonly liveArticleSlugs?: readonly string[];
+};
+
 const calculators = {
   "retirement-income": RetirementIncomeCalculator,
   "compound-growth": CompoundGrowthCalculator,
@@ -20,9 +28,15 @@ const calculators = {
   "financial-safety": FinancialSafetyCalculator,
   "turning-65": Turning65Calendar,
   "beneficiary-checklist": BeneficiaryChecklist,
-} satisfies Record<ToolSlug, ComponentType>;
+} satisfies Record<ToolSlug, ComponentType<CalculatorProps>>;
 
-export function ToolCalculator({ slug }: { slug: ToolSlug }) {
+export function ToolCalculator({
+  slug,
+  liveArticleSlugs = [],
+}: {
+  slug: ToolSlug;
+  liveArticleSlugs?: readonly string[];
+}) {
   const Calculator = calculators[slug];
-  return <Calculator />;
+  return <Calculator liveArticleSlugs={liveArticleSlugs} />;
 }

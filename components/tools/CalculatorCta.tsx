@@ -13,12 +13,11 @@ export function CalculatorCta({ toolSlug }: CalculatorCtaProps) {
   }
 
   return (
-    <div className="no-print mt-6">
+    <div className="no-print mt-5">
       <p className="text-sm leading-6 text-muted">
-        This result is an illustration, not a quote. If the gap surprises
-        you, a conversation can help you talk through the numbers you typed.
+        This is a worksheet, not a quote and not advice.
       </p>
-      <div className="mt-4 flex w-full flex-col gap-3">
+      <div className="mt-3 flex w-full flex-col gap-3">
         <Button className="w-full" href="/contact" variant="blue" showArrow>
           {tool.ctaLabel}
         </Button>

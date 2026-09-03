@@ -11,9 +11,9 @@ import { TableOfContents } from "@/components/blog/TableOfContents";
 import { BreadcrumbJsonLd, BlogPostingJsonLd } from "@/components/seo/JsonLd";
 import { Container } from "@/components/ui/Container";
 import {
-  getArticle,
   getPublishedArticles,
   getRelatedArticles,
+  getVisibleArticle,
 } from "@/lib/content/articles";
 import { getDisclaimer } from "@/lib/content/disclaimers";
 
@@ -29,7 +29,7 @@ export async function generateMetadata({
   params,
 }: ArticlePageProps): Promise<Metadata> {
   const { slug } = await params;
-  const article = getArticle(slug);
+  const article = getVisibleArticle(slug);
 
   if (!article) {
     return {};
@@ -66,9 +66,9 @@ export async function generateMetadata({
 
 export default async function ArticlePage({ params }: ArticlePageProps) {
   const { slug } = await params;
-  const article = getArticle(slug);
+  const article = getVisibleArticle(slug);
 
-  if (!article || article.publicationStatus !== "published") {
+  if (!article) {
     notFound();
   }
 

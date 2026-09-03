@@ -1,9 +1,10 @@
 import Link from "next/link";
-import { MapPin } from "lucide-react";
-import { AdvisorCarousel } from "@/components/home/AdvisorCarousel";
+import { FileText } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { IconByName } from "@/components/ui/IconMap";
+import { SmartImage } from "@/components/ui/SmartImage";
 import { advisor, advisorTrustPoints } from "@/lib/constants";
+import { siteImages } from "@/lib/images";
 
 export function AdvisorSection() {
   return (
@@ -33,11 +34,11 @@ export function AdvisorSection() {
             {advisor.ctaLabel}
           </Button>
           <Link
-            href={advisor.officeHref}
+            href={advisor.secondaryHref}
             className="inline-flex items-center gap-2 border-b border-gold pb-0.5 text-sm font-medium text-white transition-colors hover:text-gold-soft"
           >
-            <MapPin className="h-4 w-4 text-gold" aria-hidden />
-            {advisor.officeLabel}
+            <FileText className="h-4 w-4 text-gold" aria-hidden />
+            {advisor.secondaryLabel}
           </Link>
         </div>
       </div>
@@ -67,7 +68,14 @@ export function AdvisorSection() {
         <div className="official-frame h-full">
           <div className="official-frame-mat">
             <div className="relative aspect-[4/3] overflow-hidden bg-navy lg:aspect-auto lg:h-full lg:min-h-[240px]">
-              <AdvisorCarousel />
+              <SmartImage
+                src={siteImages.advisorPortrait.src}
+                alt={siteImages.advisorPortrait.alt}
+                fill
+                sizes="(min-width: 1024px) 30vw, 90vw"
+                className="absolute inset-0 h-full w-full"
+                imgClassName="object-cover object-[42%_10%]"
+              />
             </div>
           </div>
         </div>

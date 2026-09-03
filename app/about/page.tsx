@@ -125,10 +125,11 @@ export default function AboutPage() {
               </Button>
             </div>
             <p className="mt-4 text-sm leading-6 text-muted">
-              Office photographs are on a dedicated page.{" "}
-              <Link href="/office#gallery" className="text-blue hover:underline">
-                See office photographs
+              The public mailing address, phone, and email are on the{" "}
+              <Link href="/office" className="text-blue hover:underline">
+                Office page
               </Link>
+              .
             </p>
           </div>
         </Container>

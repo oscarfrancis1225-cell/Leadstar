@@ -14,9 +14,9 @@ export const tools = [
     secondaryCtaLabel: "Explore Retirement Services",
     relatedSlugs: ["retirement-goal", "compound-growth", "financial-safety"],
     howToUse: [
-      "Enter your current age, the age you hope to retire, and your current monthly income for context.",
-      "Enter estimated retirement expenses, Social Security or pension income, current savings, and what you may add each month.",
-      "Review the illustrated income, the expense figure, and any gap. Open Planning assumptions if you want to change the growth or withdrawal rate used in the illustration.",
+      "Type your age, the age you hope to stop working, and today's pay.",
+      "Type retirement bills, any Social Security or pension you already know, and savings.",
+      "Read one income number. Open Planning assumptions only if you want to change the rates.",
     ],
     includes: [
       "Growth of current savings and monthly contributions to retirement",
@@ -63,9 +63,9 @@ export const tools = [
     secondaryCtaLabel: "Explore Retirement Services",
     relatedSlugs: ["retirement-goal", "retirement-income", "financial-safety"],
     howToUse: [
-      "Enter a starting amount and a monthly contribution.",
-      "Choose an annual return and a number of years.",
-      "Watch the illustrated balance and the curve change as you move the sliders.",
+      "Type the starting balance and what you may add each month.",
+      "Pick a yearly rate and a number of years. The rate is a try, not a promise.",
+      "Read the illustrated balance.",
     ],
     includes: [
       "Monthly compounding and end-of-month contributions",
@@ -109,9 +109,9 @@ export const tools = [
     secondaryCtaLabel: "Explore Retirement Services",
     relatedSlugs: ["retirement-income", "compound-growth", "protection-needs"],
     howToUse: [
-      "Enter your ages and the monthly retirement income you would like to illustrate.",
-      "Subtract expected Social Security or pension by entering those amounts.",
-      "Add current savings and monthly contributions to see an illustrated gap or surplus.",
+      "Type your ages and the monthly income you have in mind.",
+      "Type any Social Security or pension you already know.",
+      "Add savings. Read one savings figure.",
     ],
     includes: [
       "A capital target from net annual income divided by the planning withdrawal rate",
@@ -156,9 +156,9 @@ export const tools = [
     secondaryCtaLabel: "Learn About Life Insurance",
     relatedSlugs: ["mortgage-protection", "financial-safety", "retirement-income"],
     howToUse: [
-      "Enter household income and how many years of that income you want to illustrate replacing.",
-      "Add remaining mortgage, other debts, and any education amount you would want funded.",
-      "Subtract existing life coverage and liquid savings, then read the illustrated remainder.",
+      "Type yearly pay and how many years of that pay to picture replacing.",
+      "Add the house loan, other debts, and any school money.",
+      "Subtract coverage and cash you already have. Read the leftover.",
     ],
     includes: [
       "Income multiplied by years",
@@ -203,9 +203,9 @@ export const tools = [
     secondaryCtaLabel: "Learn About Mortgage Protection",
     relatedSlugs: ["protection-needs", "financial-safety", "retirement-income"],
     howToUse: [
-      "Enter the remaining mortgage balance and the monthly payment you actually make.",
-      "Add the interest rate and years remaining on the loan.",
-      "Optionally include other housing costs, then review the remaining payment count and total outlay.",
+      "Type the loan balance and the payment you actually send.",
+      "Add the rate and the years left.",
+      "Add other housing costs if you want them in the total. Read the cash still tied to the house.",
     ],
     includes: [
       "Remaining balance as you entered it",
@@ -249,9 +249,9 @@ export const tools = [
     secondaryCtaLabel: "See all tools",
     relatedSlugs: ["protection-needs", "mortgage-protection", "retirement-income"],
     howToUse: [
-      "Enter the monthly expenses you would need to keep going.",
-      "Add current cash or liquid savings.",
-      "Include monthly debt payments, then read the illustrated number of months and the category label.",
+      "Type the bills you must pay each month.",
+      "Type the cash you could use today.",
+      "Add monthly debt payments. Read how many months that cash could cover.",
     ],
     includes: [
       "Cash savings",
@@ -282,11 +282,11 @@ export const tools = [
   },
   {
     slug: "turning-65",
-    title: "Turning 65 Enrollment-Period Calendar",
+    title: "Turning 65 Medicare Calendar",
     shortDescription:
-      "What seven months sit around a 65th birthday for Medicare Initial Enrollment Period?",
+      "Which seven months are Medicare Initial Enrollment Period around a 65th birthday?",
     description:
-      "Enter a date of birth to see the 65th birthday and the seven months of Medicare Initial Enrollment Period. If the birthday is the 1st of the month, the period starts a month earlier and ends a month earlier. This page does not compare Medicare Advantage, Medigap, Part D, premiums, star ratings, or carriers. It is not a signup. LeadStar is not affiliated with Medicare.",
+      "Enter a date of birth. See the 65th birthday and the seven months of Medicare Initial Enrollment Period. If the birthday is the 1st of the month, the period starts a month earlier and ends a month earlier. Medicare is health coverage. Social Security is a monthly check. This page does not compare Medicare Advantage, Medigap, Part D, premiums, star ratings, or carriers. It is not a signup. LeadStar is not affiliated with Medicare.",
     href: "/tools/turning-65",
     icon: "Calendar",
     relatedServiceHref: "/services/medicare-insurance",
@@ -295,14 +295,14 @@ export const tools = [
     secondaryCtaLabel: "Explore Medicare Insurance",
     relatedSlugs: ["retirement-income", "financial-safety", "beneficiary-checklist"],
     howToUse: [
-      "Enter your date of birth so the tool can find your 65th birthday.",
-      "Read which seven months are in Initial Enrollment Period, including the first-of-the-month note if it applies.",
-      "Use the checklist and the official Medicare.gov and Social Security links. Print or email the page to yourself if you want a copy.",
+      "Type the date of birth.",
+      "Read the seven Medicare Initial Enrollment Period months. If the birthday is the 1st, the period starts and ends a month earlier.",
+      "Confirm the months on Medicare.gov. Print or copy the worksheet if you want a paper copy.",
     ],
     includes: [
       "The 65th birthday from the date you typed",
       "Seven Initial Enrollment Period months, with the first-of-the-month shift when it applies",
-      "A local checklist and links to Medicare.gov and Social Security",
+      "A local checklist and a link to official Medicare.gov signup months",
     ],
     excludes: [
       "Medicare Advantage, Medigap, or Part D plan comparison",
@@ -315,17 +315,17 @@ export const tools = [
       "If you are still working, ask the employer benefits office whether coverage is creditable. This tool does not answer that.",
     ],
     summary:
-      "This calendar illustrates the seven months of Medicare Initial Enrollment Period around a 65th birthday. If the birthday is the 1st of the month, the period starts and ends a month earlier. It does not compare plans, premiums, star ratings, or carriers. LeadStar is not affiliated with Medicare.",
+      "Medicare Initial Enrollment Period is seven months around a 65th birthday. If the birthday is the 1st, it starts and ends a month earlier. This is not a Social Security page and not a signup. LeadStar is not affiliated with Medicare.",
     faqs: [
       {
         question: "Does this page enroll me in Medicare?",
         answer:
-          "No. It shows months. Sign up through Social Security or the official Medicare process. Confirm dates on Medicare.gov.",
+          "No. It shows months. Confirm them on Medicare.gov. Enrollment is not automatic for everyone.",
       },
       {
         question: "What if my birthday is on the 1st of the month?",
         answer:
-          "Medicare.gov says Initial Enrollment Period then starts a month earlier and ends a month earlier. The table on this page follows that rule. Still confirm your months on Medicare.gov.",
+          "Medicare.gov says Initial Enrollment Period then starts a month earlier and ends a month earlier. The months on this page follow that rule. Still confirm your months on Medicare.gov.",
       },
       {
         question: "Does this compare Medicare Advantage, Medigap, or Part D?",
@@ -354,9 +354,9 @@ export const tools = [
     secondaryCtaLabel: "Learn About Life Insurance",
     relatedSlugs: ["protection-needs", "financial-safety", "mortgage-protection"],
     howToUse: [
-      "Check any life events that happened since you last looked at beneficiary forms.",
-      "For each account type, jot where it lives. Do not type account numbers.",
-      "Print the list or email it to yourself. Nothing is saved on this site.",
+      "Check life events since you last looked at beneficiary forms.",
+      "Mark account types to review. You may add an institution name. Do not type account numbers.",
+      "Print or copy the list. Nothing is saved on this site.",
     ],
     includes: [
       "Life-event checkboxes you can mark on this device",

@@ -6,13 +6,14 @@ import { CalculatorField } from "@/components/tools/CalculatorField";
 import { CalculatorShell } from "@/components/tools/CalculatorShell";
 import { CushionMeter } from "@/components/tools/CushionMeter";
 import { KeepWorksheet } from "@/components/tools/KeepWorksheet";
+import { ResultCard } from "@/components/tools/ResultCard";
 import { formatMonths, formatUSD, calculateSafetyCushion } from "@/lib/calculators";
 
 const bandCopy = {
-  none: "Enter monthly expenses to see an estimate.",
-  limited: "Limited cushion",
-  moderate: "Moderate cushion",
-  stronger: "Stronger cushion",
+  none: "Add monthly bills to see a picture.",
+  limited: "A shorter cash cushion in this picture",
+  moderate: "A middle cash cushion in this picture",
+  stronger: "A longer cash cushion in this picture",
 } as const;
 
 export function FinancialSafetyCalculator() {
@@ -27,57 +28,63 @@ export function FinancialSafetyCalculator() {
   });
 
   const monthsLabel =
-    result.displayMonths === null ? "-" : `${formatMonths(result.displayMonths)} months`;
+    result.displayMonths === null ? "Add bills to see months" : `${formatMonths(result.displayMonths)} months`;
+  const meaning =
+    result.displayMonths === null
+      ? "This page divides cash by the monthly bills and debt payments you type."
+      : `${formatUSD(savings)} in cash, divided by ${formatUSD(result.monthlyOutflow)} in monthly bills and debt, is about ${formatMonths(result.displayMonths)} months. ${bandCopy[result.band]}.`;
+  const notMeaning =
+    "This is not a rule for how much cash to keep. Households differ. Investment accounts you would not spend should stay out of the cash box.";
 
   return (
     <CalculatorShell
       summary={{
-        label: "Illustrated cushion",
+        label: "Months cash could cover",
         value:
-          result.displayMonths === null
-            ? "-"
-            : `${formatMonths(result.displayMonths)} mo`,
+          result.displayMonths === null ? "-" : `${formatMonths(result.displayMonths)} mo`,
       }}
       keep={
         <KeepWorksheet
           title="Financial Safety Cushion"
-          rows={[
-            { label: "Monthly essential expenses", value: formatUSD(expenses) },
-            { label: "Current cash savings", value: formatUSD(savings) },
-            { label: "Monthly debt payments", value: formatUSD(debt) },
-            { label: "Monthly outflow illustrated", value: formatUSD(result.monthlyOutflow) },
-            { label: "Illustrated months covered", value: monthsLabel },
+          subtitle="How many months current cash could cover the bills you typed."
+          inputs={[
+            { label: "Bills you must pay each month (dollars)", value: formatUSD(expenses) },
+            { label: "Cash you could use today (dollars)", value: formatUSD(savings) },
+            { label: "Debt payments each month (dollars)", value: formatUSD(debt) },
+          ]}
+          results={[
+            { label: "Monthly bills plus debt you typed", value: formatUSD(result.monthlyOutflow) },
+            { label: "Months cash could cover", value: monthsLabel },
             { label: "Category label", value: bandCopy[result.band] },
           ]}
+          meaning={[meaning, notMeaning]}
           disclaimer="This worksheet is an illustration of how long cash might last, not a quote, not advice, and not a recommended reserve target. Household needs differ."
           toolHref="/tools/financial-safety"
         />
       }
       results={
         <div>
-          <p className="text-sm font-medium text-navy">
-            Your current reserves could cover approximately
-          </p>
-          <p className="headline mt-2 break-words text-3xl tabular-nums text-navy sm:text-4xl">
-            {result.displayMonths === null
-              ? "-"
-              : `${formatMonths(result.displayMonths)} months`}
-          </p>
-          <p className="mt-2 text-sm text-muted">Illustrated estimate</p>
-          <div className="mt-6">
-            <CushionMeter months={result.monthsCovered} band={result.band} />
-          </div>
-          <p className="mt-4 text-sm font-medium text-navy">{bandCopy[result.band]}</p>
-          <p className="mt-3 text-sm leading-6 text-muted">
-            Monthly outflow illustrated: {formatUSD(result.monthlyOutflow)}
-          </p>
+          <ResultCard
+            question="If the paycheck paused, how many months could this cash cover?"
+            answer={monthsLabel}
+            meaning={meaning}
+            notMeaning={notMeaning}
+          >
+            <p className="pt-2 text-sm text-muted">
+              Monthly bills plus debt you typed: {formatUSD(result.monthlyOutflow)}
+            </p>
+            <div className="mt-4">
+              <CushionMeter months={result.monthsCovered} band={result.band} />
+            </div>
+            <p className="mt-3 text-sm font-medium text-navy">{bandCopy[result.band]}</p>
+          </ResultCard>
           <CalculatorCta toolSlug="financial-safety" />
         </div>
       }
     >
       <CalculatorField
         id="fs-expenses"
-        label="Monthly essential expenses"
+        label="Bills you must pay each month (dollars)"
         value={expenses}
         prefix="$"
         onChange={setExpenses}
@@ -87,7 +94,7 @@ export function FinancialSafetyCalculator() {
       />
       <CalculatorField
         id="fs-savings"
-        label="Current cash savings"
+        label="Cash you could use today (dollars)"
         value={savings}
         prefix="$"
         onChange={setSavings}
@@ -97,7 +104,7 @@ export function FinancialSafetyCalculator() {
       />
       <CalculatorField
         id="fs-debt"
-        label="Monthly debt payments"
+        label="Debt payments each month (dollars)"
         value={debt}
         prefix="$"
         onChange={setDebt}

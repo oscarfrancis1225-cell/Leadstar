@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { IconByName } from "@/components/ui/IconMap";
 import { getRelatedTools } from "@/lib/content/tools";
 
 type RelatedToolsProps = {
@@ -15,25 +14,25 @@ export function RelatedTools({ slug }: RelatedToolsProps) {
   }
 
   return (
-    <section className="no-print bg-white py-12 lg:py-16">
+    <section className="no-print border-t border-line bg-white py-8">
       <div className="container-site">
-        <p className="eyebrow">Other tools</p>
-        <h2 className="headline mt-3 text-3xl">Continue exploring</h2>
-        <div className="mt-6 grid gap-4 md:grid-cols-3">
+        <h2 className="text-sm font-semibold text-navy">Other tools</h2>
+        <ul className="mt-3 grid gap-2">
           {related.map((tool) => (
-            <Link key={tool.slug} href={tool.href} className="card block p-5">
-              <div className="grid h-11 w-11 place-items-center rounded-full bg-gold-soft text-gold">
-                <IconByName name={tool.icon} className="h-5 w-5" />
-              </div>
-              <h3 className="mt-3 font-serif text-xl text-navy">{tool.title}</h3>
-              <p className="mt-2 text-sm leading-6 text-muted">{tool.shortDescription}</p>
-              <span className="mt-3 inline-flex min-h-11 items-center gap-1.5 text-sm font-semibold text-blue">
-                Calculate
-                <ArrowRight className="h-4 w-4" aria-hidden />
-              </span>
-            </Link>
+            <li key={tool.slug}>
+              <Link
+                href={tool.href}
+                className="flex min-h-11 items-center justify-between gap-3 rounded-[12px] border border-line px-4 py-3 text-sm text-navy"
+              >
+                <span>
+                  <span className="font-semibold">{tool.title}.</span>{" "}
+                  <span className="text-muted">{tool.shortDescription}</span>
+                </span>
+                <ArrowRight className="h-4 w-4 shrink-0 text-blue" aria-hidden />
+              </Link>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );

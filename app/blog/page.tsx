@@ -35,7 +35,7 @@ export default function BlogPage() {
             </div>
           ))}
           {articles.length === 0 ? (
-            <p className="lead">Articles will appear here after editorial review.</p>
+            <p className="lead">Articles will appear here once they are published.</p>
           ) : null}
         </Container>
       </section>

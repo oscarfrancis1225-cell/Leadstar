@@ -1,5 +1,9 @@
 import { describe, expect, it } from "vitest";
-import { getPublishedArticles } from "@/lib/content/articles";
+import {
+  articles,
+  getPublicationToday,
+  getPublishedArticles,
+} from "@/lib/content/articles";
 import { siteConfig } from "@/lib/content/site";
 import {
   getLicenseCredentials,
@@ -61,5 +65,16 @@ describe("site index lastmod", () => {
     expect(entries.some((item) => item.path === "/tools/beneficiary-checklist")).toBe(
       true,
     );
+  });
+
+  it("holds scheduled articles out of the index until their publication date", () => {
+    const today = getPublicationToday();
+    const indexed = new Set(getIndexableEntries().map((item) => item.path));
+    for (const article of articles) {
+      const live =
+        article.publicationStatus === "published" && article.publishedAt <= today;
+      expect(indexed.has(article.href)).toBe(live);
+    }
+    expect(indexed.has("/blog")).toBe(true);
   });
 });

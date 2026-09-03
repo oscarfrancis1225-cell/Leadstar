@@ -25,7 +25,7 @@ export function ArticleCard({ article }: ArticleCardProps) {
         </h2>
         <p className="mt-3 text-sm leading-6 text-muted">{article.excerpt}</p>
         <p className="mt-4 text-xs leading-5 text-muted">
-          LeadStar editorial · <time dateTime={article.publishedAt}>{formatDate(article.publishedAt)}</time>
+          LeadStar Financial · <time dateTime={article.publishedAt}>{formatDate(article.publishedAt)}</time>
         </p>
         <Link
           href={article.href}

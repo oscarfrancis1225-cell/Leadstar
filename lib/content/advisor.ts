@@ -4,8 +4,8 @@ export const advisor = {
   bio: "Esther Francis is a single parent in Boca Raton. She is an insurance agent licensed in Florida and California. She starts with the paycheck, not a product name.",
   ctaLabel: "Read Esther's profile",
   ctaHref: "/about/esther-francis",
-  officeLabel: "See office photographs",
-  officeHref: "/office#gallery",
+  secondaryLabel: "See licensing and disclosures",
+  secondaryHref: "/disclosures",
 } as const;
 
 export const advisorTrustPoints = [
