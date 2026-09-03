@@ -1,33 +1,38 @@
 # Publication schedule
 
-Status: APPLIED on 2026-09-03. The dates below are set in `lib/content/article-entries/`.
+Status: SUPERSEDED on 2026-09-03. All ten articles now have `publishedAt` and
+`updatedAt` of 2026-09-03 in `lib/content/article-entries/`.
 
 ## What was decided
 
-Forward scheduling. Nothing was backdated. The public site does not serve these
-articles yet, so no article can honestly carry a publication date in the past.
-Each article now carries the future date it is meant to go live, and the site
-withholds it until that day arrives.
+On 2026-09-03 the owner asked to publish every article immediately so `/blog`
+shows the full set the same day. That request superseded the staggered
+forward schedule that had been applied earlier on 2026-09-03 (first article
+2026-09-03, remaining nine dated 2026-09-05 through 2026-09-17). Nothing was
+backdated: the public site had not yet served those later articles, and every
+`publishedAt` is today.
 
-## The schedule
+The visibility gate is unchanged. An article still has to be `publicationStatus:
+"published"` with `publishedAt` on or before the current day in
+`America/New_York`. All ten current articles now meet that rule today.
 
-| Order | Article | publishedAt | Gap | Note |
-| --- | --- | --- | --- | --- |
-| 1 | how-much-life-insurance-do-i-need | 2026-09-03 | live now | Pillar page. |
-| 2 | turning-65-medicare-timeline | 2026-09-05 | 2 days | `annual-review`, `nextReviewAt: 2026-10-01`. Re-check Medicare.gov and SSA sources on the publish date. |
-| 3 | retirement-income-transition | 2026-09-07 | 2 days | Evergreen. |
-| 4 | mortgage-protection-vs-term-life | 2026-09-08 | 1 day | Evergreen. |
-| 5 | health-coverage-before-medicare | 2026-09-10 | 2 days | `annual-review`, `nextReviewAt: 2026-11-27`. Confirm current HealthCare.gov subsidy and enrollment rules on the publish date. |
-| 6 | what-final-expense-insurance-does | 2026-09-11 | 1 day | Evergreen. |
-| 7 | life-insurance-single-parents-solo-earners | 2026-09-13 | 2 days | Evergreen. Confirm SSA survivor-benefit references still current. |
-| 8 | financial-questions-after-divorce | 2026-09-15 | 2 days | Evergreen. |
-| 9 | key-person-vs-buy-sell | 2026-09-16 | 1 day | Evergreen. |
-| 10 | first-financial-planning-meeting | 2026-09-17 | 1 day | Evergreen. |
+## Current dates
 
-`updatedAt` matches `publishedAt` on every article, because no article is edited
-between now and its release. `lib/content/articles.test.ts` locks the sequence:
-first date 2026-09-03, last date 2026-09-17, gaps of one or two days, no
-duplicates.
+| Article | publishedAt | updatedAt | Note |
+| --- | --- | --- | --- |
+| how-much-life-insurance-do-i-need | 2026-09-03 | 2026-09-03 | Pillar page. |
+| turning-65-medicare-timeline | 2026-09-03 | 2026-09-03 | `annual-review`, `nextReviewAt: 2026-10-01`. |
+| retirement-income-transition | 2026-09-03 | 2026-09-03 | Evergreen. |
+| mortgage-protection-vs-term-life | 2026-09-03 | 2026-09-03 | Evergreen. |
+| health-coverage-before-medicare | 2026-09-03 | 2026-09-03 | `annual-review`, `nextReviewAt: 2026-11-27`. |
+| what-final-expense-insurance-does | 2026-09-03 | 2026-09-03 | Evergreen. |
+| life-insurance-single-parents-solo-earners | 2026-09-03 | 2026-09-03 | Evergreen. |
+| financial-questions-after-divorce | 2026-09-03 | 2026-09-03 | Evergreen. |
+| key-person-vs-buy-sell | 2026-09-03 | 2026-09-03 | Evergreen. |
+| first-financial-planning-meeting | 2026-09-03 | 2026-09-03 | Evergreen. |
+
+`updatedAt` matches `publishedAt` because the copy was not edited as part of
+this date change.
 
 ## How the gate works
 
@@ -45,7 +50,7 @@ day in `America/New_York`. Everything public reads through it:
   including the service pages and the beneficiary checklist tool, so no rail can
   link to a page that is not live yet.
 
-The site is prerendered, so a scheduled article appears on the first build or
+The site is prerendered, so an article appears on the first build or
 revalidation that runs on or after its date. If the site is not rebuilt on that
 day, the article simply stays hidden. That is a build cadence question, not a
 content question.
@@ -71,5 +76,5 @@ nine. Until a signed record exists:
 - No "Reviewed by Esther Francis" byline may be published, and no review date may
   be shown.
 
-Scheduling changes when an article is visible. It does not change what has been
-reviewed.
+Publishing all ten on 2026-09-03 changes when an article is visible. It does not
+change what has been reviewed.

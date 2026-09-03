@@ -67,7 +67,7 @@ describe("site index lastmod", () => {
     );
   });
 
-  it("holds scheduled articles out of the index until their publication date", () => {
+  it("indexes an article only when it is published and publishedAt has arrived", () => {
     const today = getPublicationToday();
     const indexed = new Set(getIndexableEntries().map((item) => item.path));
     for (const article of articles) {
@@ -76,5 +76,18 @@ describe("site index lastmod", () => {
       expect(indexed.has(article.href)).toBe(live);
     }
     expect(indexed.has("/blog")).toBe(true);
+  });
+
+  it("includes all ten articles in the index on 2026-09-03", () => {
+    expect(articles).toHaveLength(10);
+    expect(getPublishedArticles("2026-09-03")).toHaveLength(10);
+    const today = getPublicationToday();
+    if (today >= "2026-09-03") {
+      const indexed = new Set(getIndexableEntries().map((item) => item.path));
+      for (const article of articles) {
+        expect(article.publishedAt).toBe("2026-09-03");
+        expect(indexed.has(article.href)).toBe(true);
+      }
+    }
   });
 });

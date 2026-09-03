@@ -12,48 +12,15 @@ import {
   isArticleVisible,
 } from "@/lib/content/articles";
 
-const FIRST_DAY = "2026-09-03";
-const LAST_DAY = "2026-09-17";
+const PUBLISH_DAY = "2026-09-03";
 
-/** The schedule the owner approved. Forward dates only, no invented history. */
-const SCHEDULE: ReadonlyArray<readonly [string, string]> = [
-  ["how-much-life-insurance-do-i-need", "2026-09-03"],
-  ["turning-65-medicare-timeline", "2026-09-05"],
-  ["retirement-income-transition", "2026-09-07"],
-  ["mortgage-protection-vs-term-life", "2026-09-08"],
-  ["health-coverage-before-medicare", "2026-09-10"],
-  ["what-final-expense-insurance-does", "2026-09-11"],
-  ["life-insurance-single-parents-solo-earners", "2026-09-13"],
-  ["financial-questions-after-divorce", "2026-09-15"],
-  ["key-person-vs-buy-sell", "2026-09-16"],
-  ["first-financial-planning-meeting", "2026-09-17"],
-];
-
-function daysBetween(from: string, to: string) {
-  const ms = Date.parse(`${to}T00:00:00Z`) - Date.parse(`${from}T00:00:00Z`);
-  return ms / 86_400_000;
-}
-
-describe("publication schedule", () => {
-  it("gives every article its scheduled date and no earlier stamp", () => {
-    expect(articles.length).toBe(SCHEDULE.length);
-    for (const [slug, date] of SCHEDULE) {
-      const article = getArticle(slug);
-      expect(article, `missing article ${slug}`).toBeDefined();
-      expect(article?.publishedAt).toBe(date);
-      expect(article?.updatedAt).toBe(date);
-    }
-  });
-
-  it("starts on the first day, ends on the last, and spaces articles by one or two days", () => {
-    const dates = SCHEDULE.map(([, date]) => date);
-    expect(dates[0]).toBe(FIRST_DAY);
-    expect(dates[dates.length - 1]).toBe(LAST_DAY);
-    expect(new Set(dates).size).toBe(dates.length);
-    for (let index = 1; index < dates.length; index += 1) {
-      const gap = daysBetween(dates[index - 1], dates[index]);
-      expect(gap).toBeGreaterThanOrEqual(1);
-      expect(gap).toBeLessThanOrEqual(2);
+describe("publication dates", () => {
+  it("stamps every article 2026-09-03 after the owner asked to publish all ten at once", () => {
+    expect(articles.length).toBe(10);
+    for (const article of articles) {
+      expect(article.publishedAt).toBe(PUBLISH_DAY);
+      expect(article.updatedAt).toBe(PUBLISH_DAY);
+      expect(article.publicationStatus).toBe("published");
     }
   });
 
@@ -67,7 +34,7 @@ describe("publication schedule", () => {
   });
 });
 
-describe("schedule visibility gate", () => {
+describe("visibility gate", () => {
   it("reads the current day in the practice time zone", () => {
     expect(getPublicationToday()).toMatch(/^\d{4}-\d{2}-\d{2}$/);
     // 2026-09-18T02:30Z is still the evening of 2026-09-17 in New York.
@@ -75,51 +42,41 @@ describe("schedule visibility gate", () => {
     expect(getPublicationToday(new Date("2026-09-18T12:00:00Z"))).toBe("2026-09-18");
   });
 
-  it("publishes only the first article on the first day", () => {
-    const live = getPublishedArticles(FIRST_DAY);
-    expect(live.map((article) => article.slug)).toEqual([
-      "how-much-life-insurance-do-i-need",
-    ]);
-    expect(getFeaturedArticles(3, FIRST_DAY)).toHaveLength(1);
-    expect(Array.from(getArticlesByPillar(FIRST_DAY).values()).flat()).toHaveLength(1);
-  });
-
-  it("publishes every article once the last scheduled day arrives", () => {
-    expect(getPublishedArticles(LAST_DAY)).toHaveLength(SCHEDULE.length);
-    expect(getFeaturedArticles(3, LAST_DAY)).toHaveLength(3);
-  });
-
-  it("releases each article on its own date and not before", () => {
-    for (const [slug, date] of SCHEDULE) {
-      const article = getArticle(slug);
-      if (!article) {
-        throw new Error(`missing article ${slug}`);
-      }
-      const dayBefore = new Date(Date.parse(`${date}T00:00:00Z`) - 86_400_000)
-        .toISOString()
-        .slice(0, 10);
-      expect(isArticleVisible(article, dayBefore)).toBe(false);
-      expect(isArticleVisible(article, date)).toBe(true);
-      expect(getVisibleArticle(slug, dayBefore)).toBeUndefined();
-      expect(getVisibleArticle(slug, date)?.slug).toBe(slug);
+  it("is visible only when published and publishedAt is on or before today", () => {
+    const article = getArticle("how-much-life-insurance-do-i-need");
+    if (!article) {
+      throw new Error("missing article");
     }
+    expect(isArticleVisible(article, "2026-09-02")).toBe(false);
+    expect(isArticleVisible(article, PUBLISH_DAY)).toBe(true);
+    expect(getVisibleArticle(article.slug, "2026-09-02")).toBeUndefined();
+    expect(getVisibleArticle(article.slug, PUBLISH_DAY)?.slug).toBe(article.slug);
+  });
+
+  it("makes all ten articles visible on 2026-09-03", () => {
+    const live = getPublishedArticles(PUBLISH_DAY);
+    expect(live).toHaveLength(10);
+    expect(getFeaturedArticles(3, PUBLISH_DAY)).toHaveLength(3);
+    expect(Array.from(getArticlesByPillar(PUBLISH_DAY).values()).flat()).toHaveLength(10);
   });
 
   it("never links to an article that is not live yet", () => {
-    for (const [, day] of SCHEDULE) {
-      for (const article of articles) {
-        for (const related of getRelatedArticles(article, day)) {
-          expect(related.publishedAt <= day).toBe(true);
-        }
+    expect(getPublishedArticles("2026-09-02")).toEqual([]);
+    for (const article of articles) {
+      for (const related of getRelatedArticles(article, "2026-09-02")) {
+        expect(related.publishedAt <= "2026-09-02").toBe(true);
+      }
+      for (const related of getRelatedArticles(article, PUBLISH_DAY)) {
+        expect(related.publishedAt <= PUBLISH_DAY).toBe(true);
       }
     }
     expect(
-      getVisibleArticles(["first-financial-planning-meeting"], FIRST_DAY),
+      getVisibleArticles(["first-financial-planning-meeting"], "2026-09-02"),
     ).toEqual([]);
     expect(
       getVisibleArticles(
         ["first-financial-planning-meeting", "not-a-real-article"],
-        LAST_DAY,
+        PUBLISH_DAY,
       ).map((article) => article.slug),
     ).toEqual(["first-financial-planning-meeting"]);
   });
